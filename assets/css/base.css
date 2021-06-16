@@ -286,6 +286,7 @@ button:hover::before {
 /* line 285, src/assets/css/base.scss */
 .btn-submit {
     background-color: var(--primaryColor);
+    margin-right: 1rem;
     padding: .5rem 3rem !important; }
 
 /* line 290, src/assets/css/base.scss */
