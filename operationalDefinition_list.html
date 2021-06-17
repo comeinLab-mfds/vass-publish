@@ -92,8 +92,36 @@
         <div class="content">
             <div class="content-title">
                 <h1>조작적 정의</h1>
-                <button class="btn-submit" onclick="location.href='operationalDefinition_add.html'">Search</button>
-                <button class="btn-submit" onclick="location.href='operationalDefinition_add.html'">Create</button>
+                <div class="selectbox">
+                    <select name="" id="">
+                        <option value="">없음</option>
+                        <option value="HOI">HOI</option>
+                        <option value="VOI">VOI</option>
+                        <option value="Condition">Condition</option>
+                        <option value="Drug Exposure">Drug Exposure</option>
+                    </select>
+                </div>
+                <input type="text">
+                <button class="btn-submit" href="#">Search</button>
+                <button id="myBtn" class="btn-submit">Create</button>
+                    <div id="myModal" class="myModal">
+                        <div class="myBtn_modal-content">
+                            <h1>조작적정의 생성</h1>
+                            <span class="modal-close">&times;</span>
+                            <table class="modal-button-content">
+                                <tbody>
+                                <tr>
+                                    <td><button type="button" onclick="location.href='operationalDefinition_add.html'">HOI</a></td>
+                                    <td><button type="button" onclick="location.href='operationalDefinition_add.html'">VOI</a></li></td>
+                                </tr>
+                                <tr>
+                                <td><button type="button" onclick="location.href='operationalDefinition_add.html'">Condition</a></td>
+                                <td><button type="button" onclick="location.href='operationalDefinition_add.html'">Drug Exposure</a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
             </div>
             <div class="content-view list operational-definition-list">
                 <div class="table">
