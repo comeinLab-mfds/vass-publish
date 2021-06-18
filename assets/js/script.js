@@ -1,5 +1,9 @@
 "use strict";
 
+
+
+
+//*modal 팝업 *//
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -25,6 +29,8 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
 
 var vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));

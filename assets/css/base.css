@@ -216,7 +216,6 @@ legend {
 
 /* line 221, src/assets/css/base.scss */
 input {
-    -webkit-appearance: none;
     height: auto;
     border: 0;
     padding: .5rem;
@@ -525,7 +524,6 @@ aside ul {
     fill: slategray; }
 
 /* Checkbox */
-/* line 535, src/assets/css/base.scss */
 .checkbox {
     position: relative; }
 
@@ -562,7 +560,7 @@ aside ul {
 /* line 569, src/assets/css/base.scss */
 .checkbox input:checked + label:after {
     content: '';
-    width: 10px;
+    width: 15px;
     height: 6px;
     position: absolute;
     top: 6px;
@@ -573,7 +571,6 @@ aside ul {
     background: transparent;
     opacity: 1;
     transform: rotate(-45deg); }
-
 /* Radio Button */
 /* line 587, src/assets/css/base.scss */
 input[type="radio"] {
