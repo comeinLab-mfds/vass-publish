@@ -135,8 +135,8 @@
                 <div class="row">
                     <div class="input-title">Category</div>
                     <div class="input-select">
-                        <input value="HOI" type="radio" name="select-category" id="HOI">
-                        <label for="HOI">VOI</label>
+                        <input value="VOI" type="VOI" name="select-category" id="VOI">
+                        <label for="VOI">VOI</label>
                         <small class="category-information"></small>
                     </div>
                 </div>
@@ -182,9 +182,9 @@
                         <button class="btn-cancel" onclick="location.href='operationalDefinition_list.html'">선택삭제</button>
                     </div>
                 </div>
-                <h3>함께 고려해야 할 것들</h3>
+                <h3>같이 고려해야 할 것들</h3>
                 <div class="table-VOI">
-                <div class="row-table">
+                <div class="table_VOI_contain">
                     <table id="input-table" class="table">
                         <thead class="input-table-th">
                             <tr>
@@ -201,9 +201,8 @@
                                 <td><input type="text"></td>
                                 <td class="input-select input-days table_select">
                                     <input type="number">
-                                    <span>일 전</span>
+                                    <span class="input-days-range"> ~ </span>
                                     <input type="number">
-                                    <span>일 후</span></td>
                                 </tr>
                         </tbody>
                     </table>
@@ -212,12 +211,12 @@
                         <button class="btn-cancel" onclick="location.href='operationalDefinition_list.html'">선택삭제</button>
                     </div>
                 </div>
-                <div class="row-table">
+                <div class="table_VOI_contain1">
                     <table id="input-table" class="table">
                         <thead class="input-table-th">
                             <tr>
                                 <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
-                                <th>Vaccine ID</th>
+                                <th>ICD Code</th>
                                 <th>Name</th>
                                 <th>Range(Day)</th>
                             </tr>
@@ -229,10 +228,10 @@
                                 <td><input type="text"></td>
                                 <td class="input-select input-days table_select">
                                     <input type="number">
-                                    <span>일 전</span>
+                                    <span class="input-days-range"> ~ </span>
                                     <input type="number">
-                                    <span>일 후</span></td>
-                                </tr>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <div class="button-container">
@@ -259,12 +258,11 @@
                                     <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
                                     <td><input type="text"></td>
                                     <td><input type="text"></td>
-                                    <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
+                                    <td><label><input type="checkbox" name="checked" value="check" checked="checked" class="table-checkbox">&nbsp;</label></td>
                                     <td class="input-select input-days table_select">
                                         <input type="number">
-                                        <span>일 전</span>
+                                        <span class="input-days-range"> ~ </span>
                                         <input type="number">
-                                        <span>일 후</span></td>
                                 </tr>
                             </tbody>
                         </table>
