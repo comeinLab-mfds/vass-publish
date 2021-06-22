@@ -158,23 +158,22 @@
                     <div class="input-title">Category</div>
                     <div class="input-select">
                         <input value="Condition" type="radio" name="select-category" id="Condition">
-                        <label for="Condition">Drug Exposure</label>
+                        <label for="Condition">Condition</label>
                         <small class="category-information"></small>
                     </div>
                 </div>
                 <h3>Drug</h3>
                 <div class="row-table">
-                    <div class="input-table">
-                        <table id="input-table" class="table">
-                            <thead class="input-table-th">
-                                <tr>
-                                    <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
-                                    <th>EDI Code</th>
-                                    <th>Name</th>
-                                    <th>처방여부</th>
-                                </tr>
-                            </thead>
-                            <tbody class="input-table-td">
+                    <table id="input-table" class="table">
+                        <thead>
+                            <tr>
+                                <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
+                                <th>EDI Code</th>
+                                <th>Name</th>
+                                <th>처방여부</th>
+                            </tr>
+                        </thead>
+                            <tbody>
                                 <tr>
                                     <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
                                     <td><input type="text"></td>
@@ -183,7 +182,6 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
                     <div class="button-container">
                         <button class="btn-submit" onclick="addRow()">항목추가</button>
                         <button class="btn-cancel" onclick="location.href='operationalDefinition_list.html'">선택삭제</button>
@@ -222,11 +220,9 @@
                 </div>
                 </div>
                 <h3>Gap era</h3>
-                <div class="row-table">
-                    <div class="gap-era-calinder">
-                        <h3 class="gap-era-days">Days</h3>
-                        <input type="text"  id="birth_01">
-                    </div>
+                <div class="gap-era-calinder">
+                    <h3 class="gap-era-days">Days</h3>
+                    <input type="text"  id="birth_01">
                 </div>
                 <div class="row row-description">
                     <div class="input-title">Description</div>

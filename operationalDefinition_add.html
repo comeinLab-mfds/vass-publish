@@ -159,33 +159,31 @@
                 </div>
                 <h3>Diagnosis</h3>
                 <div class="row-table">
-                    <div class="input-table" id="table-plus">
-                        <table id="input-table" class="table">
-                            <thead class="input-table-th">
-                                <tr>
-                                    <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
-                                    <th>ICD code</th>
-                                    <th>Name</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody class="input-table-td">
-                                <tr>
-                                    <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
-                                    <td><input type="text"></td>
-                                    <td><input type="text"></td>
-                                    <td class="table_select">
-                                        <input value="HOI" type="radio" name="select-diagnosis" id="diagnosis">
-                                        <label for="diagnosis">주+부상병</label>
-                                        <input value="VOI" type="radio" name="select-diagnosis" id="mainDiagnosis">
-                                        <label for="mainDiagnosis">주상병</label>
-                                        <input value="condition" type="radio" name="select-diagnosis" id="subDiagnosis">
-                                        <label for="subDiagnosis">부상병</label>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <table id="input-table" class="table">
+                        <thead>
+                            <tr>
+                                <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
+                                <th>ICD code</th>
+                                <th>Name</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td class="table_select">
+                                    <input value="HOI" type="radio" name="select-diagnosis" id="diagnosis">
+                                    <label for="diagnosis">주+부상병</label>
+                                    <input value="VOI" type="radio" name="select-diagnosis" id="mainDiagnosis">
+                                    <label for="mainDiagnosis">주상병</label>
+                                    <input value="condition" type="radio" name="select-diagnosis" id="subDiagnosis">
+                                    <label for="subDiagnosis">부상병</label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <div class="button-container">
                         <button id="add_btn" class="btn-submit">항목추가</button>
                         <button class="btn-cancel" onclick="location.href='operationalDefinition_list.html'">선택삭제</button>
@@ -193,20 +191,19 @@
                 </div>
                 <h3>같이 고려할 것 들</h3>
                 <div class="row-table">
-                    <div class="input-table">
-                        <table id="input-table" class="table">
-                            <thead class="input-table-th">
-                                <tr>
-                                    <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
-                                    <th>ICD code</th>
-                                    <th>Name</th>
-                                    <th>Status</th>
-                                    <th>발생여부</th>
-                                    <th>Range(Day)</th>
-                                </tr>
-                            </thead>
-                            <tbody class="input-table-td">
-                                <tr>
+                    <table id="input-table" class="table">
+                        <thead>
+                            <tr>
+                                <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
+                                <th>ICD code</th>
+                                <th>Name</th>
+                                <th>Status</th>
+                                <th>발생여부</th>
+                                <th>Range(Day)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
                                     <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
                                     <td><input type="text"></td>
                                     <td><input type="text"></td>
@@ -223,29 +220,26 @@
                                         <input type="number">
                                         <span class="input-days-range"> ~ </span>
                                         <input type="number">
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                            </tr>
+                        </tbody>
+                    </table>
                     <div class="button-container">
                         <button class="btn-submit" onclick="addRow()">항목추가</button>
                         <button class="btn-cancel" onclick="location.href='operationalDefinition_list.html'">선택삭제</button>
                     </div>
                 </div>
                 <div class="row-table">
-                    <div class="input-title"></div>
-                    <div class="input-table">
-                        <table id="input-table" class="table">
-                            <thead class="input-table-th">
-                                <tr>
-                                    <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
-                                    <th>EDI code</th>
-                                    <th>Name</th>
-                                    <th>처방여부</th>
-                                    <th>Range(Day)</th>
-                                </tr>
-                            </thead>
-                            <tbody class="input-table-td">
+                    <table id="input-table" class="table">
+                        <thead>
+                            <tr>
+                                <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
+                                <th>EDI code</th>
+                                <th>Name</th>
+                                <th>처방여부</th>
+                                <th>Range(Day)</th>
+                            </tr>
+                        </thead>
+                            <tbody>
                                 <tr>
                                     <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
                                     <td><input type="text"></td>
@@ -254,11 +248,10 @@
                                     <td class="input-select input-days table_select">
                                         <input type="number">
                                         <span class="input-days-range"> ~ </span>
-                                        <input type="number">
+                                        <input type="number"></td>
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
                     <div class="button-container">
                         <button class="btn-submit" onclick="addRow()">항목추가</button>
                         <button class="btn-cancel" onclick="location.href='operationalDefinition_list.html'">선택삭제</button>

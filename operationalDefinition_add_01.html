@@ -135,58 +135,64 @@
                 <div class="row">
                     <div class="input-title">Category</div>
                     <div class="input-select">
-                        <input value="VOI" type="VOI" name="select-category" id="VOI">
+                        <input value="VOI" type="radio" name="select-category" id="VOI">
                         <label for="VOI">VOI</label>
                         <small class="category-information"></small>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="input-title">입원 경로</div>
-                    <div class="input-select">
-                        <div>
-                            <input value="입원" type="radio" name="select-admission" id="admission-01">
-                            <label for="admission-01">입원</label>
-                        </div>
-                        <div>
-                            <input value="외래" type="radio" name="select-admission" id="admission-02">
-                            <label for="admission-02">외래</label>
-                        </div>
-                        <div>
-                            <input value="응급실" type="radio" name="select-admission" id="admission-03">
-                            <label for="admission-03">응급실</label>
-                        </div>
-                    </div>
-                </div>
                 <h3>Diagnosis</h3>
                 <div class="row-table">
-                    <div class="input-table">
-                        <table id="input-table" class="table">
-                            <thead class="input-table-th">
-                                <tr>
-                                    <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
-                                    <th>Vaccine ID</th>
-                                    <th>Name</th>
-                                </tr>
-                            </thead>
-                            <tbody class="input-table-td">
-                                <tr>
-                                    <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
-                                    <td><input type="text"></td>
-                                    <td><input type="text"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <table id="input-table" class="table">
+                        <thead>
+                            <tr>
+                                <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
+                                <th>Vaccine ID</th>
+                                <th>Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <div class="button-container">
-                        <button class="btn-submit" onclick="addRow()">항목추가</button>
+                        <button id="myBtn" class="btn-submit" >항목추가</button>
+                            <div id="myModal" class="myModal">
+                                <div class="modal-table">
+                                    <div class="serch_input serch_input_modal">
+                                        <input type="text">
+                                        <button class="btn-submit" href="#">Search</button>
+                                    </div>
+                                    <span class="modal-close">&times;</span>
+                                    <table id="input-table" class="input-row-table"> 
+                                        <thead>
+                                            <tr>
+                                                <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
+                                                <th>Vaccine ID</th>
+                                                <th>Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
+                                            <td><input type="text"></td>
+                                            <td><input type="text"></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <button id="myBtn" class="btn-submit btn-submit-modal">선택추가</button>
+                                </div>
+                            </div>
                         <button class="btn-cancel" onclick="location.href='operationalDefinition_list.html'">선택삭제</button>
                     </div>
                 </div>
                 <h3>같이 고려해야 할 것들</h3>
-                <div class="table-VOI">
-                <div class="table_VOI_contain">
+                <div class="row-table">
                     <table id="input-table" class="table">
-                        <thead class="input-table-th">
+                        <thead>
                             <tr>
                                 <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
                                 <th>Vaccine ID</th>
@@ -194,7 +200,7 @@
                                 <th>Range(Day)</th>
                             </tr>
                         </thead>
-                        <tbody class="input-table-td">
+                        <tbody>
                             <tr>
                                 <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
                                 <td><input type="text"></td>
@@ -207,13 +213,39 @@
                         </tbody>
                     </table>
                     <div class="button-container">
-                        <button class="btn-submit" onclick="addRow()">항목추가</button>
+                        <button id="myBtn" class="btn-submit" >항목추가</button>
+                            <div id="myModal" class="myModal">
+                                <div class="modal-table">
+                                    <div class="serch_input serch_input_modal">
+                                        <input type="text">
+                                        <button class="btn-submit" href="#">Search</button>
+                                    </div>
+                                    <span class="modal-close">&times;</span>
+                                    <table id="input-table" class="input-row-table"> 
+                                        <thead>
+                                            <tr>
+                                                <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
+                                                <th>Vaccine ID</th>
+                                                <th>Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
+                                            <td><input type="text"></td>
+                                            <td><input type="text"></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <button id="myBtn" class="btn-submit btn-submit-modal">선택추가</button>
+                                </div>
+                            </div>
                         <button class="btn-cancel" onclick="location.href='operationalDefinition_list.html'">선택삭제</button>
                     </div>
                 </div>
-                <div class="table_VOI_contain1">
+                <div class="row-table">
                     <table id="input-table" class="table">
-                        <thead class="input-table-th">
+                        <thead>
                             <tr>
                                 <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
                                 <th>ICD Code</th>
@@ -221,7 +253,7 @@
                                 <th>Range(Day)</th>
                             </tr>
                         </thead>
-                        <tbody class="input-table-td">
+                        <tbody>
                             <tr>
                                 <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
                                 <td><input type="text"></td>
@@ -235,25 +267,48 @@
                         </tbody>
                     </table>
                     <div class="button-container">
-                        <button class="btn-submit" onclick="addRow()">항목추가</button>
+                        <button id="myBtn" class="btn-submit" >항목추가</button>
+                            <div id="myModal" class="myModal">
+                                <div class="modal-table">
+                                    <div class="serch_input serch_input_modal">
+                                        <input type="text">
+                                        <button class="btn-submit" href="#">Search</button>
+                                    </div>
+                                    <span class="modal-close">&times;</span>
+                                    <table id="input-table" class="input-row-table"> 
+                                        <thead>
+                                            <tr>
+                                                <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
+                                                <th>Vaccine ID</th>
+                                                <th>Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
+                                            <td><input type="text"></td>
+                                            <td><input type="text"></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <button id="myBtn" class="btn-submit btn-submit-modal">선택추가</button>
+                                </div>
+                            </div>
                         <button class="btn-cancel" onclick="location.href='operationalDefinition_list.html'">선택삭제</button>
                     </div>
                 </div>
-                </div>
                 <div class="row-table">
-                    <div class="input-title"></div>
-                    <div class="input-table">
-                        <table id="input-table" class="table">
-                            <thead class="input-table-th">
-                                <tr>
-                                    <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
-                                    <th>EDI code</th>
-                                    <th>Name</th>
-                                    <th>처방여부</th>
-                                    <th>Range(Day)</th>
-                                </tr>
-                            </thead>
-                            <tbody class="input-table-td">
+                    <table id="input-table" class="table">
+                        <thead>
+                            <tr>
+                                <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
+                                <th>EDI code</th>
+                                <th>Name</th>
+                                <th>처방여부</th>
+                                <th>Range(Day)</th>
+                            </tr>
+                        </thead>
+                            <tbody>
                                 <tr>
                                     <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
                                     <td><input type="text"></td>
@@ -265,18 +320,43 @@
                                         <input type="number">
                                 </tr>
                             </tbody>
-                        </table>
-                    </div>
+                    </table>
                     <div class="button-container">
-                        <button class="btn-submit" onclick="addRow()">항목추가</button>
+                        <button id="myBtn" class="btn-submit" >항목추가</button>
+                            <div id="myModal" class="myModal">
+                                <div class="modal-table">
+                                    <div class="serch_input serch_input_modal">
+                                        <input type="text">
+                                        <button class="btn-submit" href="#">Search</button>
+                                    </div>
+                                    <span class="modal-close">&times;</span>
+                                    <table id="input-table" class="input-row-table"> 
+                                        <thead>
+                                            <tr>
+                                                <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
+                                                <th>Vaccine ID</th>
+                                                <th>Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
+                                            <td><input type="text"></td>
+                                            <td><input type="text"></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <button id="myBtn" class="btn-submit btn-submit-modal">선택추가</button>
+                                </div>
+                            </div>
                         <button class="btn-cancel" onclick="location.href='operationalDefinition_list.html'">선택삭제</button>
                     </div>
                 </div>
-                <div class="row row-description">
+            <div class="row row-description">
                     <div class="input-title">Description</div>
                     <textarea></textarea>
                 </div>
-                <div class="row row-query">
+            <div class="row row-query">
                     <div class="input-title">
                         <span>Query</span>
                         <button class="btn-query">쿼리 생성</button>

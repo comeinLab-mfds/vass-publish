@@ -390,12 +390,15 @@ aside ul {
 
 /* line 392, src/assets/css/base.scss */
 .content-title .button-container button {
-    padding: .6rem 1.6rem; }
+    padding: .6rem 1.6rem; 
+}
 
 /* line 396, src/assets/css/base.scss */
 .content-title h1 {
     font: normal 2rem/1 'Nanumsquare';
-    flex: 1 1 auto; }
+    flex: 1 1 auto;
+    padding: 1rem;
+}
 
 /* line 401, src/assets/css/base.scss */
 .content .title p {
@@ -454,7 +457,9 @@ aside ul {
 /* line 455, src/assets/css/base.scss */
 .button-container {
     display: flex;
-    flex-direction: row-reverse; }
+    flex-direction: row-reverse;
+    align-items : center;
+ }
 
 /* line 460, src/assets/css/base.scss */
 .button-container button {

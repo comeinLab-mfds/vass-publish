@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>백신 웹개발</title>
-
     <script src="assets/js/jquery-3.5.1.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="assets/css/base.css">
@@ -94,15 +93,16 @@
                 <h1>조작적 정의</h1>
                 <div class="selectbox">
                     <select name="" id="">
-                        <option value="">없음</option>
                         <option value="HOI">HOI</option>
                         <option value="VOI">VOI</option>
                         <option value="Condition">Condition</option>
                         <option value="Drug Exposure">Drug Exposure</option>
                     </select>
                 </div>
-                <input type="text">
-                <button class="btn-submit" href="#">Search</button>
+                <div class="serch_input">
+                    <input type="text">
+                    <button class="btn-submit" href="#">Search</button>
+                </div>
                 <button id="myBtn" class="btn-submit">Create</button>
                     <div id="myModal" class="myModal">
                         <div class="myBtn_modal-content">
@@ -116,7 +116,7 @@
                                 </tr>
                                 <tr>
                                 <td><button type="button" onclick="location.href='operationalDefinition_add_02.html'">Condition</a></td>
-                                <td><button type="button" onclick="location.href='operationalDefinition_add.html'">Drug Exposure</a></td>
+                                <td><button type="button" onclick="location.href='operationalDefinition_add_03.html'">Drug Exposure</a></td>
                                 </tr>
                                 </tbody>
                             </table>

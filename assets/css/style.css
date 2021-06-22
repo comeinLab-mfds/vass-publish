@@ -783,23 +783,32 @@ main {
         position: relative;
         background-color:#fefefe;
         margin:auto;
+        padding: 1rem 1rem 2rem 1rem;
         border: 1px solid #888;
-        width:30%;
-        height:30%;
+        width:40vw;
+        height:auto;
     }
       
 .myBtn_modal-content h1{
         text-align:center;
-        margin-top: 20px;
-        font-size: 3rem;
+        margin-top: 2rem;
+        font-size: 2rem;
     }
-      
+.modal-table{
+    position: relative;
+    background-color:#fefefe;
+    margin:auto;
+    padding: 1rem 1rem 2rem 1rem;
+    border: 1px solid #888;
+    width:40vw;
+    height:auto;
+}      
 .modal-close{
         position: absolute;
         color:#aaaaaa;
-        top:10px;
-        right:20px;
-        font-size:28px;
+        top: .5rem;
+        right: 1rem;
+        font-size:2.5rem;
         font-weight:bold;
     }
       
@@ -811,14 +820,14 @@ main {
     }
       
 .modal-button-content{
-        width:60%;
-        margin:auto;
-        padding-top: 20px;
-        overflow-x: auto;
-        table-layout: fixed;
-        border-collapse: separate;
-        border-spacing: 10px 10px;
-    }
+    width:100%;
+    margin:auto;
+    padding-top: 20px;
+    overflow-x: auto;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 10px 10px;
+}
     
 .modal-button-content button{
         width: 100%;
@@ -829,7 +838,12 @@ main {
         padding: 10px;
         align-items:center;
     }
-    
+
+.serch_input{
+    display: flex;
+    align-items:center;
+    justify-content: flex-end;
+}
 
 /* ============================================================
    조작적 정의
@@ -1045,13 +1059,47 @@ input[type="radio"]#drugExposure:checked ~ .category-information::before {
     }
     
 .row-table{
-            width: 100%;
-            align-items: center;
-            padding: 1rem;
-            background-color: white;
-            margin: 0 auto .5rem;
-            border-radius: .5rem;
-    }  
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    margin: 0 auto .5rem;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+.input-row-table{
+    width: 100%;
+    padding: 2rem;
+    margin: 1rem auto 1rem;
+    flex: 1 1 auto;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.input-row-table th{
+    border-bottom: 1px solid #ddd;;
+}
+
+.input-row-table th,
+.input-row-table td {
+    padding: 1rem;
+}
+.input-modal-table{
+    margin: 1rem;
+}
+
+.btn-submit-modal{
+    margin-left: auto !important;
+}
+.gap-era-calinder{
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    border-radius: .5rem;
+    flex-direction: row;
+}
 
 
 .input-days-range{
@@ -1062,43 +1110,22 @@ input[type="radio"]#drugExposure:checked ~ .category-information::before {
 .input-table{
     margin-bottom: 10px;
 }
-.input-table-th th{
+#input-table th{
         text-align: center;
     }
     
-.input-table-td td{
+#input-table td{
         text-align: center;
         border-top: none !important;
     }
 
-.table-VOI{
+
+.myBtn_modal_top{
     display: flex;
-    align-items:center;
-    width:100%;
-    margin: 0 auto .5rem;
-}
-
-.table_VOI_contain{
-    width: 100%;
-    align-items: center;
-    padding: 1rem;
-    background-color: white;
-    margin: 0 .5rem .5rem 0;
-    border-radius: .5rem;
-}
-
-.table_VOI_contain1{
-    width: 100%;
-    align-items: center;
-    padding: 1rem;
-    margin: 0 auto .5rem;
-    background-color: white;
-    border-radius: .5rem;
 }
 
 .gap-era-calinder{
     display:flex;
-    margin:.5rem;
     align-items: center;
 }
 
@@ -1294,7 +1321,55 @@ input[type="radio"] + label::before {
         flex: auto; }
     /* line 1208, src/assets/css/style.scss */
     .result-view {
-        margin: 1rem 0 0 0; } }
+        margin: 1rem 0 0 0; } 
+    
+.btn-submit{
+    margin: .5rem 1rem !important;
+}
+
+.myBtn_modal-content{
+    width: 50vw;
+}
+
+#input-table {
+    display: inline-flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    }
+
+#input-table thead tr {
+    display: block;
+    margin-bottom: .625em;
+}
+
+#input-table th,
+#input-table td{
+    display: block;
+    border: none !important;
+}
+
+#input-table td::before{
+display: block;
+position: absolute;
+left:0;
+top:0;
+width:50%;
+font-size: .8em;
+}
+
+.serch_input_modal{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-table{
+    width:70vw;
+}
+
+    }
+
+
+
 
 @media screen and (max-width: 1200px) {
     /* line 1214, src/assets/css/style.scss */
