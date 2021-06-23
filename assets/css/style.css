@@ -908,6 +908,8 @@ input[type="radio"]#condition:checked ~ .category-information::before {
 input[type="radio"]#drugExposure:checked ~ .category-information::before {
     content: 'drugExposure: Health of Interest (HOI) 연구 대상이 되는 질병을 정의하는 #$@*&#(*&%'; }
 
+
+
 /* line 869, src/assets/css/style.scss */
 [class*="row-diagnosis"] .row.th + .row {
     border-top: 1px solid #eee; }

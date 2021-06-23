@@ -157,26 +157,28 @@
                 <div class="row">
                     <div class="input-title">Category</div>
                     <div class="input-select">
-                        <input value="Condition" type="radio" name="select-category" id="Condition">
-                        <label for="Condition">Condition</label>
+                        <input value="Drug Exposure" type="radio" name="select-category" id="Drug Exposure">
+                        <label for="Drug Exposure">Drug Exposure</label>
                         <small class="category-information"></small>
                     </div>
                 </div>
-                <h3>Diagnosis</h3>
+                <h3>Drug</h3>
                 <div class="row-table">
                     <table id="input-table" class="table">
                         <thead>
                             <tr>
-                                <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
-                                <th>ICD Code</th>
+                                <th><input type="checkbox" name="checked" value="all_check" id="checkbox" checked="checked"><label for="checkbox"></label></>
+                                <th>EDO Code</th>
                                 <th>Name</th>
+                                <th>처방여부</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
-                                <td><input type="text"></td>
-                                <td><input type="text"></td>
+                                <td><input type="checkbox" name="checked" value="all_check" id="checkbox" checked="checked"><label for="checkbox"></label></td>
+                                <td><span class="input_table_text">C46.</td>
+                                <td><span class="input_table_text">Kaposi sarcoma of palate</td>
+                                <td><input type="checkbox" name="checked" value="all_check" id="checkbox" checked="checked"><label for="checkbox"></label></td>
                             </tr>
                         </tbody>
                     </table>
@@ -190,50 +192,23 @@
                     <table id="input-table" class="table">
                         <thead>
                             <tr>
-                                <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
-                                <th>ICD Code</th>
+                                <th><input type="checkbox" name="checked" value="all_check" id="checkbox"><label for="checkbox"></label></th>
+                                <th>EDI Code</th>
                                 <th>Name</th>
+                                <th>처방여부</th>
                                 <th>Range(Day)</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
-                                <td><input type="text"></td>
-                                <td><input type="text"></td>
+                                <td><input type="checkbox" name="checked" value="all_check" id="checkbox" checked="checked"><label for="checkbox"></label></td>
+                                <td><span class="input_table_text">C46.</td>
+                                <td><span class="input_table_text">Kaposi sarcoma of palate</td>
                                 <td class="input-select input-days table_select">
                                     <input type="number">
                                     <span class="input-days-range"> ~ </span>
                                     <input type="number">
-                                </tr>
-                        </tbody>
-                    </table>
-                    <div class="button-container">
-                        <button class="btn-submit" onclick="addRow()">항목추가</button>
-                        <button class="btn-cancel" onclick="location.href='operationalDefinition_list.html'">선택삭제</button>
-                    </div>
-                </div>
-                <div class="row-table">
-                    <table id="input-table" class="table">
-                        <thead>
-                            <tr>
-                                <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
-                                    <th>EDI code</th>
-                                    <th>Name</th>
-                                    <th>처방여부</th>
-                                    <th>Range(Day)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
-                                <td><input type="text"></td>
-                                <td><input type="text"></td>
-                                <td><label><input type="checkbox" name="checked" value="check" checked="checked" class="table-checkbox">&nbsp;</label></td>
-                                <td class="input-select input-days table_select">
-                                    <input type="number">
-                                    <span class="input-days-range"> ~ </span>
-                                    <input type="number">
+                                <td><input type="checkbox" name="checked" value="all_check" id="checkbox" checked="checked"><label for="checkbox"></label></td>
                             </tr>
                         </tbody>
                     </table>
