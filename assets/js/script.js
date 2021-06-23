@@ -6,7 +6,7 @@
 
 //*modal 팝업 *//
 var modals = document.getElementsByClassName("myModal");
-var btns = document.getElementsByClassName("btn-submit");
+var btns = document.getElementsByClassName("modalBtnSubmit");
 var spanes = document.getElementsByClassName("modalClose");
 var funcs = [];
  

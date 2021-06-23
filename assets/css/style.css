@@ -805,8 +805,9 @@ main {
     border: 1px solid #888;
     width:40vw;
     height:auto;
-}      
-.modalclose{
+} 
+
+.modalClose{
         position: absolute;
         color:#aaaaaa;
         top: .5rem;
@@ -815,8 +816,8 @@ main {
         font-weight:bold;
     }
       
-.modalclose:hover,
-.modalclose:focus {
+.modalClose:hover,
+.modalClose:focus {
         color: #000;
         text-decoration: none;
         cursor: pointer;
@@ -1289,7 +1290,7 @@ input[type="radio"] + label::before {
 .edit input[type="radio"] + label,
 .admin input[type="radio"] + label {
     font-family: 'NanumSquare', sans-serif;
-    min-width: 36px;
+    max-width: 120px;
     display: flex;
     justify-content: center;
     margin-right: .5rem;
@@ -1343,25 +1344,39 @@ input[type="radio"] + label::before {
     
 
 .myBtn_modal-content{
-    width: 50vw;
+    width: 60vw;
 }
 
 #input-table {
     display: inline-flex;
-    justify-content:space-between;
-    align-items:flex-start;
+    justify-content:flex-start;
+    flex-direction: row;
     }
 
+    
+
 #input-table thead tr {
-    display: block;
+    display: inline-flex;
     margin-bottom: .625em;
+    flex-direction: column;
+    align-items: flex-start;
+
 }
 
-#input-table th,
-#input-table td{
-    display: block;
-    border: none !important;
+#input-table tbody tr{
+    display: inline-flex;
+    flex-direction: column;
 }
+
+#input-table td{
+    display: inline-flex;
+    justify-content: flex-start;
+    flex: 1 1 auto;
+    text-align:left;
+}
+
+#input-table th{
+border: none !important;}
 
 #input-table td::before{
 display: block;
@@ -1380,6 +1395,15 @@ font-size: .8em;
 .modal-table{
     width:70vw;
 }
+
+.serch_input{
+    margin-top: .5rem;
+}
+
+
+
+
+
 
     }
 

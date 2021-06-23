@@ -162,7 +162,7 @@
                     <table id="input-table" class="table">
                         <thead>
                             <tr>
-                                <th><input type="checkbox" id="checkbox1"><label for="checkbox1"></label></th>
+                                <th><input type="checkbox" id="checkbox"><label for="checkbox"></label></th>
                                 <th>ICD code</th>
                                 <th>Name</th>
                                 <th>Status</th>
@@ -184,35 +184,35 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div class="button-container">
-                        <button id="myBtn" class="btn-submit">항목추가</button>
+                    <div class="btn_contain">
+                        <button class="btn-cancel" onclick="location.href='operationalDefinition_list.html'">선택삭제</button>
+                        <button id="myBtn" class="modalBtnSubmit">항목추가</button>
                             <div id="myModal" class="myModal">
                                 <div class="modal-table">
                                     <div class="serch_input serch_input_modal">
                                         <input type="text">
                                         <button class="btn-submit" href="#">Search</button>
                                     </div>
-                                    <span class="modalclose">&times;</span>
+                                    <span class="modalClose">&times;</span>
                                     <table id="input-table" class="input-row-table"> 
                                     <thead>
                                         <tr>
-                                            <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
-                                            <th>Vaccine ID</th>
+                                            <th><input type="checkbox" id="checkbox"><label for="checkbox"></label></th>
+                                            <th>ICD code</th>
                                             <th>Name</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
-                                        <td><input type="text"></td>
-                                        <td><input type="text"></td>
+                                        <td><input type="checkbox" id="checkbox"><label for="checkbox"></label></td>
+                                        <td><span>C46.</span>
+                                        <td><span>Kaposi sarcoma of palate</span></td>
                                     </tr>
                                     </tbody>
                                     </table>
                                     <button id="myBtn" class="btn-submit btn-submit-modal">선택추가</button>
                                 </div>
                             </div>
-                        <button class="btn-cancel" onclick="location.href='operationalDefinition_list.html'">선택삭제</button>
                     </div>
                 </div>
                 <h3>같이 고려할 것 들</h3>
@@ -220,7 +220,7 @@
                     <table id="input-table" class="table">
                         <thead>
                             <tr>
-                                <th><input type="checkbox" name="checked" value="all_check" id="checkbox"><label for="checkbox"></label></th>
+                                <th><input type="checkbox" id="checkbox"><label for="checkbox"></label></th>
                                 <th>ICD code</th>
                                 <th>Name</th>
                                 <th>Status</th>
@@ -230,7 +230,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><input type="checkbox" name="checked" value="all_check" id="checkbox" checked="checked"><label for="checkbox"></label></td>
+                                <td><input type="checkbox" name="checked" value="all_check" id="checkbox"><label for="checkbox"></label></td>
                                 <td><span class="input_table_text">C46.</td>
                                 <td><span class="input_table_text">Kaposi sarcoma of palate</td>
                                 <td class="table_select">
@@ -241,7 +241,7 @@
                                     <input value="condition" type="radio" name="select-diagnosis" id="subDiagnosis">
                                     <label for="subDiagnosis">부상병</label>
                                 </td>
-                                <td><label><input type="checkbox" name="checked" value="check" checked="checked" class="table-checkbox">&nbsp;</label></td>
+                                <td><label><input type="checkbox" name="checked" value="all_check" id="checkbox" checked="checked"><label for="checkbox"></label></td>
                                 <td class="input-select input-days table_select">
                                     <input type="number">
                                     <span class="input-days-range"> ~ </span>
@@ -251,27 +251,27 @@
                     </table>
                     <div class="btn_contain">
                         <button class="btn-cancel" onclick="location.href='operationalDefinition_list.html'">선택삭제</button>
-                        <button id="myBtn" class="btn-submit">항목추가</button>
+                        <button id="myBtn" class="modalBtnSubmit">항목추가</button>
                             <div id="myModal" class="myModal">
                                 <div class="modal-table">
                                     <div class="serch_input serch_input_modal">
                                         <input type="text">
                                         <button class="btn-submit" href="#">Search</button>
                                     </div>
-                                    <span class="modal-close">&times;</span>
+                                    <span class="modalClose">&times;</span>
                                     <table id="input-table" class="input-row-table"> 
                                         <thead>
                                             <tr>
-                                                <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
-                                                <th>Vaccine ID</th>
+                                                <th><input type="checkbox" name="checked" value="all_check" id="checkbox"><label for="checkbox"></label></th>
+                                                <th>ICD code</th>
                                                 <th>Name</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
-                                            <td><input type="text"></td>
-                                            <td><input type="text"></td>
+                                            <td><input type="checkbox" name="checked" value="all_check" id="checkbox"><label for="checkbox"></label></td>
+                                            <td><span>C46.</span>
+                                            <td><span>Kaposi sarcoma of palate</span></td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -284,7 +284,7 @@
                     <table id="input-table" class="table">
                         <thead>
                             <tr>
-                                <th><input type="checkbox" name="checked" value="all_check" id="checkbox" checked="checked"><label for="checkbox"></label></th>
+                                <th><input type="checkbox" name="checked" value="all_check" id="checkbox"><label for="checkbox"></label></th>
                                 <th>EDI code</th>
                                 <th>Name</th>
                                 <th>처방여부</th>
@@ -293,10 +293,10 @@
                         </thead>
                             <tbody>
                                 <tr>
-                                    <td><input type="checkbox" name="checked" value="all_check" id="checkbox" checked="checked"><label for="checkbox"></label></td>
+                                    <td><input type="checkbox" name="checked" value="all_check" id="checkbox" ><label for="checkbox"></label></td>
                                     <td><span class="input_table_text">C46.</td>
                                     <td><span class="input_table_text">Kaposi sarcoma of palate</td>
-                                    <td><label><input type="checkbox" name="checked" value="check" checked="checked" class="table-checkbox">&nbsp;</label></td>
+                                    <td><input type="checkbox" name="checked" value="all_check" checked="checked" id="checkbox"><label for="checkbox"></label></td>
                                     <td class="input-select input-days table_select">
                                         <input type="number">
                                         <span class="input-days-range"> ~ </span>
@@ -306,27 +306,29 @@
                         </table>
                         <div class="btn_contain">
                             <button class="btn-cancel" onclick="location.href='operationalDefinition_list.html'">선택삭제</button>
-                            <button id="myBtn" class="btn-submit">항목추가</button>
+                            <button id="myBtn" class="modalBtnSubmit">항목추가</button>
                                 <div id="myModal" class="myModal">
                                     <div class="modal-table">
                                         <div class="serch_input serch_input_modal">
                                             <input type="text">
                                             <button class="btn-submit" href="#">Search</button>
                                         </div>
-                                        <span class="modal-close">&times;</span>
+                                        <span class="modalClose">&times;</span>
                                         <table id="input-table" class="input-row-table"> 
                                             <thead>
                                                 <tr>
-                                                    <th><label><input type="checkbox" name="checked" value="all_check" class="table-checkbox">&nbsp;</th>
-                                                    <th>Vaccine ID</th>
+                                                    <th><input type="checkbox" id="checkbox"><label for="checkbox"></label></th>
+                                                    <th>EDI Code</th>
                                                     <th>Name</th>
+                                                    <th>ATC Code</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                             <tr>
-                                                <td><label><input type="checkbox" name="checked" value="check" class="table-checkbox">&nbsp;</label></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
+                                                <td><input type="checkbox" id="checkbox"><label for="checkbox"></label></td>
+                                                <td><span>C46.</span>
+                                                <td><span>Kaposi sarcoma of palate</span></td>
+                                                <td><span>ADW45877</span></td>
                                             </tr>
                                             </tbody>
                                         </table>
