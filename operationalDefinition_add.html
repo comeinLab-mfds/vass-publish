@@ -162,7 +162,7 @@
                     <table id="input-table" class="table">
                         <thead>
                             <tr>
-                                <th><input type="checkbox" id="checkbox"><label for="checkbox"></label></th>
+                                <th><input type="checkbox" class="checkb" id="checkbox"><label for="checkbox"></label></th>
                                 <th>ICD code</th>
                                 <th>Name</th>
                                 <th>Status</th>
@@ -170,7 +170,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><input type="checkbox" name="checked" value="all_check" id="checkbox"><label for="checkbox"></label></td>
+                                <td><input type="checkbox" class="checkb" id="checkbox"><label for="checkbox"></label></td>
                                 <td><span class="input_table_text">C46.</td>
                                 <td><span class="input_table_text">Kaposi sarcoma of palate</td>
                                 <td class="table_select">
@@ -185,16 +185,16 @@
                         </tbody>
                     </table>
                     <div class="btn_contain">
-                        <button class="btn-cancel" onclick="location.href='operationalDefinition_list.html'">선택삭제</button>
+                        <button class="btn-cancel">선택삭제</button>
                         <button id="myBtn" class="modalBtnSubmit">항목추가</button>
                             <div id="myModal" class="myModal">
                                 <div class="modal-table">
-                                    <div class="serch_input serch_input_modal">
+                                    <div class="serch_input_modal">
                                         <input type="text">
                                         <button class="btn-submit" href="#">Search</button>
                                     </div>
                                     <span class="modalClose">&times;</span>
-                                    <table id="input-table" class="input-row-table"> 
+                                    <table id="input-modal-table" class="table"> 
                                     <thead>
                                         <tr>
                                             <th><input type="checkbox" id="checkbox"><label for="checkbox"></label></th>
@@ -210,7 +210,7 @@
                                     </tr>
                                     </tbody>
                                     </table>
-                                    <button id="myBtn" class="btn-submit btn-submit-modal">선택추가</button>
+                                    <button id="myBtn" class="btn-submit btn-submit-modal"   onclick="location.href='operationalDefinition_add.html'">선택추가</button>
                                 </div>
                             </div>
                     </div>
@@ -250,32 +250,32 @@
                         </tbody>
                     </table>
                     <div class="btn_contain">
-                        <button class="btn-cancel" onclick="location.href='operationalDefinition_list.html'">선택삭제</button>
+                        <button class="btn-cancel">선택삭제</button>
                         <button id="myBtn" class="modalBtnSubmit">항목추가</button>
                             <div id="myModal" class="myModal">
                                 <div class="modal-table">
-                                    <div class="serch_input serch_input_modal">
+                                    <div class="serch_input_modal">
                                         <input type="text">
                                         <button class="btn-submit" href="#">Search</button>
                                     </div>
                                     <span class="modalClose">&times;</span>
-                                    <table id="input-table" class="input-row-table"> 
+                                    <table id="input-modal-table" class="table"> 
                                         <thead>
                                             <tr>
-                                                <th><input type="checkbox" name="checked" value="all_check" id="checkbox"><label for="checkbox"></label></th>
+                                                <th><input type="checkbox"id="checkbox"><label for="checkbox"></label></th>
                                                 <th>ICD code</th>
                                                 <th>Name</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td><input type="checkbox" name="checked" value="all_check" id="checkbox"><label for="checkbox"></label></td>
+                                            <td><input type="checkbox" id="checkbox"><label for="checkbox"></label></td>
                                             <td><span>C46.</span>
                                             <td><span>Kaposi sarcoma of palate</span></td>
                                         </tr>
                                         </tbody>
                                     </table>
-                                    <button id="myBtn" class="btn-submit btn-submit-modal">선택추가</button>
+                                    <button id="myBtn" class="btn-submit btn-submit-modal"  onclick="location.href='operationalDefinition_add.html'">선택추가</button>
                                 </div>
                             </div>
                     </div>
@@ -305,16 +305,16 @@
                             </tbody>
                         </table>
                         <div class="btn_contain">
-                            <button class="btn-cancel" onclick="location.href='operationalDefinition_list.html'">선택삭제</button>
+                            <button class="btn-cancel">선택삭제</button>
                             <button id="myBtn" class="modalBtnSubmit">항목추가</button>
                                 <div id="myModal" class="myModal">
                                     <div class="modal-table">
-                                        <div class="serch_input serch_input_modal">
+                                        <div class="serch_input_modal">
                                             <input type="text">
                                             <button class="btn-submit" href="#">Search</button>
                                         </div>
                                         <span class="modalClose">&times;</span>
-                                        <table id="input-table" class="input-row-table"> 
+                                        <table id="input-modal-table" class="table"> 
                                             <thead>
                                                 <tr>
                                                     <th><input type="checkbox" id="checkbox"><label for="checkbox"></label></th>
@@ -332,7 +332,7 @@
                                             </tr>
                                             </tbody>
                                         </table>
-                                        <button class="btn-submit btn-submit-modal">선택추가</button>
+                                        <button class="btn-submit btn-submit-modal" onclick="location.href='operationalDefinition_add.html'">선택추가</button>
                                     </div>
                                 </div>
                         </div>

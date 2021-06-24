@@ -801,7 +801,7 @@ main {
     position: relative;
     background-color:#fefefe;
     margin:auto;
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 1rem 2rem;
     border: 1px solid #888;
     width:40vw;
     height:auto;
@@ -1059,11 +1059,13 @@ input[type="radio"]#drugExposure:checked ~ .category-information::before {
     opacity: 1; }
 
 
+/*table 주부상 select*/
 .table_select{
-        display: flex;
-        justify-content:center;
-    }
-    
+    display: flex;
+    justify-content:center;
+} 
+
+/*table css*/
 .row-table{
     display: flex;
     align-items: flex-end;
@@ -1075,51 +1077,9 @@ input[type="radio"]#drugExposure:checked ~ .category-information::before {
     flex-direction: column;
 }
 
-.input-row-table{
-    width: 100%;
-    padding: 2rem;
-    margin: 1rem auto 1rem;
-    flex: 1 1 auto;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-}
 
-.input-row-table th{
-    border-bottom: 1px solid #ddd;;
-}
-
-.input-row-table th,
-.input-row-table td {
-    padding: 1rem;
-}
-.input-modal-table{
-    margin: 1rem;
-}
-
-.btn_contain{
-    display: flex;
-    
-}
-
-.btn-submit-modal{
-    margin-left: auto !important;
-}
-.gap-era-calinder{
-    width: 100%;
-    padding: 1rem;
-    background-color: white;
-    border-radius: .5rem;
-    flex-direction: row;
-}
-
-
-.input-days-range{
-    margin: 0 1rem;
-    padding-top: .5rem; 
-}
-
-.input-table{
-    margin-bottom: 10px;
+#input-table{
+    margin-bottom: 1rem;
 }
 #input-table th{
         text-align: center;
@@ -1130,9 +1090,49 @@ input[type="radio"]#drugExposure:checked ~ .category-information::before {
         border-top: none !important;
     }
 
+#input-table thead th{
+    background-color: #f3f3f3
+} 
 
-.myBtn_modal_top{
+.input-days-range{
+    margin: 0 1rem;
+    padding-top: .5rem; 
+}
+
+.btn_contain{
     display: flex;
+    
+}
+
+/*modal*/
+.btn-submit-modal{
+    margin-left: auto !important;
+}
+
+#input-modal-table thead th{
+    background-color: #f3f3f3;
+
+} 
+
+#input-modal-table thead th,tr{
+    text-align: center;
+}
+
+.serch_input_modal{
+    display: flex;
+    flex-direction: row;
+    margin-top: .5rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/*gap*/
+.gap-era-calinder{
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    border-radius: .5rem;
+    flex-direction: row;
 }
 
 .gap-era-calinder{
@@ -1146,11 +1146,6 @@ input[type="radio"]#drugExposure:checked ~ .category-information::before {
 }
 
 
-.add_btn{
-    margin: .5rem 1rem;
-    background-color: var(--primaryColor);
-    padding: .5rem 3rem 
-}
 
 
 /* ============================================================
@@ -1223,7 +1218,9 @@ input[type="radio"]#drugExposure:checked ~ .category-information::before {
 
 /* line 1083, src/assets/css/style.scss */
 .input-days input {
-    width: 3rem; }
+    width: 2.5rem;
+    height: 2.5rem;
+}
 
 /* line 1087, src/assets/css/style.scss */
 .input-days input::after {
@@ -1351,21 +1348,29 @@ input[type="radio"] + label::before {
     display: inline-flex;
     justify-content:flex-start;
     flex-direction: row;
+    font-size: 1.3rem;
+    margin: 1rem 0;
     }
 
-    
+#input-table thead, tbody{
+    width: 100%;
+}
 
 #input-table thead tr {
     display: inline-flex;
-    margin-bottom: .625em;
+    width:80%;
     flex-direction: column;
     align-items: flex-start;
-
+    border-right:1px solid slategrey;
 }
+
+#input-table thead th{
+    width:100%;}
 
 #input-table tbody tr{
     display: inline-flex;
     flex-direction: column;
+    align-items: center;
 }
 
 #input-table td{
@@ -1387,18 +1392,11 @@ width:50%;
 font-size: .8em;
 }
 
-.serch_input_modal{
-    display: flex;
-    flex-direction: column;
-}
-
 .modal-table{
     width:70vw;
 }
 
-.serch_input{
-    margin-top: .5rem;
-}
+
 
 
 
