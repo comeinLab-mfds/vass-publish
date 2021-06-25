@@ -36,6 +36,10 @@ window.onclick = function(event) {
 
 
 
+
+
+//*aisde menu*//
+
 var vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
 window.addEventListener('resize', function () {
@@ -87,6 +91,8 @@ if (aside) {
     return asideSubMenu.addEventListener('click', openSubMenu);
   });
 }
+
+
 
 var selectedCategory = document.querySelector('input[name = "select-category"]:checked');
 

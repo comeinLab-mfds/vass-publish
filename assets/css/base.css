@@ -540,54 +540,7 @@ aside ul {
 .pagination svg {
     fill: slategray; }
 
-/* Checkbox */
-.checkbox {
-    position: relative; }
 
-/* line 539, src/assets/css/base.scss */
-.checkbox input {
-    position: absolute;
-    opacity: 0; }
-
-/* line 544, src/assets/css/base.scss */
-.checkbox label {
-    flex: 1 1 auto !important;
-    color: #AAA;
-    display: flex;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-    padding: 0;
-    transition: .2s color; }
-
-/* line 555, src/assets/css/base.scss */
-.checkbox input:checked + label {
-    color: #36299f; }
-
-/* line 559, src/assets/css/base.scss */
-.checkbox label:before {
-    border-radius: 2px;
-    transition: .2s;
-    content: '';
-    margin-right: 3px;
-    width: 15px;
-    height: 15px;
-    background-color: white; }
-
-/* line 569, src/assets/css/base.scss */
-.checkbox input:checked + label:after {
-    content: '';
-    width: 15px;
-    height: 6px;
-    position: absolute;
-    top: 6px;
-    left: 3px;
-    border: 2px solid black;
-    border-top: none;
-    border-right: none;
-    background: transparent;
-    opacity: 1;
-    transform: rotate(-45deg); }
 /* Radio Button */
 /* line 587, src/assets/css/base.scss */
 input[type="radio"] {
@@ -651,6 +604,7 @@ input[type="radio"] + label:empty:before {
     flex: 1 1 100% !important; }
 
 
+    
 
 /*selectbox*/
 /* line 647, src/assets/css/base.scss */
