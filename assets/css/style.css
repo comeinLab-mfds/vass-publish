@@ -340,7 +340,7 @@ main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 0 .5rem; }
+    padding: 0; }
 
 /* line 375, src/assets/css/style.scss */
 .row li input[type="text"] {
@@ -1103,6 +1103,12 @@ input[id="checkb"] label
     
 }
 
+.content-view_category{
+    display: flex;
+    width:100%;
+    align-items:center;
+}
+
 /*modal*/
 .btn-submit-modal{
     margin-left: auto !important;
@@ -1226,7 +1232,8 @@ input[type="checkbox"]:checked + label span {
 .input-title {
     flex: 0 0 120px;
     color: slategray;
-    font-family: 'Comfortaa', cursive, 'NanumSquare', sans-serif;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'NanumSquare', sans-serif;
     font-size: 14px; 
     margin-bottom: 5px;
 }

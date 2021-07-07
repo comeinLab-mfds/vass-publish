@@ -98,20 +98,59 @@
             </div>
             <div class="content-view edit">
                 <div class="row">
-                    <div class="input-title">Category</div>
-                    <input type="text" value="HOI" readonly>
+                    <div class="content-view_category">
+                        <div class="input-title">Category</div>
+                        <div class="input-select">
+                            <label for="HOI">HOI</label>
+                        </div>
+                    </div>
+                    <div class="content-view_category">
+                        <div class="input-title">Approval</div>
+                        <div clss="approval_select">
+                            <ul class="table_radio">
+                                <li>
+                                    <input type="radio" value="approval" name="hoi_approval" id="hoi_approval">
+                                    <label for="hoi_approval">Y</label>
+                                </li>
+                                <li>
+                                    <input type="radio" value="nonapproval" name="hoi_approval" id="hoi_nonapproval">
+                                    <label for="hoi_nonapproval">N</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="input-title">Created Date</div>
-                    <input type="text" value="2020-10-01" readonly>
+                    <div class="content-view_category">
+                        <div class="input-title">Creator</div>
+                        <div class="input-select">
+                            <label for="Park Waiting">Park Waiting</label>
+                        </div>
+                    </div>
+                    <div class="content-view_category">
+                        <div class="input-title">Create Date</div>
+                        <div class="input-select">
+                            <label for="create_date">2021-07-07</label>
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="input-title">Created User</div>
-                    <input type="text" value="홍길동" readonly>
-                </div>
-                <div class="row">
-                    <div class="input-title">Expired Date</div>
-                    <input type="text" value="2020-10-31" readonly>
+                    <div class="content-view_category">
+                        <div class="input-title">Extraction Start Date</div>
+                        <div class="input-container">
+                            <input type="text" id="ageStartYear_02" class="datepicker_ym" autocomplete="false">
+                            <span>~</span>
+                            <input type="text" id="ageEndYear_02" class="datepicker_ym" autocomplete="false">
+                        </div>
+                    </div>
+                    <div class="content-view_category">
+                        <div class="input-title">Extraction End Date</div>
+                        <div class="input-container">
+                            <input type="text" id="ageStartYear_02" class="datepicker_ym" autocomplete="false">
+                            <span>~</span>
+                            <input type="text" id="ageEndYear_02" class="datepicker_ym" autocomplete="false">
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="input-title">Description</div>
@@ -119,7 +158,7 @@
                 </div>
                 <div class="row">
                     <div class="input-title">Query</div>
-                    <textarea readonly>select * sdfsdf</textarea>
+                    <textarea>select * sdfsdf</textarea>
                 </div>
             </div>
         </div>
