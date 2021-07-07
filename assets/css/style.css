@@ -1431,8 +1431,16 @@ font-size: .8em;
 
 
 
+.row {
+    flex-wrap:wrap;}
 
+.input-container{
+    flex-wrap: wrap;
+}
 
+.content-view_category{
+    margin: .5rem 0;
+}
 
 
 
