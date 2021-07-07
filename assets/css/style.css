@@ -1103,7 +1103,7 @@ input[id="checkb"] label
     
 }
 
-.content-view_category{
+.content-view-item{
     display: flex;
     width:100%;
     align-items:center;
@@ -1438,7 +1438,7 @@ font-size: .8em;
     flex-wrap: wrap;
 }
 
-.content-view_category{
+.content-view-item{
     margin: .5rem 0;
 }
 
