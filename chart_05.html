@@ -70,12 +70,18 @@
                             <li><a href="chart_04.html">지역별 접종률</a></li>
                         </ul>
                     </li>
-                    <li><a href="chart_05.html" class="active">안전성</a></li>
+                    <li>
+                        <span class="sub-menu">안전성</span>
+                        <ul>
+                            <li><a href="chart_05.html">안전성 분석 현황</a></li>
+                            <li><a href="chart_05.html">실마리정보</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <h3 class="aside-title">조작적 정의</h3>
                 <ul>
                     <li><a href="operationalDefinition_list.html">목록리스트</a></li>
-                    <li><a href="operationalDefinition_add.html">조작적정의 생성</a></li>
+                    <li><a href="operationalDefinition_add.html" class="active">조작적정의 생성</a></li>
                 </ul>
                 <h3 class="aside-title">연구디자인</h3>
                 <ul>
@@ -95,109 +101,32 @@
             <div class="content-title">
                 <h1>안전성 분석 현황</h1>
             </div>
-            <div class="content-view filters-top">
-                <div class="search">
-                    <div class="filter filter-vaccine-type">
-                        <h3>vaccine type</h3>
+            <div class="content-view edit">
+                <div class="row safety">
+                    <div class="input-title">
+                        이상반응 별 백신 접종 여부 중요도
+                    </div>
+                    <div class="safety_importance">
                         <ul>
                             <li>
-                                <input id="vaccine-01" type="radio" name="select-vaccine-type">
-                                <label for="vaccine-01">CG</label>
+                                <div class="safety_importance_danger">
+                                    <div class="safety_importance_title">위험</div>
+                                    <div class="safety_importance_description">백신중요도 2, 백신 부작용 발생</div>
+                                </div>
+                            </li>
+                            <li>    
+                                <div class="safety_importance_warn">
+                                    <div class="safety_importance_title">주의</div>
+                                    <div class="safety_importance_description">백신중요도 1, 백신 부작용 주의</div>
+                                </div>
                             </li>
                             <li>
-                                <input id="vaccine-02" type="radio" name="select-vaccine-type">
-                                <label for="vaccine-02">B형간염</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-03" type="radio" name="select-vaccine-type">
-                                <label for="vaccine-03">DTaP</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-04" type="radio" name="select-vaccine-type">
-                                <label for="vaccine-04">폴리오(IPV)</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-05" type="radio" name="select-vaccine-type">
-                                <label for="vaccine-05">DTaP-IPV</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-06" type="radio" name="select-vaccine-type">
-                                <label for="vaccine-06">DTaP-IPV/Hib</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-07" type="radio" name="select-vaccine-type">
-                                <label for="vaccine-07">Td</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-08" type="radio" name="select-vaccine-type">
-                                <label for="vaccine-08">Tdap</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-09" type="radio" name="select-vaccine-type">
-                                <label for="vaccine-09">MMR</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-10" type="radio" name="select-vaccine-type">
-                                <label for="vaccine-10">일본뇌염</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-11" type="radio" name="select-vaccine-type">
-                                <label for="vaccine-11">수두</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-12" type="radio" name="select-vaccine-type">
-                                <label for="vaccine-12">Hib</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-13" type="radio" name="select-vaccine-type">
-                                <label for="vaccine-13">A형간염</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-14" type="radio" name="select-vaccine-type">
-                                <label for="vaccine-14">폐렴구균</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-15" type="radio" name="select-vaccine-type">
-                                <label for="vaccine-15">HPV</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-16" type="radio" name="select-vaccine-type">
-                                <label for="vaccine-16">장티푸스</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-17" type="radio" name="select-vaccine-type">
-                                <label for="vaccine-17">신증후군출혈열</label>
+                                <div class="safety_importance_good">
+                                    <div class="safety_importance_title">양호</div>
+                                    <div class="safety_importance_description">백신중요도 &lt; 1</div>
+                                </div>
                             </li>
                         </ul>
-                    </div>
-                    <div class="filters">
-                        <div class="filter filter-period">
-                            <h3>위험 구간 (접종 후)</h3>
-                            <div class="input-container">
-                                <div class="selectbox">
-                                    <select name="" id="">
-                                        <option value="1">0</option>
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                    </select>
-                                </div>
-                                <span>~</span>
-                                <div class="selectbox">
-                                    <select name="" id="">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                    </select>
-                                </div>
-                                <div class="selectbox">
-                                    <select name="" id="">
-                                        <option value="1">일</option>
-                                    </select>
-                                </div>
-                                후
-                            </div>
-                        </div>
                         <button class="submit-search">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                 <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
