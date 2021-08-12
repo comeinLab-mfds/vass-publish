@@ -1,5 +1,8 @@
 "use strict";
 
+
+
+
 //*modal 팝업 *//
 var modals = document.getElementsByClassName("myModal");
 var btns = document.getElementsByClassName("modalBtnSubmit");
