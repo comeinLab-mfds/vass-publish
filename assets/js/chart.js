@@ -1,8 +1,12 @@
 "use strict";
 
 google.charts.load('current', {
-  'packages': ['geochart', 'table', 'corechart', 'line']
+  'packages': ['geochart', 'table', 'corechart', 'line', 'bar']
 });
+
+
+
+
 google.charts.setOnLoadCallback(drawChart);
 google.charts.setOnLoadCallback(drawChart_02);
 google.charts.setOnLoadCallback(drawChart_03);
@@ -10,6 +14,8 @@ google.charts.setOnLoadCallback(drawChart_04);
 google.charts.setOnLoadCallback(drawChart_05);
 google.charts.setOnLoadCallback(drawChart_06);
 google.charts.setOnLoadCallback(drawChart_07);
+google.charts.setOnLoadCallback(drawChart_08);
+google.charts.setOnLoadCallback(drawChart_09);
 
 function drawChart() {
   var data = new google.visualization.DataTable();
@@ -539,3 +545,70 @@ function drawChart_07() {
   var chart_07 = new google.visualization.LineChart(document.getElementById('chart_07'));
   chart_07.draw(data, options);
 }
+
+
+function drawChart_08() {
+
+  var data = google.visualization.arrayToDataTable([
+    ['Month', 'LLR', '발생수', 'X'],
+    ['2020년 7월', 2,     5,    7],
+    ['2020년 8월', 3,      6,     8],
+    ['2020년 9월',  4,     8,     10],
+    ['2020년 10월', 1,      3,    6]
+  ]);
+
+  var options = {
+    title : '이상반응 발생 현황 및 위험도',
+    width: '100%',
+    height: 600,
+    hAxis: {
+      title: 'Month',
+      format: 'yyyy년 m월'},
+    vAxes: {
+      0: {title: 'LLR', maxValue: 12, minValue: 0},
+      1: {title: '발생수', maxValue: 12, minValue: 0}
+    },
+    seriesType: 'bars',
+    series: {
+      0: {targetAxisIndex: 0},
+      1: {targetAxisIndex: 1},
+      2: {type: 'line'}}
+  };
+
+  
+  var chart_08 = new google.visualization.ComboChart(document.getElementById('chart_08'));
+  chart_08.draw(data, options);
+} 
+
+
+function drawChart_09() {
+
+  var data = new google.visualization.DataTable();
+  data.addColumn('number', 'date');
+  data.addColumn('number', 'Dogs');
+
+  var data = google.visualization.arrayToDataTable([
+    ['Month', 'Bolivia'],
+    ['2020년 7월',  1],
+    ['2020년 8월',  2],
+    ['2020년 9월',  5],
+    ['2020년 10월',  7]
+  ]);
+
+  var options = {
+    title : '이상반응 관련 백신 중요도',
+    width: '100%',
+    height: 600,
+    hAxis: {
+      title: '시간'
+    },
+    vAxis: {
+      title: '중요도',
+      maxValue: 10, 
+      minValue: 0
+    }
+  };
+
+  var chart_09 = new google.visualization.LineChart(document.getElementById('chart_09'));
+  chart_09.draw(data, options);
+} 
