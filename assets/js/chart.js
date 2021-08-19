@@ -16,6 +16,12 @@ google.charts.setOnLoadCallback(drawChart_06);
 google.charts.setOnLoadCallback(drawChart_07);
 google.charts.setOnLoadCallback(drawChart_08);
 google.charts.setOnLoadCallback(drawChart_09);
+google.charts.setOnLoadCallback(drawChart_10);
+google.charts.setOnLoadCallback(drawChart_11);
+google.charts.setOnLoadCallback(drawChart_12);
+google.charts.setOnLoadCallback(drawChart_13);
+google.charts.setOnLoadCallback(drawChart_14);
+google.charts.setOnLoadCallback(drawChart_15);
 
 function drawChart() {
   var data = new google.visualization.DataTable();
@@ -612,3 +618,189 @@ function drawChart_09() {
   var chart_09 = new google.visualization.LineChart(document.getElementById('chart_09'));
   chart_09.draw(data, options);
 } 
+
+function drawChart_10() {
+  var data = google.visualization.arrayToDataTable([
+    ['백신', '중요도', { role: 'style'}],
+    ['독감', 2.3, '#F51405'],
+    ['MMR', 1.2, '#e88300'],
+    ['HPV', 0.8, '#379e03'],
+    ['수두', 0.5, '#379e03']
+  ]);
+
+  var options = {
+    title: '아나필락시스',
+    titleTextStyle: { 
+      fontSize: 15,
+      bold: 'bold' },
+    width: '100%',
+    height: 400,
+    hAxis: {
+      title: '중요도',
+      minValue: 0,
+      ticks: [0 , 0.5, 1, 1.5, 2, 2.5, 3, 3.5]
+    },
+    vAxis: {
+      title: '백신'
+    },
+    legend: {position: 'none'}
+  };
+
+  var chart_10 = new google.visualization.BarChart(document.getElementById('chart_10'));
+  chart_10.draw(data, options);
+}
+
+function drawChart_11() {
+  var data = google.visualization.arrayToDataTable([
+    ['백신', '중요도', { role: 'style'}],
+    ['HPV', 3, '#F51405'],
+    ['독감', 2.7, '#F51405'],
+    ['MMR', 1.5, '#379e03' ],
+    ['A형간염', 0.3, '#379e03']
+  ]);
+
+  var options = {
+    title: '벨마비',
+    titleTextStyle: { 
+      fontSize: 15,
+      bold: 'bold' },
+    width: '100%',
+    height: 400,
+    hAxis: {
+      title: '중요도',
+      minValue: 0,
+      ticks: [0 , 0.5, 1, 1.5, 2, 2.5, 3, 3.5]
+    },
+    vAxis: {
+      title: '백신'
+    },
+    legend: {position: 'none'}
+  };
+
+  var chart_11 = new google.visualization.BarChart(document.getElementById('chart_11'));
+  chart_11.draw(data, options);
+}
+
+function drawChart_12() {
+  var data = google.visualization.arrayToDataTable([
+    ['백신', '중요도',  { role: 'style'}],
+    ['MMR', 1.8, '#e88300'],
+    ['수두', 1.2, '#e88300'],
+    ['뇌염', 1, '#379e03'],
+    ['독감', 0.8, '#379e03']
+  ]);
+
+  var options = {
+    title: '혈소판감소증',
+    titleTextStyle: { 
+      fontSize: 15,
+      bold: 'bold' },
+    width: '100%',
+    height: 400,
+    hAxis: {
+      title: '중요도',
+      minValue: 0,
+      ticks: [0 , 0.5, 1, 1.5, 2]
+    },
+    vAxis: {
+      title: '백신'
+    },
+    legend: {position: 'none'}
+  };
+
+  var chart_12 = new google.visualization.BarChart(document.getElementById('chart_12'));
+  chart_12.draw(data, options);
+}
+
+function drawChart_13() {
+  var data = google.visualization.arrayToDataTable([
+    ['백신', '중요도',  { role: 'style'}],
+    ['독감', 4.2, '#F51405'],
+    ['A형간염', 3.6, '#F51405'],
+    ['수두', 2.3, '#F51405'],
+    ['MMR', 1.2, '#379e03']
+  ]);
+
+  var options = {
+    title: '발열',
+    titleTextStyle: { 
+      fontSize: 15,
+      bold: 'bold' },
+    width: '100%',
+    height: 400,
+    hAxis: {
+      title: '중요도',
+      minValue: 0,
+      ticks: [0 , 1, 2, 3, 4, 5]
+    },
+    vAxis: {
+      title: '백신'
+    },
+    legend: {position: 'none'}
+  };
+
+  var chart_13 = new google.visualization.BarChart(document.getElementById('chart_13'));
+  chart_13.draw(data, options);
+}
+
+function drawChart_14() {
+  var data = google.visualization.arrayToDataTable([
+    ['백신', '중요도',  { role: 'style'}],
+    ['MMR', 1.8, '#e88300'],
+    ['수두', 1.2, '#e88300'],
+    ['뇌염', 1, '#379e03'],
+    ['독감', 0.8, '#379e03']
+  ]);
+
+  var options = {
+    title: '길랑,바레 증후군',
+    titleTextStyle: { 
+      fontSize: 15,
+      bold: 'bold' },
+    width: '100%',
+    height: 400,
+    hAxis: {
+      title: '중요도',
+      minValue: 0,
+      ticks: [0 , 0.5, 1, 1.5, 2]
+    },
+    vAxis: {
+      title: '백신'
+    },
+    legend: {position: 'none'}
+  };
+
+  var chart_14 = new google.visualization.BarChart(document.getElementById('chart_14'));
+  chart_14.draw(data, options);
+}
+
+function drawChart_15() {
+  var data = google.visualization.arrayToDataTable([
+    ['백신', '중요도',  { role: 'style'}],
+    ['MMR', 1.8, 'color : #e88300'],
+    ['수두', 1.2, '#e88300'],
+    ['뇌염', 1, '#379e03'],
+    ['독감', 0.8, '#379e03']
+  ]);
+
+  var options = {
+    title: '발진',
+    titleTextStyle: { 
+      fontSize: 15,
+      bold: 'bold' },
+    width: '100%',
+    height: 400,
+    hAxis: {
+      title: '중요도',
+      minValue: 0,
+      ticks: [0 , 0.5, 1, 1.5, 2]
+    },
+    vAxis: {
+      title: '백신'
+    },
+    legend: {position: 'none'}
+  };
+
+  var chart_15 = new google.visualization.BarChart(document.getElementById('chart_15'));
+  chart_15.draw(data, options);
+}
