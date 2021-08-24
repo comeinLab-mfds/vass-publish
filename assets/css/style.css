@@ -1024,6 +1024,11 @@ input[type="radio"]:checked + label {
   margin: 2rem 1rem 1rem 1rem;
 }
 
+.safety_vaccine_select,
+.filter-vaccine-type {
+  display: flex;
+}
+
 /* line 599, src/assets/css/style.scss */
 .result-view {
   flex: 1 1 auto;
@@ -1058,6 +1063,14 @@ input[type="radio"]:checked + label {
   display: flex;
 }
 
+.safety_reaction_chart {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
 .safety_chart {
   display: flex;
   flex: 1 1 auto;
@@ -1067,10 +1080,14 @@ input[type="radio"]:checked + label {
 
 .safety_info_chart {
   display: flex;
-  flex-direction: column;
 }
 
 .safety_chart_group {
+  display: flex;
+  width: 100%;
+}
+
+.safety_info_chart_select {
   display: flex;
 }
 
@@ -1500,9 +1517,8 @@ input[type="checkbox"]:checked + label span {
 .input-title {
   flex: 0 0 120px;
   color: slategray;
-  font-family: "Comfortaa", cursive;
-  font-family: "NanumSquare", sans-serif;
-  font-size: 14px;
+  font-family: Comfortaa, "NanumSquare", sans-serif;
+  font-size: 13px;
   margin-bottom: 5px;
 }
 

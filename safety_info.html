@@ -102,127 +102,118 @@
                 <h1>실마리정보</h1>
             </div>
             <div class="content-view edit">
-                <div class="row safety_info_date">
-                    <div class="input-title">
-                        분석기간
+                <div class="row">
+                    <div class="input-title">분석기간</div>
+                    <div class="input-container">
+                        <input type="text" id="ageStartYear_02" class="datepicker_ym" autocomplete="false">
+                        <span>~</span>
+                        <input type="text" id="ageEndYear_02" class="datepicker_ym" autocomplete="false">
                     </div>
-                    <div class="safety_date">
-                        <div class="filter filter-period filter-data">
-                            <input type="text" id="ageStartYear_02" class="datepicker_ym" autocomplete="false">
-                            <span>~</span>
-                            <input type="text" id="ageEndYear_02" class="datepicker_ym" autocomplete="false">
+                </div>
+                <div class="row">
+                    <div class="safety_info_select">
+                        <div class="safety_vaccine_select">
+                            <div class="input-title">vaccine</div>
+                            <ul class="safety-vaccine-type">
+                                <li>
+                                    <input id="vaccine-01" type="radio" name="safety-vaccine-select">
+                                    <label for="vaccine-01">HPV</label>
+                                </li>
+                                <li>
+                                    <input id="vaccine-02" type="radio" name="safety-vaccine-select">
+                                    <label for="vaccine-02">독감</label>
+                                </li>
+                                <li>
+                                    <input id="vaccine-03" type="radio" name="safety-vaccine-select">
+                                    <label for="vaccine-03">수두</label>
+                                </li>
+                                <li>
+                                    <input id="vaccine-04" type="radio" name="safety-vaccine-select">
+                                    <label for="vaccine-04">A형간염</label>
+                                </li>
+                                <li>
+                                    <input id="vaccine-05" type="radio" name="safety-vaccine-select">
+                                    <label for="vaccine-05">B형간염</label>
+                                </li>
+                                <li>
+                                    <input id="vaccine-06" type="radio" name="safety-vaccine-select">
+                                    <label for="vaccine-06">Tdap</label>
+                                </li>
+                                <li>
+                                    <input id="vaccine-07" type="radio" name="safety-vaccine-select">
+                                    <label for="vaccine-07">일본뇌염</label>
+                                </li>
+                                <li>
+                                    <input id="vaccine-08" type="radio" name="safety-vaccine-select">
+                                    <label for="vaccine-08">DTaP</label>
+                                </li>
+                                <li>
+                                    <input id="vaccine-09" type="radio" name="safety-vaccine-select">
+                                    <label for="vaccine-09">Hib</label>
+                                </li>
+                                <li>
+                                    <input id="vaccine-10" type="radio" name="safety-vaccine-select">
+                                    <label for="vaccine-10">폴리오</label>
+                                </li>
+                                <li>
+                                    <input id="vaccine-11" type="radio" name="safety-vaccine-select">
+                                    <label for="vaccine-11">BCG</label>
+                                </li>
+                                <li>
+                                    <input id="vaccine-12" type="radio" name="safety-vaccine-select">
+                                    <label for="vaccine-12">폐렴구균</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="filter-vaccine-type">
+                            <div class="input-title">이상반응</div>
+                            <ul class="filter-vaccine-response">
+                                <li>
+                                    <input id="response-01" type="radio" name="vaccine-select-response">
+                                    <label for="response-01">발열</label>
+                                </li>
+                                <li>
+                                    <input id="response-02" type="radio" name="vaccine-select-response">
+                                    <label for="response-02">아나필락시스</label>
+                                </li>
+                                <li>
+                                    <input id="response-03" type="radio" name="vaccine-select-response">
+                                    <label for="response-03">뇌염</label>
+                                </li>
+                                <li>
+                                    <input id="response-04" type="radio" name="vaccine-select-response">
+                                    <label for="response-04">혈소판 감소성 자반증</label>
+                                </li>
+                                <li>
+                                    <input id="response-05" type="radio" name="vaccine-select-response">
+                                    <label for="response-05">무과립구증</label>
+                                </li>
+                                <li>
+                                    <input id="response-06" type="radio" name="vaccine-select-response">
+                                    <label for="response-06">벨마비</label>
+                                </li>
+                                <li>
+                                    <input id="response-07" type="radio" name="vaccine-select-response">
+                                    <label for="response-07">길랑.바레</label>
+                                </li>
+                                <li>
+                                    <input id="response-08" type="radio" name="vaccine-select-response">
+                                    <label for="response-08">말초신경증</label>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="vaccine_response">
-                    <div class="safety-vaccine-type">
-                        <div class="input-title">vaccine</div>
-                        <ul>
-                            <li>
-                                <input id="vaccine-01" type="radio" name="safety-vaccine-select">
-                                <label for="vaccine-01">HPV</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-02" type="radio" name="safety-vaccine-select">
-                                <label for="vaccine-02">독감</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-03" type="radio" name="safety-vaccine-select">
-                                <label for="vaccine-03">수두</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-04" type="radio" name="safety-vaccine-select">
-                                <label for="vaccine-04">A형간염</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-05" type="radio" name="safety-vaccine-select">
-                                <label for="vaccine-05">B형간염</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-06" type="radio" name="safety-vaccine-select">
-                                <label for="vaccine-06">Tdap</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-07" type="radio" name="safety-vaccine-select">
-                                <label for="vaccine-07">일본뇌염</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-08" type="radio" name="safety-vaccine-select">
-                                <label for="vaccine-08">DTaP</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-09" type="radio" name="safety-vaccine-select">
-                                <label for="vaccine-09">Hib</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-10" type="radio" name="safety-vaccine-select">
-                                <label for="vaccine-10">폴리오</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-11" type="radio" name="safety-vaccine-select">
-                                <label for="vaccine-11">BCG</label>
-                            </li>
-                            <li>
-                                <input id="vaccine-12" type="radio" name="safety-vaccine-select">
-                                <label for="vaccine-12">폐렴구균</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="filter-vaccine-response">
-                        <div class="input-title">이상반응</div>
-                        <ul>
-                            <li>
-                                <input id="response-01" type="radio" name="vaccine-select-response">
-                                <label for="response-01">발열</label>
-                            </li>
-                            <li>
-                                <input id="response-02" type="radio" name="vaccine-select-response">
-                                <label for="response-02">아나필락시스</label>
-                            </li>
-                            <li>
-                                <input id="response-03" type="radio" name="vaccine-select-response">
-                                <label for="response-03">뇌염</label>
-                            </li>
-                            <li>
-                                <input id="response-04" type="radio" name="vaccine-select-response">
-                                <label for="response-04">혈소판 감소성 자반증</label>
-                            </li>
-                            <li>
-                                <input id="response-05" type="radio" name="vaccine-select-response">
-                                <label for="response-05">무과립구증</label>
-                            </li>
-                            <li>
-                                <input id="response-06" type="radio" name="vaccine-select-response">
-                                <label for="response-06">벨마비</label>
-                            </li>
-                            <li>
-                                <input id="response-07" type="radio" name="vaccine-select-response">
-                                <label for="response-07">길랑.바레</label>
-                            </li>
-                            <li>
-                                <input id="response-08" type="radio" name="vaccine-select-response">
-                                <label for="response-08">말초신경증</label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="safety_info_chart">
+                <div class="row safety_reaction_chart">
                     <div class="safety_chart_group">
-                        <div class="safety_chart">
-                            <div class="result-view importance-result-view">
-                                <div id="chart_08" class="chart" ></div>
-                            </div>
+                        <div class="chart-container">
+                            <div id="chart_08" class="chart"></div>
+                        </div>
+                        <div class="chart-container">
+                            <div id="chart_09" class="chart" ></div>
                         </div>
                     </div>
-                    <div class="safety_chart_group">
-                        <div class="safety_chart">
-                            <div class="result-view importance-result-view">
-                                <div id="chart_09" class="chart" ></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
+                </div> 
             </div>
         </div>
     </main>
