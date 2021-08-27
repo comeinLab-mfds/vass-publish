@@ -1044,51 +1044,41 @@ input[type="radio"]:checked + label {
 
 /*실마리정보*/
 
-.vaccine_response {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  padding: 1rem;
-  background-color: white;
-  margin: 0 auto 0.5rem;
-  border-radius: 0.5rem;
-}
-
 .safety-vaccine-type {
   display: flex;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
-.filter-vaccine-response {
-  display: flex;
-}
-
-.safety_reaction_chart {
+.safety_info_filter {
+  background-color: white;
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-top: 0.5rem;
+  padding: 2rem 1rem 1rem;
 }
 
-.safety_chart {
-  display: flex;
-  flex: 1 1 auto;
-  width: 100%;
-  height: 100%;
-}
-
-.safety_info_chart {
+.vaccine-response-type {
   display: flex;
 }
 
+.filter-vaccine-response input[type="radio"] + label {
+  max-width: none !important;
+}
+
+/*실마리정보  chart*/
 .safety_chart_group {
   display: flex;
   width: 100%;
 }
 
-.safety_info_chart_select {
+.safety_reaction_chart {
+  background-color: white;
+  border-radius: 0.5rem;
   display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem 1rem;
+  margin-top: 1rem;
 }
 
 /* ============================================================
@@ -1747,23 +1737,18 @@ input[type="radio"] + label::before {
     margin: 0.5rem 0;
   }
 
-  .safety-vaccine-type ul {
+  .safety_vaccine_select,
+  .vaccine-response-type {
     display: flex;
     flex-wrap: wrap;
   }
 
-  .safety-vaccine-type ul li,
-  .filter-vaccine-response ul li {
+  .safety-vaccine-type li {
     margin-bottom: 0.5rem;
   }
 
-  .filter-vaccine-response ul {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .safety_info_chart {
-    flex-direction: column;
+  .filter-vaccine-response li {
+    margin-bottom: 0.5rem;
   }
 }
 

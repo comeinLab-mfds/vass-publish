@@ -567,6 +567,7 @@ function drawChart_08() {
     title : '이상반응 발생 현황 및 위험도',
     width: '100%',
     height: 650,
+    legend: {position: 'none'},
     hAxis: {
       title: 'Month',
       format: 'yyyy년 m월'},
@@ -612,7 +613,8 @@ function drawChart_09() {
       title: '중요도',
       maxValue: 10, 
       minValue: 0
-    }
+    },
+    legend: {position: 'none'}
   };
 
   var chart_09 = new google.visualization.LineChart(document.getElementById('chart_09'));
