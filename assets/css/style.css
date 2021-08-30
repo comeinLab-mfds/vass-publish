@@ -1067,6 +1067,11 @@ input[type="radio"]:checked + label {
 }
 
 /*실마리정보  chart*/
+
+.safety_reaction_chart_group {
+  display: inline-flex;
+}
+
 .safety_chart_group {
   display: flex;
   width: 100%;
@@ -1749,6 +1754,11 @@ input[type="radio"] + label::before {
 
   .filter-vaccine-response li {
     margin-bottom: 0.5rem;
+  }
+
+  .safety_reaction_chart_group{
+    display: flex;
+    flex-direction: column;
   }
 }
 
