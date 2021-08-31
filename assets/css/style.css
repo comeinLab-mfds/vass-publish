@@ -984,7 +984,7 @@ input[type="radio"]:checked + label {
 /*안전성*/
 
 .safety_importance {
-  display: flex;
+  margin-top: 1rem;
 }
 
 .safety_importance_danger,
@@ -1066,6 +1066,14 @@ input[type="radio"]:checked + label {
   max-width: none !important;
 }
 
+.safety_allergy_importance {
+  background-color: white;
+  border-radius: 0.5rem;
+  display: grid;
+  flex-direction: column;
+  padding: 2rem 1rem 1rem;
+}
+
 /*실마리정보  chart*/
 
 .safety_reaction_chart_group {
@@ -1084,6 +1092,20 @@ input[type="radio"]:checked + label {
   flex-direction: column;
   padding: 2rem 1rem 1rem;
   margin-top: 1rem;
+}
+
+.safety_chart {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2rem 1rem 1rem;
+  margin-top: 1rem;
+}
+
+.safety_chart_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, auto));
+  gap: 0.5rem;
+  grid-auto-rows: auto;
 }
 
 /* ============================================================
@@ -1756,9 +1778,23 @@ input[type="radio"] + label::before {
     margin-bottom: 0.5rem;
   }
 
-  .safety_reaction_chart_group{
+  .safety_reaction_chart_group {
     display: flex;
     flex-direction: column;
+  }
+
+  .safety_chart_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .safety_importance ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .safety_importance ul li {
+    margin-bottom: 0.5rem;
   }
 }
 
