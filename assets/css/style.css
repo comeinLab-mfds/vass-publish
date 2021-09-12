@@ -1074,7 +1074,20 @@ input[type="radio"]:checked + label {
   padding: 2rem 1rem 1rem;
 }
 
+.safety_importance_description {
+  display: flex;
+  align-items: center;
+}
+
+.safety_importance_description span {
+  font-size: 18px;
+}
+
 /*실마리정보  chart*/
+
+.safety_title {
+  font-size: 14px !important;
+}
 
 .safety_reaction_chart_group {
   display: inline-flex;
