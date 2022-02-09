@@ -921,7 +921,7 @@ input[type="radio"]:checked + label {
   margin: auto;
   padding: 1rem 1rem 2rem 1rem;
   border: 1px solid #888;
-  width: 40vw;
+  width: 50vw;
   height: auto;
 }
 
@@ -1081,6 +1081,23 @@ input[type="radio"]:checked + label {
 
 .safety_importance_description span {
   font-size: 18px;
+}
+
+.chart-btn{
+  display: flex;
+  flex-direction: column;
+}
+
+.morebtn {
+  padding:0.5rem 1rem; 
+  background: #cdcdcd;
+  color: white;
+  border-radius: .3rem;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 /*실마리정보  chart*/

@@ -555,37 +555,44 @@ function drawChart_07() {
 
 function drawChart_08() {
 
-  var data = google.visualization.arrayToDataTable([
-    ['Month', 'LLR', '발생수', 'X'],
-    ['2020년 7월', 2,     5,    7],
-    ['2020년 8월', 3,      6,     8],
-    ['2020년 9월',  4,     8,     10],
-    ['2020년 10월', 1,      3,    6]
-  ]);
 
-  var options = {
-    title : '이상반응 발생 현황 및 위험도',
-    width: '100%',
-    height: 650,
-    legend: {position: 'none'},
-    hAxis: {
-      title: 'Month',
-      format: 'yyyy년 m월'},
-    vAxes: {
-      0: {title: 'LLR', maxValue: 12, minValue: 0},
-      1: {title: '발생수', maxValue: 12, minValue: 0}
-    },
-    seriesType: 'bars',
-    series: {
-      0: {targetAxisIndex: 0},
-      1: {targetAxisIndex: 1},
-      2: {type: 'line'}}
-  };
+  var data = new google.visualization.DataTable();
+      data.addColumn('number', '시간(week)');
+      data.addColumn('number', 'LLR');
 
-  
-  var chart_08 = new google.visualization.ComboChart(document.getElementById('chart_08'));
+      data.addRows([
+        [1,  -8.5],[2, -8.2],[3, -7.8],[4, -8.5],[5, -8.1],[6, -8.8],[7, -9.0],[8, -8.6],
+        [9,  -7.8],[10,  -7.5],[11, -7.2],[12, -6.8],[13, -7.2],[14, -7.4],[15, -7.9],[16, -7.2],[17, -6.8],
+        [18,  -5.2],[19,  -4.8],[20, -4.3],[21, -3.8],[22, -3.2],[23, -3.4],[24, -3.9],[25, -3.2],[26, -2.8],
+        [27,  -2.6],[28,  -2.0],[29, -1.5],[30, -1.8],[31, -1.9],[32, -1.4],[33, -0.9],[34, -0.5],[35, -0.3]
+      ]);
+
+      var options = {
+        title: '이상반응 발생 현황 및 위험도',
+        width: '100%',
+        height: 650,
+        vAxis: {
+          title: 'LLR',
+          baseline: 2,
+          baselineColor: 'red',
+          maxValue: 10,
+          minValue: -10,
+          ticks: [-10,-5, 0, 5, 10]
+        },
+        hAxis: {
+          title: '시간(week)',
+          gridlines: {
+            count: 0
+          }
+        },
+        legend: {
+          position: 'top'
+        }
+      };
+
+  var chart_08 = new google.visualization.LineChart(document.getElementById('chart_08'));
   chart_08.draw(data, options);
-} 
+}
 
 
 function drawChart_09() {
@@ -595,31 +602,40 @@ function drawChart_09() {
   data.addColumn('number', 'Dogs');
 
   var data = google.visualization.arrayToDataTable([
-    ['Month', 'Bolivia'],
-    ['2020년 7월',  1],
-    ['2020년 8월',  2],
-    ['2020년 9월',  5],
-    ['2020년 10월',  7]
+      ['Month', '중요도'],
+      ['2020년 7월', 0.8],
+      ['2020년 8월', 1.2],
+      ['2020년 9월', 0.9],
+      ['2020년 10월', 2]
   ]);
 
   var options = {
-    title : '이상반응 관련 백신 중요도',
-    width: '100%',
-    height: 650,
-    hAxis: {
-      title: '시간'
-    },
-    vAxis: {
-      title: '중요도',
-      maxValue: 10, 
-      minValue: 0
-    },
-    legend: {position: 'none'}
+      title: '이상반응 관련 백신 중요도',
+      width: '100%',
+      height: 650,
+      colors: ["#698caf"],
+      hAxis: {
+          title: '월'
+      },
+      vAxis: {
+          title: '중요도',
+          maxValue: 5,
+          minValue: 0
+      },
+      legend: {
+          position: 'top'
+      },
+      pointSize: 5,
+      animation: {
+          "startup": true,
+          duration: 1000,
+          easing: 'linea'
+      }
   };
 
-  var chart_09 = new google.visualization.LineChart(document.getElementById('chart_09'));
+  var chart_09 = new google.visualization.AreaChart(document.getElementById('chart_09'));
   chart_09.draw(data, options);
-} 
+}
 
 function drawChart_10() {
   var data = google.visualization.arrayToDataTable([
