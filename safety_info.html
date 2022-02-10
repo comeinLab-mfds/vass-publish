@@ -205,7 +205,33 @@
                 <div class="safety_reaction_chart">
                     <div class="safety_reaction_chart_group">
                         <div class="chart-container chart-btn">
-                          <div class="morebtn">더보기</div>
+                          <div id="myBtn" class="morebtn modalBtnSubmit">더보기</div>
+                            <div id="myModal" class="myModal">
+                                <div class="modal-table">
+                                    <div class="serch_input_modal">
+                                        <input type="text">
+                                        <button class="btn-submit" href="#">Search</button>
+                                    </div>
+                                    <span class="modalClose">&times;</span>
+                                    <table id="input-modal-table" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th><input type="checkbox" id="checkb2" name="checkb"><label for="checkb2"><span></span></label></th>
+                                            <th>ICD code</th>
+                                            <th>Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" id="checkb3" name="checkb"><label for="checkb3"><span></span></label></td>
+                                        <td><span>C46.</span>
+                                        <td><span>Kaposi sarcoma of palate</span></td>
+                                    </tr>
+                                    </tbody>
+                                    </table>
+                                    <button id="myBtn" class="btn-submit btn-submit-modal"   onclick="location.href='operationalDefinition_add.html'">선택추가</button>
+                                </div>
+                            </div>
                           <div id="chart_08" class="chart"></div>
                         </div>
                         <div class="chart-container">
