@@ -1085,7 +1085,8 @@ input[type="radio"]:checked + label {
 
 .chart-btn{
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  align-items:flex-start;
 }
 
 .morebtn {
@@ -1099,6 +1100,87 @@ input[type="radio"]:checked + label {
   -moz-user-select: none;
   -ms-user-select: none;
 }
+
+
+
+.safety_info-modal-contain{
+width:100%;
+padding:1rem;
+}
+
+.safety-modal-table{
+width:100%;
+margin-top:2rem;
+border-collapse:separate;
+}
+
+.safety-modal-table th,td {
+ border-bottom: 1px solid #ddd;
+ border-collapse:none;
+}
+
+.safety-modal-table tr{
+text-align:center;
+}
+
+.safety-modal-table>thead>tr>th,
+.safety-modal-table>tbody>tr>th{
+text-align:center;
+}
+
+.safety-modal-table>tbody>td{
+vertical-align:none !important;
+}
+
+.safety-modal-table thead th:nth-child(1) {
+  width: 20%;
+}
+
+.safety-modal-table thead th:nth-child(2) {
+  width: 20%;
+}
+
+.safety-modal-table thead th:nth-child(3) {
+  width: 30%;
+}
+
+.safety-modal-table thead th:nth-child(4) {
+  width: 20%;
+}
+
+.safety-modal-table thead th:nth-child(5) {
+  width: 10%;
+}
+
+
+.safety-modal-table tbody td:nth-child(2) {
+  width: 20%;
+}
+
+.safety-modal-table tbody td:nth-child(3) {
+  width: 30%;
+}
+
+.safety-modal-table tbody td:nth-child(4) {
+  width: 20%;
+}
+
+.safety-modal-table tbody td:nth-child(5) {
+  width: 10%;
+}
+
+
+
+.safety-tabale-br{
+display:flex;
+flex-direction:column;}
+
+.table-bottom-foot{
+margin : 1rem 0;
+font-size: 12px;
+}
+
+
 
 /*실마리정보  chart*/
 

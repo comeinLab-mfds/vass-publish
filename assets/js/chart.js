@@ -577,7 +577,7 @@ function drawChart_08() {
           baselineColor: 'red',
           maxValue: 10,
           minValue: -10,
-          ticks: [-10,-5, 0, 5, 10]
+
         },
         hAxis: {
           title: '시간(week)',
