@@ -1117,7 +1117,7 @@ border-collapse:separate;
 border-bottom:1px solid #ddd;
 border-radius:0;
 font-weight:bold;
-color:slategray;}
+color:#999;}
 
 .safety-modal-table-th li:nth-of-type(1){
 width:15%
@@ -1170,7 +1170,10 @@ width:15%
 
 .safety-tabale-br{
 display:flex;
-flex-direction:column;}
+flex-direction:column;
+font-weight: 700;
+text-align: center;
+}
 
 .table-bottom-foot{
 margin : 1rem 0;
