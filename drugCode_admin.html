@@ -88,7 +88,7 @@
                 </ul>
                 <h3 class="aside-title">조작적 정의</h3>
                 <ul>
-                    <li><a href="operationalDefinition_list.html"  class="active">목록리스트</a></li>
+                    <li><a href="operationalDefinition_list.html" >목록리스트</a></li>
                     <li><a href="operationalDefinition_add.html">조작적정의 생성</a></li>
                 </ul>
                 <h3 class="aside-title">연구디자인</h3>
@@ -98,7 +98,7 @@
                 </ul>
                 <h3 class="aside-title">관리자</h3>
                 <ul>
-                    <li><a href="drugCode_admin.html">약물 코드 관리</a></li>
+                    <li><a href="drugCode_admin.html"  class="active">약물 코드 관리</a></li>
                     <li><a href="">조작적 추출관리</a></li>
                     <li><a href="">연구설계 추출관리</a></li>
                     <li><a href="">결과대시보드 관리</a></li>
@@ -108,59 +108,57 @@
         </aside>
         <div class="content">
             <div class="content-title">
-                <h1>조작적 정의</h1>
-                <div class="selectbox">
+                <h1 >약물 코드 관리</h1>
+            </div>
+            <div class="drugCode_admin_content">
+                <div class="drugCode_admin_title">EDI 약물 코드</div>
+                <div class="drugCode_admin_btn">
+                    <button type="button" class="drugCode_admin_plusBtn">추가</button>
+                    <bitton type="button" id="myBtn" class="drugCode_admin_uploadBtn modalBtnSubmit">파일업로드
+                        <div id="myModal" class="myModal">
+                            <div class="modal-table">
+                                <div class="safety_info-modal-contain">
+                                  <span class="modalClose">&times;</span>
+                                  <input type="file" class="drugCode_fileUpload" accept=".doc">
+                                </div>
+                            </div>
+                        </div>
+                    </bitton>
+                </div>
+            </div>
+            <div class="drugCOde_select">
+                <div class="drugCode_selectbox">
                     <select name="" id="">
-                        <option value="HOI">없음</option>
-                        <option value="HOI">HOI</option>
-                        <option value="VOI">VOI</option>
-                        <option value="Condition">Condition</option>
-                        <option value="Drug Exposure">Drug Exposure</option>
+                        <option value="없음">버전선택</option>
+                        <option value="1">1</option>
                     </select>
                 </div>
-                <div class="serch_input">
-                    <input type="text">
-                    <button class="btn-submit" href="#">Search</button>
-                </div>
-                <button id="myBtn" class="modalBtnSubmit">Create</button>
-                    <div id="myModal" class="myModal">
-                        <div class="myBtn_modal-content">
-                            <h1>조작적정의 생성</h1>
-                            <span class="modalClose">&times;</span>
-                            <table class="modal-button-content">
-                                <tbody>
-                                <tr>
-                                    <td><button type="button" onclick="location.href='operationalDefinition_add.html'">HOI</a></td>
-                                    <td><button type="button" onclick="location.href='operationalDefinition_add_01.html'">VOI</a></li></td>
-                                </tr>
-                                <tr>
-                                <td><button type="button" onclick="location.href='operationalDefinition_add_02.html'">Condition</a></td>
-                                <td><button type="button" onclick="location.href='operationalDefinition_add_03.html'">Drug Exposure</a></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
             </div>
-            <div class="content-view list operational-definition-list">
+            <div class="content-view list">
                 <div class="table">
-                    <ul class="row th">
-                        <li>count</li>
-                        <li>Category</li>
-                        <li>Created Date</li>
-                        <li>Created User</li>
-                        <li>Descripton</li>
-                        <li>Query</li>
-                        <li>Extraction date</li>
+                    <ul class="row th drugCode_admin_table">
+                        <li>ID</li>
+                        <li>코드</li>
+                        <li class="drugCode_table_br">코드이름 <span>(주성분 명칭)</li>
+                        <li>제형</li>
+                        <li>분류번호</li>
+                        <li>투여</li>
+                        <li>함량</li>
+                        <li>단위</li>
+                        <li>버전</li>
+                        <li>삭제</li>
                     </ul>
-                    <ul class="row" onclick="location.href='operationalDefinition_edit.html'">
-                        <li>1</li>
-                        <li>HOI</li>
-                        <li>2020-10-01</li>
-                        <li>hong1234</li>
-                        <li>seizure 진단 받은 eventseizure 진단 받은 event</li>
-                        <li>select * sdfsdf</li>
-                        <li>2020-10-31</li>
+                    <ul class="row drugCode_admin_table" >
+                        <li>ID</li>
+                        <li>10001AGN</li>
+                        <li>상황균사체엑스</li>
+                        <li>GN</li>
+                        <li>421</li>
+                        <li>내복</li>
+                        <li>1.1</li>
+                        <li>g</li>
+                        <li>7</li>
+                        <li><button class="drug_admin_btn">삭제</button></li>
                     </ul>
                 </div>
             </div>

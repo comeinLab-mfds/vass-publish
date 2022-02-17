@@ -379,7 +379,7 @@ main {
 
 /* line 350, src/assets/css/style.scss */
 .table .row.th li {
-  font-family: "Comfortaa", cursive;
+  font-family: Comfortaa, "NanumSquare", sans-serif;
   color: slategray;
   font-size: 11px;
 }
@@ -1769,6 +1769,92 @@ input[type="radio"] + label::before {
   color: white;
   border: 0;
 }
+
+/*========================약물관리코드===========================*/
+
+.drugCode_admin_content{
+width:100%;
+padding: 1rem;
+display:flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.drugCode_admin_btn{
+display:flex;
+align-items: center;
+}
+
+.drugCode_admin_uploadBtn{
+background-color: rgba(0,0,0,0.1);
+padding:0.6rem 1.6rem;
+border-radius: 0.3rem;
+cursor:pointer;
+}
+
+.drugCode_admin_title{
+font-size:1.7rem;
+font-family:Comfortaa, "NanumSquare", sans-serif;
+color:slategray;
+}
+
+.drugCode_version_select{
+width:100%;}
+
+.drugCOde_select{
+width:100%;
+padding: 1rem;
+}
+
+.drugCode_admin_table{
+width:100%;
+}
+
+.drugCode_table_br{
+display:flex;
+flex-direction:column;
+}
+
+.drugCode_admin_table li:nth-of-type(1){
+width: 10%;
+}
+
+.drugCode_admin_table li:nth-of-type(2){
+width: 10%;
+}
+
+.drugCode_admin_table li:nth-of-type(3){
+width: 20%;
+}
+.drugCode_admin_table li:nth-of-type(4){
+width: 10%;
+}
+
+.drugCode_admin_table li:nth-of-type(5){
+width: 5%;
+}
+
+.drugCode_admin_table li:nth-of-type(6){
+width: 5%;
+}
+
+.drugCode_admin_table li:nth-of-type(7){
+width: 5%;
+}
+
+.drugCode_admin_table li:nth-of-type(8){
+width: 10%;
+}
+
+.drugCode_admin_table li:nth-of-type(9){
+width: 10%;
+}
+
+.drugCode_admin_table li:nth-of-type(10){
+width: 15%;
+}
+
+
 
 @media screen and (max-width: 768px) {
   /* line 1178, src/assets/css/style.scss */

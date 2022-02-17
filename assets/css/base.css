@@ -635,7 +635,7 @@ select::-ms-expand {
     display: none; }
 
 /* line 674, src/assets/css/base.scss */
-.selectbox::before {
+/*.selectbox::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -648,7 +648,7 @@ select::-ms-expand {
     display: inline-block;
     padding: 3px;
     transform: rotate(45deg);
-    -webkit-transform: rotate(45deg); }
+    -webkit-transform: rotate(45deg); }*/
 
 /*table*/
 /* line 691, src/assets/css/base.scss */
