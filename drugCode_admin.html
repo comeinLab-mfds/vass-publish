@@ -99,6 +99,7 @@
                 <h3 class="aside-title">관리자</h3>
                 <ul>
                     <li><a href="drugCode_admin.html"  class="active">약물 코드 관리</a></li>
+                    <li><a href="diagnosisCode_admmin.html" >진단 코드 관리</a></li>
                     <li><a href="">조작적 추출관리</a></li>
                     <li><a href="">연구설계 추출관리</a></li>
                     <li><a href="">결과대시보드 관리</a></li>
@@ -111,27 +112,61 @@
                 <h1 >약물 코드 관리</h1>
             </div>
             <div class="drugCode_admin_content">
-                <div class="drugCode_admin_title">EDI 약물 코드</div>
-                <div class="drugCode_admin_btn">
-                    <button type="button" class="drugCode_admin_plusBtn">추가</button>
-                    <bitton type="button" id="myBtn" class="drugCode_admin_uploadBtn modalBtnSubmit">파일업로드
-                        <div id="myModal" class="myModal">
-                            <div class="modal-table">
-                                <div class="safety_info-modal-contain">
-                                  <span class="modalClose">&times;</span>
-                                  <input type="file" class="drugCode_fileUpload" accept=".doc">
-                                </div>
-                            </div>
-                        </div>
-                    </bitton>
-                </div>
-            </div>
-            <div class="drugCOde_select">
+                <div class="drugCode_admin_version">
+                    <div class="drugCode_admin_title">EDI 약물 코드</div>
+                    <div class="drugCOde_select">
                 <div class="drugCode_selectbox">
                     <select name="" id="">
                         <option value="없음">버전선택</option>
                         <option value="1">1</option>
                     </select>
+                </div>
+            </div>
+                </div>
+                <div class="drugCode_admin_btn">
+                    <button type="button" id="myBtn" class="drugCode_admin_plusBtn modalBtnSubmit">추가</button>
+                        <div id="myModal" class="myModal">
+                            <div class="modal-table drugCode_plusTable_modal">
+                                <div class="drugCode-modal-contain">
+                                  <span class="modalClose">&times;</span>
+                                  <div class="drugCode_plusTable">
+                                      <div class="table admin_plusTable_table">
+                                          <ul class="row th drugCode_plusTable_th">
+                                              <li>Code</li>
+                                              <li>주성분 명칭</li>
+                                              <li>제형</li>
+                                              <li>분류 번호</li>
+                                              <li>투여</li>
+                                              <li>함량</li>
+                                              <li>단위</li>
+                                          </ul>
+                                          <ul class="row drugCode_plusTable_td">
+                                              <li class="admin_plus_input"><input type="text"></li>
+                                              <li class="admin_plus_input"><input type="text"></li>
+                                              <li class="admin_plus_input"><input type="text"></li>
+                                              <li class="admin_plus_input"><input type="text"></li>
+                                              <li class="admin_plus_input"><input type="text"></li>
+                                              <li class="admin_plus_input"><input type="text"></li>
+                                              <li class="admin_plus_input"><input type="text"></li>
+                                          </ul>
+                                      </div>
+                                      <button type="button" class="drugCode_plusbtn">추가</button>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    <button type="button" id="myBtn" class="drugCode_admin_uploadBtn modalBtnSubmit">파일업로드</button>
+                        <div id="myModal" class="myModal">
+                            <div class="modal-table fileUpload-modal">
+                                <div class="fileUpload-modal-contain">
+                                    <span class="modalClose">&times;</span>
+                                    <div class="drugCode_fileUpload">
+                                        <input type="file" accept=".doc">
+                                        <button type="button" class="fileUploadBtn">업로드</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
             <div class="content-view list">
@@ -148,7 +183,7 @@
                         <li>버전</li>
                         <li>삭제</li>
                     </ul>
-                    <ul class="row drugCode_admin_table" >
+                    <ul id="myBtn" class="row drugCode_admin_table modalBtnSubmit" >
                         <li>ID</li>
                         <li>10001AGN</li>
                         <li>상황균사체엑스</li>
@@ -160,6 +195,36 @@
                         <li>7</li>
                         <li><button class="drug_admin_btn">삭제</button></li>
                     </ul>
+                    <div id="myModal" class="myModal">
+                            <div class="modal-table drugCode_plusTable_modal">
+                                <div class="drugCode-modal-contain">
+                                  <span class="modalClose">&times;</span>
+                                  <div class="drugCode_plusTable">
+                                      <div class="table drugCode_plusTable_table">
+                                          <ul class="row th drugCode_plusTable_th">
+                                              <li>Code</li>
+                                              <li>주성분 명칭</li>
+                                              <li>제형</li>
+                                              <li>분류 번호</li>
+                                              <li>투여</li>
+                                              <li>함량</li>
+                                              <li>단위</li>
+                                          </ul>
+                                          <ul class="row drugCode_plusTable_td">
+                                              <li>100101AGN</li>
+                                              <li>상황균사체엑스</li>
+                                              <li>GN</li>
+                                              <li>421</li>
+                                              <li>내복</li>
+                                              <li>1.1</li>
+                                              <li>g</li>
+                                          </ul>
+                                      </div>
+                                      <button type="button" class="drugCode_plusbtn">수정</button>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
