@@ -1771,6 +1771,64 @@ input[type="radio"] + label::before {
   border: 0;
 }
 
+
+/*========================백신코드 관리=======================*/
+
+.vaccineCode_admin{
+display:flex;
+align-items:center;
+background-color:white;
+border-radius:1rem;
+padding
+}
+
+.vaccineName_admin,
+.vaccineNumber_admin{
+max-width:360px;
+max-height:60vh;
+overflow:hidden;
+overflow-y:auto;
+border:1px solid #dcdcdc;
+padding:1rem;
+border-radius:0.5rem;
+margin:1rem;
+}
+
+.vaccineName_plus{
+display:flex;
+align-items:center;
+border-bottom:1px solid #ddd;
+margin-bottom:1rem;
+justify-content:space-between;
+}
+
+
+
+.vaccineCode_td{
+display:flex;
+align-items:center;
+flex-direction:column;
+}
+
+
+.vaccineCode_td li{
+display:flex;
+justify-content:space-between;
+border-bottom: 1px solid #ddd;
+padding:0.7rem 0;
+width:100%;
+align-items:center;}
+
+
+.vaccineCode_td li button{
+padding:0;
+background-color:transparent;
+margin-left:0.5rem;}
+
+
+
+
+
 /*========================약물관리코드===========================*/
 
 .drugCode_admin_version{
