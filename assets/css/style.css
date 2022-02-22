@@ -940,10 +940,7 @@ input[type="radio"]:checked + label {
 }
 
 .modalClose {
-  position: absolute;
   color: #aaaaaa;
-  top: 0.5rem;
-  right: 1rem;
   font-size: 2.5rem;
   font-weight: bold;
 }
@@ -1776,21 +1773,20 @@ input[type="radio"] + label::before {
 
 .vaccineCode_admin{
 display:flex;
-align-items:flex-start;
+flex-wrap:wrap;
+justify-content:center;
 background-color:white;
 border-radius:1rem;
-padding:1rem;
-width:900px;
+padding:2rem;
+max-width:1200px;
+width:100%;
 height:70vh;
-justify-content:center;
-flex-wrap:wrap;
-margin-top:2rem;
 text-align:center;
 }
 
 .vaccineName_admin,
 .vaccineNumber_admin{
-width:360px;
+max-width:360px;
 max-height:60vh;
 overflow:hidden;
 overflow-y:auto;
@@ -1798,6 +1794,7 @@ border:1px solid #dcdcdc;
 padding:1rem;
 border-radius:0.5rem;
 margin:1rem;
+flex : 1 1 auto;
 }
 
 .vaccineName_plus{
@@ -1821,17 +1818,19 @@ margin:auto;}
 display:flex;
 align-items:center;
 flex-direction:column;
+padding:0.5rem;
 }
 
 .vaccineName{
 width:50%;}
 
-
+.vaccinePlus_btn{
+padding: 0.5rem 1rem;}
 
 .vaccineCode_td li{
 display:flex;
 justify-content:space-around;
-padding:0.5rem 1rem;
+padding:0.7rem 1rem;
 width:100%;
 align-items:center;
 text-align:center;}
@@ -1854,9 +1853,166 @@ fill:#ddd!important;
 width:100%;
 }
 
+.vaccineCode_plusModal{
+width: 25%!important;
+height:15vh!important;
+}
+
+.accineCode-modal-contain{
+width:100%;
+}
+
+.modal_navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+width:100%;}
+
+.modal_title {
+font-size:1.6rem;
+color:#919191;
+font-family:"NanumSquare", sans-serif;
+}
+
+.vaccineCode_contain{
+display:flex;
+align-items:center;
+margin: 1rem;
+padding:1rem;
+}
+
+.vaccineCode_plusBtn{
+margin: 0.5rem!important;
+}
+
+.vaccineNumber_contain{
+display:flex;
+flex-direction:column;
+margin-top:1rem;
+}
+
+.vaccineSelect_name{
+margin:0 1rem;
+text-align:left;
+}
+
+.vaccine_countName{
+display:flex;
+align-items:center;
+padding:1rem;
+}
+
+.modalClose_noTitle{
+position:absolute;
+right:0;
+top:0;
+margin:1rem;
+}
 
 
+input[type="checkbox"] + label {
+  cursor: pointer;
+  margin-right: 0.5rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
+input[type="checkbox"] + label:before {
+  background: #f3f6f9;
+  border-radius: 100%;
+  border: 1px solid #e3e6e9;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  position: relative;
+  margin-right: 3px;
+  vertical-align: middle;
+  transition: all 0.2s ease;
+}
+
+
+input[type="checkbox"]:hover + label:before,
+input[type="checkbox"]:checked + label:before {
+  border-color: #2869bd !important;
+  background-color: #2869bd !important;
+  box-shadow: inset 0 0 0 2px #ddd;
+}
+
+
+input[type="checkbox"]:focus + label:before {
+  outline: none;
+}
+
+
+input[type="checkbox"]:disabled + label {
+  cursor: auto;
+}
+
+
+input[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: inset 0 0 0 2px #f4f4f4;
+  border-color: #b4b4b4;
+  background: #b4b4b4;
+}
+
+
+input[type="checkbox"]:disabled + label:before {
+  border-color: #b4b4b4;
+  background: #f4f4f4;
+}
+
+
+input[type="checkbox"] + label:empty:before {
+  margin-right: 0;
+}
+
+
+.vaccineCode_td input[type="checkbox"] + label {
+  justify-content: center;
+  margin-right: 0;
+  box-sizing: border-box;
+}
+
+
+.vaccineCode_td input[type="checkbox"] + label:before {
+  content: none;
+}
+
+
+.vaccineCode_td input[type="checkbox"]:hover + label,
+input[type="checkbox"]:checked + label {
+  background-color: var(--brightBlue);
+  border: 1px solid var(--brightBlue) !important;
+  color: var(--primaryColor);
+}
+
+
+.vaccineCode_td input[type="checkbox"]:hover + label,
+.vaccineCode_td input[type="checkbox"]:checked + label {
+  background-color: var(--brightBlue);
+  color: var(--primaryColor);
+}
+
+
+.vaccineCode_td input[type="checkbox"] {
+  display: none;
+  opacity: 0;
+}
+
+.vaccineName label {
+  padding: 1rem;
+  margin: 0.2rem;
+  border-radius: 0.3rem;
+}
+
+.vaccineCode_td label{
+  display: flex;
+  line-height: 1;
+  border: 1px solid #eee;
+  transition: background-color 0.2s;
+  }
 
 /*========================약물관리코드===========================*/
 

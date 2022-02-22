@@ -117,29 +117,46 @@
                         <div class="vaccine_title">
                             백신 이름
                         </div>
-                        <button type="button" class="vaccinePlus_btn">추가</button>
+                        <button type="button" id="myBtn" class="vaccinePlus_btn modalBtnSubmit">추가</button>
+                         <div id="myModal" class="myModal">
+                            <div class="modal-table vaccineCode_plusModal">
+                                <div class="vaccineCode-modal-contain">
+                                    <div class="modal_navbar">
+                                        <div class="modal_title">백신추가</div>
+                                        <span class="modalClose">&times;</span>
+                                    </div>
+                                    <div class="vaccineCode_contain">
+                                        <input type="text" class="vaccineCode_namePlus">
+                                        <button type="button" class="vaccineCode_plusBtn">선택 추가</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <ul class="vaccineCode_td">
                         <li>
-                            <div class="vaccineName">BCG</div>
+                            <div class="vaccineName">
+                                <input type="checkbox" name="vaccineName" id="vaccineName_admin1" value="0">
+                                <label for="vaccineName_admin1">BCG</label>
+                            </div>
                             <button type="button" class="delete-btn">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
                             </button>
                         </li>
                         <li>
-                            <div class="vaccineName">A형 간염</div>
+                            <div class="vaccineName">
+                                <input type="checkbox" name="vaccineName" id="vaccineName_admin2" value="0">
+                                <label for="vaccineName_admin2">A형간염</label>
+                            </div>
                             <button type="button" class="delete-btn">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
                             </button>
                         </li>
                         <li>
-                            <div class="vaccineName">B형 간염</div>
-                            <button type="button" class="delete-btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
-                            </button>
-                        </li>
-                        <li>
-                            <div class="vaccineName">B형 간염</div>
+                            <div class="vaccineName">
+                                <input type="checkbox" name="vaccineName" id="vaccineName_admin3" value="0">
+                                <label for="vaccineName_admin3">B형간염</label>
+                            </div>
                             <button type="button" class="delete-btn">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
                             </button>
@@ -151,7 +168,24 @@
                         <div class="vaccine_title">
                             백신 차수
                         </div>
-                        <button type="button" class="vaccinePlus_btn">추가</button>
+                        <button type="button" id="myBtn" class="vaccinePlus_btn modalBtnSubmit">추가</button>
+                        <div id="myModal" class="myModal">
+                            <div class="modal-table vaccineCode_plusModal">
+                                <div class="vaccineCode-modal-contain">
+                                    <div class="modal_navbar">
+                                        <div class="modal_title">백신 차수</div>
+                                        <span class="modalClose">&times;</span>
+                                    </div>
+                                    <div class="vaccineNumber_contain">
+                                        <div class="vaccineSelect_name">A형 간염</div>
+                                        <div class="vaccine_countName">
+                                            <input type="text" class="vaccineCode_namePlus">
+                                            <button type="button" class="vaccineCode_plusBtn">선택 추가</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <ul class="vaccineCode_td">
                         <li>
