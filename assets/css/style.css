@@ -2016,42 +2016,54 @@ input[type="checkbox"]:checked + label {
 
 /*========================약물관리코드===========================*/
 
-.drugCode_admin_version{
-  display: flex;
-  align-items: center;
-}
-
-.drugCode_admin_content{
+.admin_control{
 width:100%;
 padding: 1rem;
+}
+
+.admin_plusSearch{
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.admin_titleBtn{
+display:flex;
+align-items:center;
+width:100%;
+}
+
+.drugCode_admin_title{
+font-size:1.7rem;
+font-family:Comfortaa, "NanumSquare", sans-serif;
+color:slategray;
+}
+
+.admin_subBtn{
 display:flex;
 align-items: center;
-justify-content: space-between;
+margin-left:1rem;
 }
 
 .drugCode_admin_plusBtn{
   margin: 0 0.5rem!important;
 }
 
-.drugCode_admin_btn{
-display:flex;
-align-items: center;
-}
-
 .drugCode_admin_uploadBtn{
+color:#000 !important;
 background-color: rgba(0,0,0,0.1);
-padding:0.6rem 1.6rem;
+margin:0 !important;
 border-radius: 0.3rem;
 cursor:pointer;
 }
 
-
-.drugCode_admin_title{
-font-size:1.7rem;
-font-family:Comfortaa, "NanumSquare", sans-serif;
-color:slategray;
-  width: 100%;
+.search_input{
+display:flex;
+align-items:center;
+justify-content:flex-end;
+width:100%
 }
+
 
 .admin_plus_input{
   margin:0 0.25rem;
@@ -2075,9 +2087,7 @@ color:slategray;
   width: 100%;
 }
 
-.drugCode_admin_uploadBtn{
-  color:#000 !important;
-}
+
 
 .drugCode_plusTable_th{
   border-bottom: 1px solid #ddd;
@@ -2158,13 +2168,13 @@ color:slategray;
   padding: 1rem;
 }
 
-.drugCode_version_select{
-width:100%;}
-
-.drugCOde_select{
-width:100%;
-padding: 1rem;
+.drugCode_select{
+display:flex;
+align-items:center;
 }
+
+.drugCode_select>.drugCode_editBtn{
+margin-left:1rem;}
 
 .drugCode_admin_table{
   width:100%;
