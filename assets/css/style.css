@@ -2283,9 +2283,19 @@ width: 15%;
 }
 
 
+/*========================조작적정의 관리=======================*/
 
+.search_plus{
+display:flex;
+align-items:center;
+justify-content:flex-end;
+width:100%;
+padding: 1rem;
+}
 
-
+.admin-searchBtn{
+margin:0 0.5rem!important;
+}
 
 
 @media screen and (max-width: 768px) {
