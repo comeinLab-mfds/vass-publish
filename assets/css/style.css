@@ -2308,6 +2308,60 @@ margin:0 0.5rem!important;
 }
 
 
+.admin_modalTable{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+
+.admin_plusTable_table{
+  width: 100%;
+}
+
+.admin_plusBtn_modal{
+display:flex;
+justify-content:flex-start;
+margin-bottom:1rem;
+align-items:center;
+}
+
+.admin_plus_input{
+  margin:0 0.25rem;
+}
+
+.admin_list_table{
+display:flex;
+width:100%;
+justify-content:space-around;
+padding:1rem;
+}
+
+.edi_admin_modal{
+align-items:flex-start!important;}
+
+.admin_list_modal{
+display:flex;
+justify-content:space-around;
+align-items:center;
+flex-direction:column;
+}
+
+.admin_list_modal li{
+margin-bottom:1rem;
+}
+
+.modal_columnLine{
+border-left: 1px solid #fff;
+height:auto;
+}
+
+.adminOperational_modal{
+width:30vw!important;
+height:20vh!important;
+}
+
+
 @media screen and (max-width: 768px) {
   /* line 1178, src/assets/css/style.scss */
   .content-title {

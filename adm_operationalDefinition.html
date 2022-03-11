@@ -120,7 +120,29 @@
             <div class="search_plus">
                 <input type="text" id="edi_search_val">
                 <button class="btn-submit admin-searchBtn">검색</button>
-                <button class="btn-submit admin-searchBtn">추가</button>
+                <button class="btn-submit admin-searchBtn modalBtnSubmit">추가</button>
+
+                <div id="myModal" class="myModal">
+                    <div class="modal-table adminOperational_modal">
+                        <div class="drugCode-modal-contain">
+                            <span class="modalClose modalClose_noTitle">&times;</span>
+                            <div class="admin_modalTable">
+                                <div class="admin_list_table">
+                                    <ul class="admin_list_modal edi_admin_modal">
+                                        <li>이상반응명</li>
+                                        <li>활성화</li>
+                                    </ul>
+                                    <div class="modal_columnLine"></div>
+                                    <ul class="admin_list_modal edi_admin_modal">
+                                        <li class="admin_plus_input"><input type="text"></li>
+                                        <li class="admin_plus_input"><input type="checkbox"></li>
+                                    </ul>
+                                </div>
+                                <button type="button" class="drugCode_plusbtn">추가</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="content-view list">
                 <div class="table">
@@ -148,26 +170,28 @@
                         <li><input type="checkbox"></li>
                         <li><button class="drug_admin_btn">삭제</button></li>
                     </ul>
+
                     <div id="myModal" class="myModal">
-                            <div class="modal-table diagnosis_plusTable_modal">
-                                <div class="drugCode-modal-contain">
-                                  <span class="modalClose modalClose_noTitle">&times;</span>
-                                  <div class="drugCode_plusTable">
-                                      <div class="table drugCode_plusTable_table">
-                                          <ul class="row th diagnosis_modal_plusTable_th">
-                                              <li>Code</li>
-                                              <li>name</li>
-                                          </ul>
-                                          <ul class="row diagnosis_modal_plusTable">
-                                              <li>A00</li>
-                                              <li>A00</li>
-                                          </ul>
-                                      </div>
-                                      <button type="button" class="drugCode_plusbtn">수정</button>
-                                  </div>
+                        <div class="modal-table adminOperational_modal">
+                            <div class="drugCode-modal-contain">
+                                <span class="modalClose modalClose_noTitle">&times;</span>
+                                <div class="admin_modalTable">
+                                    <div class="admin_list_table">
+                                        <ul class="admin_list_modal edi_admin_modal">
+                                            <li>이상반응명</li>
+                                            <li>활성화</li>
+                                        </ul>
+                                        <div class="modal_columnLine"></div>
+                                        <ul class="admin_list_modal edi_admin_modal">
+                                            <li class="admin_plus_input"><input type="text"></li>
+                                            <li class="admin_plus_input"><input type="checkbox"></li>
+                                        </ul>
+                                    </div>
+                                    <button type="button" class="drugCode_plusbtn">수정</button>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
