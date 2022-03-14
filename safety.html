@@ -10,6 +10,17 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+
+    <script>
+    $(document).ready(function(){
+
+        // selectbox styling
+        $('select').niceSelect();
+
+    });
+    </script>
+
 </head>
 <body>
 <div class="container">
@@ -104,58 +115,75 @@
             <div class="content-title">
                 <h1>안전성 분석 현황</h1>
             </div>
-            <div class="content-view edit">
-                <div class="safety_allergy_importance">
-                    <div class="input-title safety_title">
-                        이상반응 별 백신 접종 여부 중요도
+            <div class="content-view safety_vaccineResult">
+                <div class="row vaccine_select">
+                <div class="input-title">백신선택</div>
+                <div class="safety_vaccineSelect">
+                    <div class="vaccineSelect">
+                        <div class="vaccine_selectbox">
+                            <select name="" id="vaccineSelect">
+                                <option value="독감">독감</option>
+                                <option value="MMR">MMR</option>
+                                <option value="뇌수막염">뇌수막염</option>
+                            </select>
+                        </div>
+                        <div class="vaccineNumber_selectbox">
+                            <select name="" id="">
+                                <option value="">1차</option>
+                                <option value="">2차</option>
+                                <option value="">3차</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="safety_importance">
-                        <ul>
-                            <li>
-                                <div class="safety_importance_danger">
-                                    <div class="safety_danger_title">위험</div>
-                                    <div class="safety_importance_description">백신중요도&nbsp; <span>&ge;</span> &nbsp; 2, 백신 부작용 발생</div>
-                                </div>
-                            </li>
-                            <li>    
-                                <div class="safety_importance_warn">
-                                    <div class="safety_warn_title">주의</div>
-                                    <div class="safety_importance_description">백신중요도&nbsp; <span>&ge;</span> &nbsp; 1, 백신 부작용 주의</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="safety_importance_good">
-                                    <div class="safety_good_title">양호</div>
-                                    <div class="safety_importance_description">백신중요도&nbsp; <span>&lt;</span> &nbsp; 1</div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                    <button type="button" class="vaccine_resultBtn">결과보기</button>
                 </div>
-                <div class="update_time">
-                    업데이트 시각 : 2021년 7월 20일 16:20:31
-                </div>
-                <div class="safety_chart">
-                    <div class="safety_chart_container">
-                        <div class="chart-container">
-                            <div id="chart_10" class="chart"></div>
-                        </div>
-                        <div class="chart-container">
-                            <div id="chart_11" class="chart" ></div>
-                        </div>
-                        <div class="chart-container">
-                            <div id="chart_12" class="chart" ></div>
-                        </div>
-                        <div class="chart-container">
-                            <div id="chart_13" class="chart"></div>
-                        </div>
-                        <div class="chart-container">
-                            <div id="chart_14" class="chart"></div>
-                        </div>
-                        <div class="chart-container">
-                            <div id="chart_15" class="chart"></div>
-                        </div>  
-                    </div>        
+            </div>
+            <div class="result-view vaccineResult">
+                <div class="vaccineResult_table">
+                    <ul class="vaccineResult_th">
+                        <li>이상반응 종류</li>
+                        <li>위험 구간 내 발생 환자 수 </li>
+                        <li>대조 구간 내 발생 환자 수</li>
+                        <li>발생률비</li>
+                        <li>중요도</li>
+                    </ul>
+                    <ul class="vaccineResult_tableTd">
+                        <li class="vaccineResult_td">
+                            <div class="vaccineResult_tdHead">이상반응 1</div>
+                            <div>6</div>
+                            <div>5</div>
+                            <div>2.80</div>
+                            <div></div>
+                        </li>
+                        <li class="vaccineResult_td">
+                            <div class="vaccineResult_tdHead">이상반응 2</div>
+                            <div>6</div>
+                            <div>5</div>
+                            <div>2.80</div>
+                            <div></didiv
+                        </li>
+                        <li class="vaccineResult_td">
+                            <div class="vaccineResult_tdHead">이상반응 3</div>
+                            <div>7</div>
+                            <div>16</div>
+                            <div>1.02</div>
+                            <div></div>
+                        </li>
+                        <li class="vaccineResult_td">
+                            <div class="vaccineResult_tdHead">이상반응 4</div>
+                            <div>7</div>
+                            <div>19</div>
+                            <div>0.86</div>
+                            <div></div>
+                        </li>
+                        <li class="vaccineResult_td">
+                            <div class="vaccineResult_tdHead">이상반응 5</div>
+                            <div>8</div>
+                            <div>22</div>
+                            <div>0.85</div>
+                            <div></div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
