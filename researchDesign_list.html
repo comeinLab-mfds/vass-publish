@@ -88,20 +88,19 @@
                 </ul>
                 <h3 class="aside-title">조작적 정의</h3>
                 <ul>
-                    <li><a href="operationalDefinition_list.html" >목록리스트</a></li>
+                    <li><a href="operationalDefinition_list.html">목록리스트</a></li>
                     <li><a href="operationalDefinition_add.html">조작적정의 생성</a></li>
                 </ul>
                 <h3 class="aside-title">연구디자인</h3>
                 <ul>
-                    <li><a href="">연구디자인 리스트</a></li>
+                    <li><a href="researchDesign_list.html" class="active">연구디자인 리스트</a></li>
                     <li><a href="">연구디자인 생성</a></li>
                 </ul>
                 <h3 class="aside-title">관리자</h3>
                 <ul>
                     <li><a href="vaccineCode_admin.html">백신 코드 관리</a></li>
                     <li><a href="drugCode_admin.html">약물 코드 관리</a></li>
-                    <li><a href="diagnosisCode_admmin.html">진단 코드 관리</a></li>
-                    <li><a href="diagnosisCode_admmin.html" class="active">조작적정의 관리</a></li>
+                    <li><a href="diagnosisCode_admmin.html" >진단 코드 관리</a></li>
                     <li><a href="">조작적 추출관리</a></li>
                     <li><a href="">연구설계 추출관리</a></li>
                     <li><a href="">결과대시보드 관리</a></li>
@@ -109,86 +108,84 @@
                 </ul>
             </div>
         </aside>
+
         <div class="content">
             <div class="content-title">
-                <h1>조작적정의 관리</h1>
-            </div>
-            <ul class="tabs">
-                <li><a href="adm_operationalDefinition.html" class="active" >이상반응 관리</a></li>
-                <li><a href="extract_admin.html">추출관리</a></li>
-            </ul>
-            <div class="search_plus">
-                <input type="text" id="edi_search_val">
-                <button class="btn-submit admin-searchBtn">검색</button>
-                <button class="btn-submit admin-searchBtn modalBtnSubmit">추가</button>
-
-                <div id="myModal" class="myModal">
-                    <div class="modal-table adminOperational_modal">
-                        <div class="drugCode-modal-contain">
-                            <span class="modalClose modalClose_noTitle">&times;</span>
-                            <div class="admin_modalTable">
-                                <div class="admin_list_table">
-                                    <ul class="admin_list_modal edi_admin_modal">
-                                        <li>이상반응명</li>
-                                        <li>활성화</li>
-                                    </ul>
-                                    <div class="modal_columnLine"></div>
-                                    <ul class="admin_list_modal edi_admin_modal">
-                                        <li class="admin_plus_input"><input type="text"></li>
-                                        <li class="admin_plus_input"><input type="checkbox"></li>
-                                    </ul>
-                                </div>
-                                <button type="button" class="drugCode_plusbtn">추가</button>
-                            </div>
-                        </div>
+                <h1>연구디자인 리스트</h1>
+                <div class="search_content">
+                    <div class="selectbox">
+                        <select name="" id="">
+                            <option value="HOI">없음</option>
+                            <option value="HOI">HOI</option>
+                            <option value="VOI">VOI</option>
+                            <option value="Condition">Condition</option>
+                            <option value="Drug Exposure">Drug Exposure</option>
+                        </select>
+                    </div>
+                    <input type="text" name="" value="">
+                    <div class="button-container">
+                        <button id="myBtn" class="modalBtnSubmit">Create</button>
+                        <button type="button" class="btn-submit">Search</button>
                     </div>
                 </div>
             </div>
-            <div class="content-view list">
+            <div class="content-view list researchDesign-list">
                 <div class="content-table">
-                    <ul class="row th diagnosisCode_admin_table">
-                        <li>ID</li>
-                        <li>이상반응명</li>
-                        <li>활성화</li>
-                        <li>삭제</li>
+                    <ul class="row th">
+                        <li>NO</li>
+                        <li class="table_list_th">
+                            <div class="array_pointer" onclick="fn_ordering_created();">연구 디자인 종류</div>
+                            <div class="table_list_array"></div>
+                        </li>
+                        <li class="table_list_th">
+                            <div class="array_pointer1" onclick="fn_ordering_created();">분석 대상 백신</div>
+                            <div class="table_list_array"></div>
+                        </li>
+                        <li class="table_list_th">
+                            <div class="array_pointer2" onclick="fn_ordering_created();">분석 대상 HOI</div>
+                            <div class="table_list_array"></div>
+                        </li>
+                        <li class="table_list_th">
+                            <div class="array_pointer3" onclick="fn_ordering_created();">생성일</div>
+                            <div class="table_list_array"></div>
+                        </li>
+                        <li class="table_list_th">
+                            <div class="array_pointer4" onclick="fn_ordering_created();">작성자</div>
+                            <div class="table_list_array"></div>
+                        </li>
+                        <li>분석작동</li>
                     </ul>
-                    <ul class="row diagnosisCode_admin_table modalBtnSubmit" >
+                    <ul class="row">
                         <li>1</li>
+                        <li>SCRI</li>
+                        <li>인플루엔자</li>
                         <li>아나필락시스</li>
-                        <li><input type="checkbox"></li>
-                        <li><button class="drug_admin_btn">삭제</button></li>
+                        <li>2022-03-03 08:09</li>
+                        <li>홍길동</li>
+                        <li>Yes</li>
                     </ul>
-                    <ul class="row diagnosisCode_admin_table modalBtnSubmit" >
-                        <li>2</li>
-                        <li>벨마비</li>
-                        <li><input type="checkbox"></li>
-                        <li><button class="drug_admin_btn">삭제</button></li>
-                    </ul>
-                    <ul class="row diagnosisCode_admin_table modalBtnSubmit" >
-                        <li>3</li>
-                        <li>혈소판감소증</li>
-                        <li><input type="checkbox"></li>
-                        <li><button class="drug_admin_btn">삭제</button></li>
-                    </ul>
+                </div>
+            </div>
+        </div>
 
-                    <div id="myModal" class="myModal">
-                        <div class="modal-table adminOperational_modal">
-                            <div class="drugCode-modal-contain">
-                                <span class="modalClose modalClose_noTitle">&times;</span>
-                                <div class="admin_modalTable">
-                                    <div class="admin_list_table">
-                                        <ul class="admin_list_modal edi_admin_modal">
-                                            <li>이상반응명</li>
-                                            <li>활성화</li>
-                                        </ul>
-                                        <div class="modal_columnLine"></div>
-                                        <ul class="admin_list_modal edi_admin_modal">
-                                            <li class="admin_plus_input"><input type="text"></li>
-                                            <li class="admin_plus_input"><input type="checkbox"></li>
-                                        </ul>
-                                    </div>
-                                    <button type="button" class="drugCode_plusbtn">수정</button>
-                                </div>
+        <div id="myModal" class="myModal">
+            <div class="myBtn_modal-content design-modal">
+                <div class="popup_headerSearch">
+                    <h3>연구디자인 생성</h3>
+                    <span class="modalClose">&times;</span>
+                </div>
+                <div class="popup_modal_content">
+                    <div class="modal_content">
+                        <div class="popup_content">
+                            <div class="design_select">
+                                <ul>
+                                    <li>
+                                        <button type="button">생성(ML)</button>
+                                    </li>
+                                    <li>
+                                        <button type="button">생성(SCRI)</button>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>

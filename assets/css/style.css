@@ -919,7 +919,7 @@ input[type="radio"]:checked + label {
   position: relative;
   background-color: #fefefe;
   margin: auto;
-  padding: 1rem 1rem 2rem 1rem;
+  padding: 1.5rem;
   border: 1px solid #888;
   width: 50vw;
   height: auto;
@@ -952,27 +952,7 @@ input[type="radio"]:checked + label {
   cursor: pointer;
 }
 
-.modal-button-content {
-  width: 100%;
-  margin: auto;
-  padding-top: 20px;
-  overflow-x: auto;
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 10px 10px;
-}
-
-.modal-button-content button {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: #c7c7c7;
-  text-align: center;
-  padding: 10px;
-  align-items: center;
-}
-
-.serch_input {
+.search_input {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -1601,7 +1581,7 @@ tr {
   text-align: center;
 }
 
-.serch_input_modal {
+.search_input_modal {
   display: flex;
   flex-direction: row;
   margin-top: 0.5rem;
@@ -1653,8 +1633,353 @@ input[type="checkbox"]:checked + label span {
 } * /
 
 
+/*============================연구디자인리스트============================*/
+.search_content {
+  display: flex;
+  align-items: center;
+}
 
 
+.table_list_array {
+  margin-left: .3rem;
+  width: 10px;
+  height: 9px;
+  background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4.69 4.06'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23878686;%7D%3C/style%3E%3C/defs%3E%3Cpolygon class='cls-1' points='2.35 4.06 4.69 0 0 0 2.35 4.06'/%3E%3C/svg%3E");
+}
+
+.table_list_array.active {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.table_list_array1.active {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.array_pointer,
+.array_pointer1,
+.array_pointer2,
+.array_pointer3
+.array_pointer4{
+  cursor: pointer;
+  display: flex !important;
+}
+
+.table_list_th{
+display:flex;
+align-items:center;}
+
+.researchDesign-list .row li:nth-of-type(1){
+width:5%}
+
+.researchDesign-list .row li:nth-of-type(2){
+width:12%}
+
+.researchDesign-list .row li:nth-of-type(3){
+width:19%}
+
+.researchDesign-list .row li:nth-of-type(4){
+width:22%}
+
+.researchDesign-list .row li:nth-of-type(5){
+width:20%}
+
+.researchDesign-list .row li:nth-of-type(6){
+width:10%}
+
+.researchDesign-list .row li:nth-of-type(7){
+width:12%}
+
+
+.design_select{
+  width: 100%;
+  margin: auto;
+  overflow-x: auto;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 10px 10px;
+  display: flex;}
+
+.design_select ul {
+  width: 100%;
+  margin: 0.5rem;
+}
+
+.design_select ul li {
+  width: 100%;
+  margin-right:0.5rem;
+}
+
+.design_select button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #c7c7c7;
+  text-align: center;
+  padding: 10px;
+  align-items: center;
+}
+
+.design_select ul li button {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: var(--darkGray);
+  background: #fff;
+  border: 1px solid #eee;
+  margin: 0.5rem;
+}
+
+.design_select ul li button:hover {
+  color: white;
+  background: var(--secondaryColor);
+}
+
+.modal_content{
+height:100%;
+padding:1.2rem;
+overflow-y:auto;
+display: flex;
+flex-direction: column;
+height:100%;
+justify-content:space-between;
+}
+
+.popup_modal_header h3{
+color:slategray;}
+
+.design-modal{
+width:30vw!important;}
+
+.popup_headerSearch{
+display: flex;
+  justify-content: space-between!important;
+  align-items: center;
+  }
+
+
+
+/*===========================연구디자인 생성=============================*/
+
+.analysis_button{
+display:flex;
+align-items: center;
+margin:0 0.5rem;}
+
+.analysis_button h3{
+margin:0 0.5rem;}
+
+.research_edit .row .input-title{
+flex: 0 0 140px;
+}
+
+.analysis_age{
+display:flex;
+align-items: center;
+}
+
+.age_select{
+display:flex;
+align-items: center;}
+
+.age_input{
+margin:0 1rem;}
+
+.age_input input{
+width:3.5rem;
+height:3rem;}
+
+.period_day .input-title{
+display:flex;
+flex-direction:column;}
+
+.period_day input{
+width:3.5rem;
+height:3rem;
+}
+
+.period_day label{
+margin:0 1rem;
+}
+
+.research_edit .create_title{
+width:100%;
+margin-top:1rem;}
+
+.analysis_select{
+display:flex;
+flex: 1 0 auto;
+font-family:Comfortaa, "NanumSquare", sans-serif;}
+
+.analysis_row{
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+}
+
+.analysis_title{
+display:flex;
+justify-content:space-between;
+width:100%;
+border-bottom:1px solid #cdcdcd;
+padding:1rem;
+}
+
+.analysis_search{
+display:flex;
+align-items:center;}
+
+.analysis_search_title,
+.analysis_gap_title{
+color:slategray;
+margin-right:1rem;
+}
+
+.analysis_gap,
+.analysis_gap label{
+display:flex;
+align-items:center;}
+
+.analysis_gap label input{
+width:2.5rem;
+margin:0 0.5rem;
+}
+
+.analysis_content{
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+width:100%;
+padding:1rem;
+overflow:hidden;
+overflow-y:auto;
+height:80%;
+}
+
+.analysis_content li{
+display:flex;
+width:100%;
+align-items:center;
+justify-content:flex-start;}
+
+.analysis_content_title{
+flex:0 0 100px;
+color:slategray;
+}
+
+
+
+.hoi, .drug{
+margin-right:0.5rem;}
+
+
+.popup_search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:flex-end;
+  padding:0;
+  margin-bottom:1rem;
+}
+
+.popup_search button{
+margin-left:0.5rem;}
+
+
+
+/*연구디자인 모달*/
+
+.research-modal{
+width:50vw!important;
+}
+
+.analysis_modal{
+width:100%;
+text-align:center;
+padding:1rem;
+}
+
+.research_analysis{
+align-items:center;
+padding:1rem;
+}
+
+.research_analysis.th{
+border-bottom:1px solid #cdcdcd;}
+
+.research_analysis li:nth-child(1){
+width:81%;}
+
+.research_analysis li:nth-child(2){
+width:11%;}
+
+.research_analysis li:nth-child(3){
+width:8%;}
+
+.analysis_modal_th{
+color:slategray;
+padding:1rem;
+}
+
+
+
+.row.analysis_modal_td{
+background-color:#f5f5f5!important;}
+
+.analysis_modal_th li:nth-child(1){
+width:30%;
+}
+
+.analysis_modal_th li:nth-child(2){
+width:30%;
+}
+
+.analysis_modal_th li:nth-child(3){
+width:20%;
+}
+
+.analysis_modal_th li:nth-child(4){
+width:20%;}
+
+
+
+.analysis_modal_td li:nth-child(1){
+width:30%;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+display:inline-block;}
+
+.analysis_modal_td li:nth-child(2){
+width:30%;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+display:inline-block;}
+
+.analysis_modal_td li:nth-child(3){
+width:20%;}
+
+.analysis_modal_td li:nth-child(4){
+width:20%;}
+
+
+
+.analysis_modal_td a:hover{
+color:#939393;
+}
+
+.more_list{
+display:flex;
+justify-content:center;}
+
+.more_btn{
+background-color:#d7d3d3;}
 
 
 /* ============================================================

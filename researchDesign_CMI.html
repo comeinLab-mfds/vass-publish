@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>백신 웹개발</title>
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/jquery.nice-select.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+
+    <script>
+    $(document).ready(function(){
+        $('select').niceSelect();
+
+    });
+
+    </script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <a href="">
+            <div class="logo">VASS</div>
+        </a>
+        <ul class="menu">
+            <li>
+                <a href="">홍길동</a>
+            </li>
+            <li>
+                <a href="">logout</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <aside>
+            <div class="aside-toggle-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 18 18">
+                    <path d="M2 13.5h14V12H2v1.5zm0-4h14V8H2v1.5zM2 4v1.5h14V4H2z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                    <path d="M15 8.25H5.87l4.19-4.19L9 3 3 9l6 6 1.06-1.06-4.19-4.19H15v-1.5z"/>
+                </svg>
+            </div>
+            <div class="aside-icon-menu">
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                        <path d="M10 20h4V4h-4v16zm-6 0h4v-8H4v8zM16 9v11h4V9h-4z"/>
+                    </svg>
+                </a>
+                <a href="operationalDefinition_list.html" class="active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                        <path d="M16 8h-2v3h-3v2h3v3h2v-3h3v-2h-3zM2 12c0-2.79 1.64-5.2 4.01-6.32V3.52C2.52 4.76 0 8.09 0 12s2.52 7.24 6.01 8.48v-2.16C3.64 17.2 2 14.79 2 12zm13-9c-4.96 0-9 4.04-9 9s4.04 9 9 9 9-4.04 9-9-4.04-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"/>
+                    </svg>
+                </a>
+                <a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                        <path d="M20.5 11H19V7c0-1.1-.9-2-2-2h-4V3.5C13 2.12 11.88 1 10.5 1S8 2.12 8 3.5V5H4c-1.1 0-1.99.9-1.99 2v3.8H3.5c1.49 0 2.7 1.21 2.7 2.7s-1.21 2.7-2.7 2.7H2V20c0 1.1.9 2 2 2h3.8v-1.5c0-1.49 1.21-2.7 2.7-2.7 1.49 0 2.7 1.21 2.7 2.7V22H17c1.1 0 2-.9 2-2v-4h1.5c1.38 0 2.5-1.12 2.5-2.5S21.88 11 20.5 11z"/>
+                    </svg>
+                </a>
+                <a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                        <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="aside-menu">
+                <h3 class="aside-title">결과대시보드</h3>
+                <ul>
+                    <li><a href="">summary</a></li>
+                    <li>
+                        <span class="sub-menu">접종률</span>
+                        <ul>
+                            <li><a href="index.html">생년월 코호트별 접종률</a></li>
+                            <li><a href="chart_02.html">연령군별 접종률</a></li>
+                            <li><a href="chart_04.html">지역별 접종률</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="sub-menu">안전성</span>
+                        <ul>
+                            <li><a href="safety.html">안전성 분석 현황</a></li>
+                            <li><a href="safety_info.html">실마리정보</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3 class="aside-title">조작적 정의</h3>
+                <ul>
+                    <li><a href="operationalDefinition_list.html">목록리스트</a></li>
+                    <li><a href="operationalDefinition_add.html">조작적정의 생성</a></li>
+                </ul>
+                <h3 class="aside-title">연구디자인</h3>
+                <ul>
+                    <li><a href="researchDesign_list.html" class="active">연구디자인 리스트</a></li>
+                    <li><a href="">연구디자인 생성</a></li>
+                </ul>
+                <h3 class="aside-title">관리자</h3>
+                <ul>
+                    <li><a href="vaccineCode_admin.html">백신 코드 관리</a></li>
+                    <li><a href="drugCode_admin.html">약물 코드 관리</a></li>
+                    <li><a href="diagnosisCode_admmin.html" >진단 코드 관리</a></li>
+                    <li><a href="">조작적 추출관리</a></li>
+                    <li><a href="">연구설계 추출관리</a></li>
+                    <li><a href="">결과대시보드 관리</a></li>
+                    <li><a href="user_list.html">유저 관리</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="content">
+            <div class="content-title">
+                <h1>연구디자인 생성</h1>
+                <div class="button-container">
+                    <button type="button">불러오기</button>
+                    <div class="analysis_button">
+                        <h3>분석작동선택</h3>
+                        <button type="button" class="btn-cancel">NO</button>
+                        <button type="button">YES</button>
+                    </div>
+                </div>
+            </div>
+            <div class="content-view content_edit research_edit">
+
+                <!--category-->
+                <div class="row">
+                    <div class="input-title">Category</div>
+                    <div class="input-select">
+                        <label>CMI</label>
+                    </div>
+                </div>
+
+                <!--분석데이터기간-->
+                <div class="row">
+                    <div class="input-title">분석 대상 데이터 기간</div>
+                    <div class="filter filter-period">
+                        <input type="text" id="researchYear_01" class="datepicker" autocomplete="false">
+                        <span>~</span>
+                        <input type="text" id="researchYear_02" class="datepicker_02" autocomplete="false">
+                    </div>
+                </div>
+
+                <!--분석기간-->
+                <div class="row">
+                    <div class="input-title">분석기간</div>
+                    <div class="filter filter-period">
+                        <input type="text" id="researchYear_03" class="datepicker_03" autocomplete="false">
+                    </div>
+                </div>
+
+                <!--분석대상백신-->
+                <div class="row">
+                    <div class="input-title">분석 대상 백신</div>
+                    <div class="vaccineSelect">
+                        <div class="selectbox vaccine_selectbox">
+                            <select>
+                                <option value="">백신 선택</option>
+                            </select>
+                        </div>
+
+                        <div class="selectbox vaccineNumber_selectbox">
+                            <select>
+                                <option value="">차수 선택</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!--분석 대상 이상반응-->
+                <div class="row">
+                    <div class="input-title">분석 대상 이상반응</div>
+                    <div class="selectbox">
+                        <select>
+                            <option value="1">아나필락시스</option>
+                            <option value="2">무과립증후군</option>
+                            <option value="3">벨마비</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--분석 연령-->
+                <div class="row">
+                    <div class="input-title">분석 연령</div>
+                    <div class="analysis_age">
+                        <div class="age_select">
+                            <select name="search">
+                                <option value="1">나이</option>
+                                <option value="2">개월</option>
+                                <option value="3">주수</option>
+                                <option value="0">제한없음</option>
+                            </select>
+                            <div class="age_input"  id="inputDis">
+                                <input type="number">
+                                <span>세</span>
+                                <span>~</span>
+                                <input type="number">
+                                <span>세</span>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="age_selectAll">
+                            <input type="checkbox" id="all">
+                            <label for="all">제한없음</label>
+                        </div>-->
+                    </div>
+                </div>
+
+                <hr>
+
+                <h3 class="create_title">분석 대상 이상반응의 조작적 정의 선택</h3>
+
+                <div class="analysis_select">
+
+                    <div class="row analysis_row hoi">
+                        <div class="analysis_title">
+                            <div class="analysis_search">
+                                <div class="analysis_search_title">HOI</div>
+                                <button type="button" id="myBtn" class="analysis_search_button modalBtnSubmit">검색</button>
+                            </div>
+                            <div class="analysis_gap">
+                                <div class="analysis_gap_title">Gap era</div>
+                                <label for="analysis_gapera">
+                                    <input type="number" id="analysis_gapera">일
+                                </label>
+                            </div>
+                        </div>
+                        <ul class="analysis_content">
+                           <li>
+                               <div class="analysis_content_title">제목</div>
+                               <div class="analysis_content_select">hoi 아나필락시스</div>
+                           </li>
+                           <li>
+                               <div class="analysis_content_title">상세설명</div>
+                               <div class="analysis_content_select">아나필락시스 HOI 정의</div>
+                           </li>
+                        </ul>
+                    </div>
+
+                    <div class="row analysis_row drug">
+                        <div class="analysis_title">
+                            <div class="analysis_search">
+                                <div class="analysis_search_title">Drug exposure</div>
+                                <button type="button" class="analysis_search_button">검색</button>
+                            </div>
+                            <div class="analysis_gap">
+                                <div class="analysis_gap_title">Gap era</div>
+                                <label for="analysis_drug">
+                                    <input type="number" id="analysis_drug">일
+                                </label>
+                            </div>
+                        </div>
+                        <ul class="analysis_content">
+                           <li>
+                               <div class="analysis_content_title">제목</div>
+                               <div class="analysis_content_select">에피네프린 투여</div>
+                           </li>
+                           <li>
+                               <div class="analysis_content_title">상세설명</div>
+                               <div class="analysis_content_select">152630BIJ, 152632CLQ</div>
+                           </li>
+                        </ul>
+                    </div>
+
+                    <div class="row analysis_row condition">
+                        <div class="analysis_title">
+                            <div class="analysis_search">
+                                <div class="analysis_search_title">Condition</div>
+                                <button type="button" class="analysis_search_button">검색</button>
+                            </div>
+                            <div class="analysis_gap">
+                                <div class="analysis_gap_title">Gap era</div>
+                                <label for="analysis_condition">
+                                    <input type="number" id="analysis_condition">일
+                                </label>
+                            </div>
+                        </div>
+                        <ul class="analysis_content">
+                           <li>
+                               <div class="analysis_content_title">제목</div>
+                               <div class="analysis_content_select"></div>
+                           </li>
+                           <li>
+                               <div class="analysis_content_title">상세설명</div>
+                               <div class="analysis_content_select"></div>
+                           </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!--HOI 기준 일자-->
+                <div class="row period_day">
+                    <div class="input-title">HOI 기준 <span>일자와의 차이</span> </div>
+                    <input type="number" id="day">
+                    <label for="day">일</label>
+                </div>
+
+                <!--위험구간 일수-->
+                <div class="row period_day">
+                    <div class="input-title">위험구간 일수 </div>
+                    <input type="number" id="danger_day">
+                    <label for="danger_day">일</label>
+                </div>
+
+                <!--대조구간 일수-->
+                <div class="row period_day">
+                    <div class="input-title">대조구간 일수 </div>
+                    <input type="number" id="compare_day">
+                    <label for="compare_day">일</label>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="myModal" class="myModal">
+            <div class="myBtn_modal-content research-modal">
+                <div class="popup_headerSearch">
+                    <h3>HOI 리스트</h3>
+                    <span class="modalClose">&times;</span>
+                </div>
+                <div class="search popup_search">
+                    <input type="text" class="">
+                    <button type="button" class="">검색</button>
+                </div>
+                <div class="popup_modal_content">
+                    <div class="analysis_modal">
+                        <ul class="research_analysis th">
+                            <li>
+                                <ul class="analysis_modal_th">
+                                    <li>제목</li>
+                                    <li>설명</li>
+                                    <li>생성일</li>
+                                    <li>생성자</li>
+                                </ul>
+                            </li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="analysis_modal_list">
+                            <ul class="research_analysis">
+                                <li>
+                                    <ul class="analysis_modal_td">
+                                        <li>hoi 아나필락시스</li>
+                                        <li>아나필락시스 진단 코드를 진단 받은 당일 에피네프린을 주사 받은 경우</li>
+                                        <li>2021-11-10 15:47</li>
+                                        <li>vass_관리자</li>
+                                    </ul>
+                                </li>
+                                <li class="more_list">
+                                    <button type="button" class="more_btn" onclick="location.href='">상세보기</button>
+                                </li>
+                                <li class="more_list">
+                                    <button type="button">선택</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+<script src="assets/js/jquery.cookie.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -292,7 +292,6 @@ button:hover::before {
 .modalBtnSubmit{
     background-color: var(--primaryColor);
     margin-left: 1rem;
-    margin-right: 2rem;
     padding: .5rem 3rem !important; }
     
 /* line 290, src/assets/css/base.scss */
@@ -606,8 +605,7 @@ input[type="radio"] + label:empty:before {
     box-sizing: border-box;
     border-radius: .3rem;
     background-color: white;
-    margin: .5rem;
-    border: 1px solid #EEE; }
+    margin: .5rem; }
 
 /* line 656, src/assets/css/base.scss */
 /*
@@ -646,11 +644,11 @@ select::-ms-expand {
 
 /*table*/
 /* line 691, src/assets/css/base.scss */
-.table {
+.content-table {
     width: 100%; }
 
 /* line 695, src/assets/css/base.scss */
-.table .row {
+.content-table .row {
     flex: 1 1 auto;
     display: flex;
     align-items: center;
@@ -665,25 +663,25 @@ select::-ms-expand {
     animation: fadeInOpacity .8s forwards; }
 
 /* line 709, src/assets/css/base.scss */
-.table .row span {
+.content-table .row span {
     color: #5e5c67;
     align-items: center;
     display: flex;
     justify-content: center; }
 
 /* line 716, src/assets/css/base.scss */
-.table .th {
+.content-table .th {
     border-radius: 0;
     background: transparent !important;
     padding-bottom: 0; }
 
 /* line 722, src/assets/css/base.scss */
-.table .th span {
+.content-table .th span {
     font: 12px/1.5 'Comfortaa';
     color: slategray !important; }
 
 /* line 727, src/assets/css/base.scss */
-.table .list {
+.content-table .list {
     height: 100%;
     overflow-y: auto; }
 
@@ -956,11 +954,11 @@ select::-ms-expand {
     fill: rgba(255, 255, 255, 0.3); }
 
 /* line 1000, src/assets/css/base.scss */
-.dark-mode .table .row {
+.dark-mode .content-table .row {
     background-color: var(--darkmodeSecondaryColor); }
 
 /* line 1004, src/assets/css/base.scss */
-.dark-mode .table .row span {
+.dark-mode .content-table .row span {
     color: #d0d3dc; }
 
 /* line 1008, src/assets/css/base.scss */
