@@ -1981,6 +1981,16 @@ justify-content:center;}
 .more_btn{
 background-color:#d7d3d3;}
 
+.input-select-div1{
+margin-bottom:0.5rem;
+}
+
+.input-select-div1,
+.input-select-div2{
+display:flex;
+align-items:center;
+}
+
 
 /* ============================================================
    Admin
