@@ -22,6 +22,12 @@ google.charts.setOnLoadCallback(drawChart_12);
 google.charts.setOnLoadCallback(drawChart_13);
 google.charts.setOnLoadCallback(drawChart_14);
 google.charts.setOnLoadCallback(drawChart_15);
+google.charts.setOnLoadCallback(drawChart_16);
+google.charts.setOnLoadCallback(drawChart_17);
+google.charts.setOnLoadCallback(drawChart_18);
+google.charts.setOnLoadCallback(drawChart_19);
+google.charts.setOnLoadCallback(drawChart_20);
+google.charts.setOnLoadCallback(drawChart_21);
 
 function drawChart() {
   var data = new google.visualization.DataTable();
@@ -568,9 +574,9 @@ function drawChart_08() {
       ]);
 
       var options = {
-        title: '이상반응 발생 현황 및 위험도',
         width: '100%',
-        height: 650,
+        height: '600',
+        backgroundColor: '#f1f5f9',
         vAxis: {
           title: 'LLR',
           baseline: 2,
@@ -590,8 +596,14 @@ function drawChart_08() {
         }
       };
 
-  var chart_08 = new google.visualization.LineChart(document.getElementById('chart_08'));
-  chart_08.draw(data, options);
+function resize() {
+    var chart_08 = new google.visualization.LineChart(document.getElementById('chart_08'));
+    chart_08.draw(data, options);
+
+    }
+
+        window.onload = resize();
+        window.onresize = resize;
 }
 
 
@@ -610,9 +622,8 @@ function drawChart_09() {
   ]);
 
   var options = {
-      title: '이상반응 관련 백신 중요도',
       width: '100%',
-      height: 650,
+      height: '600',
       colors: ["#698caf"],
       hAxis: {
           title: '월'
@@ -633,9 +644,17 @@ function drawChart_09() {
       }
   };
 
+function resize() {
   var chart_09 = new google.visualization.AreaChart(document.getElementById('chart_09'));
   chart_09.draw(data, options);
+
+  }
+
+       window.onload = resize();
+       window.onresize = resize;
 }
+
+
 
 function drawChart_10() {
   var data = google.visualization.arrayToDataTable([
@@ -821,4 +840,282 @@ function drawChart_15() {
 
   var chart_15 = new google.visualization.BarChart(document.getElementById('chart_15'));
   chart_15.draw(data, options);
+}
+
+function drawChart_16() {
+
+  var data = new google.visualization.DataTable();
+      data.addColumn('number', '시간(week)');
+      data.addColumn('number', 'LLR');
+
+      data.addRows([
+        [1,  -8.5],[2, -8.2],[3, -7.8],[4, -8.5],[5, -8.1],[6, -8.8],[7, -9.0],[8, -8.6],
+        [9,  -7.8],[10,  -7.5],[11, -7.2],[12, -6.8],[13, -7.2],[14, -7.4],[15, -7.9],[16, -7.2],[17, -6.8],
+        [18,  -5.2],[19,  -4.8],[20, -4.3],[21, -3.8],[22, -3.2],[23, -3.4],[24, -3.9],[25, -3.2],[26, -2.8],
+        [27,  -2.6],[28,  -2.0],[29, -1.5],[30, -1.8],[31, -1.9],[32, -1.4],[33, -0.9],[34, -0.5],[35, -0.3]
+      ]);
+
+      var options = {
+        width: '100%',
+        height: '600',
+        backgroundColor: '#f1f5f9',
+        vAxis: {
+          title: 'LLR',
+          baseline: 2,
+          baselineColor: 'red',
+          maxValue: 10,
+          minValue: -10,
+
+        },
+        hAxis: {
+          title: '시간(week)',
+          gridlines: {
+            count: 0
+          }
+        },
+        legend: {
+          position: 'top'
+        }
+      };
+
+    function resize() {
+        var chart_16 = new google.visualization.LineChart(document.getElementById('chart_16'));
+        chart_16.draw(data, options);
+
+  }
+        window.onload = resize();
+        window.onresize = resize;
+}
+
+function drawChart_17() {
+
+  var data = new google.visualization.DataTable();
+      data.addColumn('number', '시간(week)');
+      data.addColumn('number', 'LLR');
+
+      data.addRows([
+        [1,  -8.5],[2, -8.2],[3, -7.8],[4, -8.5],[5, -8.1],[6, -8.8],[7, -9.0],[8, -8.6],
+        [9,  -7.8],[10,  -7.5],[11, -7.2],[12, -6.8],[13, -7.2],[14, -7.4],[15, -7.9],[16, -7.2],[17, -6.8],
+        [18,  -5.2],[19,  -4.8],[20, -4.3],[21, -3.8],[22, -3.2],[23, -3.4],[24, -3.9],[25, -3.2],[26, -2.8],
+        [27,  -2.6],[28,  -2.0],[29, -1.5],[30, -1.8],[31, -1.9],[32, -1.4],[33, -0.9],[34, -0.5],[35, -0.3]
+      ]);
+
+      var options = {
+        width: '100%',
+        backgroundColor: '#f1f5f9',
+        vAxis: {
+          title: 'LLR',
+          baseline: 2,
+          baselineColor: 'red',
+          maxValue: 10,
+          minValue: -10,
+
+        },
+        hAxis: {
+          title: '시간(week)',
+          gridlines: {
+            count: 0
+          }
+        },
+        legend: {
+          position: 'top'
+        }
+      };
+
+    function resize() {
+        var chart_17 = new google.visualization.LineChart(document.getElementById('chart_17'));
+        chart_17.draw(data, options);
+
+    }
+
+        window.onload = resize();
+        window.onresize = resize;
+
+}
+
+function drawChart_18() {
+
+  var data = new google.visualization.DataTable();
+      data.addColumn('number', '시간(week)');
+      data.addColumn('number', 'LLR');
+
+      data.addRows([
+        [1,  -8.5],[2, -8.2],[3, -7.8],[4, -8.5],[5, -8.1],[6, -8.8],[7, -9.0],[8, -8.6],
+        [9,  -7.8],[10,  -7.5],[11, -7.2],[12, -6.8],[13, -7.2],[14, -7.4],[15, -7.9],[16, -7.2],[17, -6.8],
+        [18,  -5.2],[19,  -4.8],[20, -4.3],[21, -3.8],[22, -3.2],[23, -3.4],[24, -3.9],[25, -3.2],[26, -2.8],
+        [27,  -2.6],[28,  -2.0],[29, -1.5],[30, -1.8],[31, -1.9],[32, -1.4],[33, -0.9],[34, -0.5],[35, -0.3]
+      ]);
+
+      var options = {
+        width: '100%',
+        height:'300',
+        backgroundColor: '#f1f5f9',
+        vAxis: {
+          title: 'LLR',
+          baseline: 2,
+          baselineColor: 'red',
+          maxValue: 10,
+          minValue: -10,
+
+        },
+        hAxis: {
+          title: '시간(week)',
+          gridlines: {
+            count: 0
+          }
+        },
+        legend: {
+          position: 'top'
+        }
+      };
+
+    function resize() {
+        var chart_18 = new google.visualization.LineChart(document.getElementById('chart_18'));
+        chart_18.draw(data, options);
+
+  }
+        window.onload = resize();
+        window.onresize = resize;
+}
+
+function drawChart_19() {
+
+   var data = new google.visualization.DataTable();
+  data.addColumn('number', 'date');
+  data.addColumn('number', 'Dogs');
+
+  var data = google.visualization.arrayToDataTable([
+      ['Month', '중요도'],
+      ['2020년 7월', 0.8],
+      ['2020년 8월', 1.2],
+      ['2020년 9월', 0.9],
+      ['2020년 10월', 2]
+  ]);
+
+  var options = {
+      width: '100%',
+      height:'300',
+      colors: ["#698caf"],
+      hAxis: {
+          title: '월'
+      },
+      vAxis: {
+          title: '중요도',
+          maxValue: 5,
+          minValue: 0
+      },
+      legend: {
+          position: 'top'
+      },
+      pointSize: 5,
+      animation: {
+          "startup": true,
+          duration: 1000,
+          easing: 'linea'
+      }
+  };
+
+    function resize() {
+        var chart_19 = new google.visualization.AreaChart(document.getElementById('chart_19'));
+        chart_19.draw(data, options);
+
+    }
+
+        window.onload = resize();
+        window.onresize = resize;
+
+}
+
+function drawChart_20() {
+
+
+  var data = new google.visualization.DataTable();
+      data.addColumn('number', '시간(week)');
+      data.addColumn('number', 'LLR');
+
+      data.addRows([
+        [1,  -8.5],[2, -8.2],[3, -7.8],[4, -8.5],[5, -8.1],[6, -8.8],[7, -9.0],[8, -8.6],
+        [9,  -7.8],[10,  -7.5],[11, -7.2],[12, -6.8],[13, -7.2],[14, -7.4],[15, -7.9],[16, -7.2],[17, -6.8],
+        [18,  -5.2],[19,  -4.8],[20, -4.3],[21, -3.8],[22, -3.2],[23, -3.4],[24, -3.9],[25, -3.2],[26, -2.8],
+        [27,  -2.6],[28,  -2.0],[29, -1.5],[30, -1.8],[31, -1.9],[32, -1.4],[33, -0.9],[34, -0.5],[35, -0.3]
+      ]);
+
+      var options = {
+        width: '100%',
+        height:'300',
+        backgroundColor: '#f1f5f9',
+        vAxis: {
+          title: 'LLR',
+          baseline: 2,
+          baselineColor: 'red',
+          maxValue: 10,
+          minValue: -10,
+
+        },
+        hAxis: {
+          title: '시간(week)',
+          gridlines: {
+            count: 0
+          }
+        },
+        legend: {
+          position: 'top'
+        }
+      };
+
+function resize() {
+    var chart_20 = new google.visualization.LineChart(document.getElementById('chart_20'));
+    chart_20.draw(data, options);
+
+    }
+
+        window.onload = resize();
+        window.onresize = resize;
+}
+
+
+function drawChart_21() {
+
+  var data = new google.visualization.DataTable();
+      data.addColumn('number', '시간(week)');
+      data.addColumn('number', 'LLR');
+
+      data.addRows([
+        [1,  -8.5],[2, -8.2],[3, -7.8],[4, -8.5],[5, -8.1],[6, -8.8],[7, -9.0],[8, -8.6],
+        [9,  -7.8],[10,  -7.5],[11, -7.2],[12, -6.8],[13, -7.2],[14, -7.4],[15, -7.9],[16, -7.2],[17, -6.8],
+        [18,  -5.2],[19,  -4.8],[20, -4.3],[21, -3.8],[22, -3.2],[23, -3.4],[24, -3.9],[25, -3.2],[26, -2.8],
+        [27,  -2.6],[28,  -2.0],[29, -1.5],[30, -1.8],[31, -1.9],[32, -1.4],[33, -0.9],[34, -0.5],[35, -0.3]
+      ]);
+
+      var options = {
+        width: '100%',
+        height:'300',
+        backgroundColor: '#f1f5f9',
+        vAxis: {
+          title: 'LLR',
+          baseline: 2,
+          baselineColor: 'red',
+          maxValue: 10,
+          minValue: -10,
+        },
+        hAxis: {
+          title: '시간(week)',
+          gridlines: {
+            count: 0
+          }
+        },
+        legend: {
+          position: 'top'
+        }
+      };
+
+
+    function resize() {
+      var chart_21 = new google.visualization.LineChart(document.getElementById('chart_21'));
+      chart_21.draw(data, options);
+
+      }
+
+           window.onload = resize();
+           window.onresize = resize;
 }

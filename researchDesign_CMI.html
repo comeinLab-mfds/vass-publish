@@ -112,7 +112,7 @@
             <div class="content-title">
                 <h1>연구디자인 생성</h1>
                 <div class="button-container">
-                    <button type="button">불러오기</button>
+                    <button type="button" class="modalBtnSubmit import_btn"  id="myBtn">불러오기</button>
                     <div class="analysis_button">
                         <h3>분석작동선택</h3>
                         <button type="button" class="btn-cancel">NO</button>
@@ -182,20 +182,18 @@
                 <div class="row">
                     <div class="input-title">분석 연령</div>
                     <div class="analysis_age">
-                        <div class="age_select">
-                            <select name="search">
-                                <option value="1">나이</option>
-                                <option value="2">개월</option>
-                                <option value="3">주수</option>
-                                <option value="0">제한없음</option>
-                            </select>
-                            <div class="age_input"  id="inputDis">
-                                <input type="number">
-                                <span>세</span>
-                                <span>~</span>
-                                <input type="number">
-                                <span>세</span>
-                            </div>
+                        <select class="age_select">
+                            <option value="1">나이</option>
+                            <option value="2">개월</option>
+                            <option value="3">주수</option>
+                            <option value="0">제한없음</option>
+                        </select>
+                        <div class="age_input"  id="inputDis">
+                            <input type="number">
+                            <span>세</span>
+                            <span>~</span>
+                            <input type="number">
+                            <span>세</span>
                         </div>
                         <!--
                         <div class="age_selectAll">
@@ -288,6 +286,8 @@
 
                 </div>
 
+                <hr>
+
                 <!--HOI 기준 일자-->
                 <div class="row period_day">
                     <div class="input-title">HOI 기준 <span>일자와의 차이</span> </div>
@@ -312,10 +312,11 @@
             </div>
         </div>
 
+        <!--불러오기 모달-->
         <div id="myModal" class="myModal">
             <div class="myBtn_modal-content research-modal">
                 <div class="popup_headerSearch">
-                    <h3>HOI 리스트</h3>
+                    <h3>불러오기</h3>
                     <span class="modalClose">&times;</span>
                 </div>
                 <div class="search popup_search">
@@ -347,13 +348,205 @@
                                     </ul>
                                 </li>
                                 <li class="more_list">
-                                    <button type="button" class="more_btn" onclick="location.href='">상세보기</button>
-                                </li>
-                                <li class="more_list">
                                     <button type="button">선택</button>
                                 </li>
                             </ul>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--hoi 검색모달-->
+        <div id="myModal" class="myModal">
+            <div class="myBtn_modal-content research-modal">
+                <div class="popup_headerSearch">
+                    <h3>HOI 리스트</h3>
+                    <span class="modalClose">&times;</span>
+                </div>
+                <div class="search popup_search">
+                    <input type="text" class="">
+                    <button type="button" class="">검색</button>
+                </div>
+                <div class="popup_modal_content research_modal_content">
+                    <ul class="research_analysis research_modal_th">
+                        <li>제목</li>
+                        <li>설명</li>
+                        <li>생성일</li>
+                        <li>생성자</li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+
+                    <div class="analysis_modal_list popup_yScroll">
+                        <ul class="research_analysis">
+                            <li>hoi 아나필락시스</li>
+                            <li>아나필락시스 진단 코드를 진단 받은 당일 에피네프린을 주사 받은 경우</li>
+                            <li>2021-11-10 15:47</li>
+                            <li>vass_관리자</li>
+                            <li class="more_list">
+                                <button type="button" class="more_btn" onclick="location.href='">상세보기</button>
+                            </li>
+                            <li class="more_list">
+                                <button type="button">선택</button>
+                            </li>
+                        </ul>
+                        <ul class="research_analysis">
+                            <li>hoi 아나필락시스</li>
+                            <li>아나필락시스 진단 코드를 진단 받은 당일 에피네프린을 주사 받은 경우</li>
+                            <li>2021-11-10 15:47</li>
+                            <li>vass_관리자</li>
+                            <li class="more_list">
+                                <button type="button" class="more_btn" onclick="location.href='">상세보기</button>
+                            </li>
+                            <li class="more_list">
+                                <button type="button">선택</button>
+                            </li>
+                        </ul>
+                        <ul class="research_analysis">
+                            <li>hoi 아나필락시스</li>
+                            <li>아나필락시스 진단 코드를 진단 받은 당일 에피네프린을 주사 받은 경우</li>
+                            <li>2021-11-10 15:47</li>
+                            <li>vass_관리자</li>
+                            <li class="more_list">
+                                <button type="button" class="more_btn" onclick="location.href='">상세보기</button>
+                            </li>
+                            <li class="more_list">
+                                <button type="button">선택</button>
+                            </li>
+                        </ul>
+                        <ul class="research_analysis">
+                            <li>hoi 아나필락시스</li>
+                            <li>아나필락시스 진단 코드를 진단 받은 당일 에피네프린을 주사 받은 경우</li>
+                            <li>2021-11-10 15:47</li>
+                            <li>vass_관리자</li>
+                            <li class="more_list">
+                                <button type="button" class="more_btn" onclick="location.href='">상세보기</button>
+                            </li>
+                            <li class="more_list">
+                                <button type="button">선택</button>
+                            </li>
+                        </ul>
+                        <ul class="research_analysis">
+                            <li>hoi 아나필락시스</li>
+                            <li>아나필락시스 진단 코드를 진단 받은 당일 에피네프린을 주사 받은 경우</li>
+                            <li>2021-11-10 15:47</li>
+                            <li>vass_관리자</li>
+                            <li class="more_list">
+                                <button type="button" class="more_btn" onclick="location.href='">상세보기</button>
+                            </li>
+                            <li class="more_list">
+                                <button type="button">선택</button>
+                            </li>
+                        </ul>
+                        <ul class="research_analysis">
+                            <li>hoi 아나필락시스</li>
+                            <li>아나필락시스 진단 코드를 진단 받은 당일 에피네프린을 주사 받은 경우</li>
+                            <li>2021-11-10 15:47</li>
+                            <li>vass_관리자</li>
+                            <li class="more_list">
+                                <button type="button" class="more_btn" onclick="location.href='">상세보기</button>
+                            </li>
+                            <li class="more_list">
+                                <button type="button">선택</button>
+                            </li>
+                        </ul>
+                        <ul class="research_analysis">
+                            <li>hoi 아나필락시스</li>
+                            <li>아나필락시스 진단 코드를 진단 받은 당일 에피네프린을 주사 받은 경우</li>
+                            <li>2021-11-10 15:47</li>
+                            <li>vass_관리자</li>
+                            <li class="more_list">
+                                <button type="button" class="more_btn" onclick="location.href='">상세보기</button>
+                            </li>
+                            <li class="more_list">
+                                <button type="button">선택</button>
+                            </li>
+                        </ul>
+                        <ul class="research_analysis">
+                            <li>hoi 아나필락시스</li>
+                            <li>아나필락시스 진단 코드를 진단 받은 당일 에피네프린을 주사 받은 경우</li>
+                            <li>2021-11-10 15:47</li>
+                            <li>vass_관리자</li>
+                            <li class="more_list">
+                                <button type="button" class="more_btn" onclick="location.href='">상세보기</button>
+                            </li>
+                            <li class="more_list">
+                                <button type="button">선택</button>
+                            </li>
+                        </ul>
+                        <ul class="research_analysis">
+                            <li>hoi 아나필락시스</li>
+                            <li>아나필락시스 진단 코드를 진단 받은 당일 에피네프린을 주사 받은 경우</li>
+                            <li>2021-11-10 15:47</li>
+                            <li>vass_관리자</li>
+                            <li class="more_list">
+                                <button type="button" class="more_btn" onclick="location.href='">상세보기</button>
+                            </li>
+                            <li class="more_list">
+                                <button type="button">선택</button>
+                            </li>
+                        </ul>
+                        <ul class="research_analysis">
+                            <li>hoi 아나필락시스</li>
+                            <li>아나필락시스 진단 코드를 진단 받은 당일 에피네프린을 주사 받은 경우</li>
+                            <li>2021-11-10 15:47</li>
+                            <li>vass_관리자</li>
+                            <li class="more_list">
+                                <button type="button" class="more_btn" onclick="location.href='">상세보기</button>
+                            </li>
+                            <li class="more_list">
+                                <button type="button">선택</button>
+                            </li>
+                        </ul>
+                        <ul class="research_analysis">
+                            <li>hoi 아나필락시스</li>
+                            <li>아나필락시스 진단 코드를 진단 받은 당일 에피네프린을 주사 받은 경우</li>
+                            <li>2021-11-10 15:47</li>
+                            <li>vass_관리자</li>
+                            <li class="more_list">
+                                <button type="button" class="more_btn" onclick="location.href='">상세보기</button>
+                            </li>
+                            <li class="more_list">
+                                <button type="button">선택</button>
+                            </li>
+                        </ul>
+                        <ul class="research_analysis">
+                            <li>hoi 아나필락시스</li>
+                            <li>아나필락시스 진단 코드를 진단 받은 당일 에피네프린을 주사 받은 경우</li>
+                            <li>2021-11-10 15:47</li>
+                            <li>vass_관리자</li>
+                            <li class="more_list">
+                                <button type="button" class="more_btn" onclick="location.href='">상세보기</button>
+                            </li>
+                            <li class="more_list">
+                                <button type="button">선택</button>
+                            </li>
+                        </ul>
+                        <ul class="research_analysis">
+                            <li>hoi 아나필락시스</li>
+                            <li>아나필락시스 진단 코드를 진단 받은 당일 에피네프린을 주사 받은 경우</li>
+                            <li>2021-11-10 15:47</li>
+                            <li>vass_관리자</li>
+                            <li class="more_list">
+                                <button type="button" class="more_btn" onclick="location.href='">상세보기</button>
+                            </li>
+                            <li class="more_list">
+                                <button type="button">선택</button>
+                            </li>
+                        </ul>
+                        <ul class="research_analysis">
+                            <li>hoi 아나필락시스</li>
+                            <li>아나필락시스 진단 코드를 진단 받은 당일 에피네프린을 주사 받은 경우</li>
+                            <li>2021-11-10 15:47</li>
+                            <li>vass_관리자</li>
+                            <li class="more_list">
+                                <button type="button" class="more_btn" onclick="location.href='">상세보기</button>
+                            </li>
+                            <li class="more_list">
+                                <button type="button">선택</button>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
