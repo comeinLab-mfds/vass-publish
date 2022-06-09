@@ -2937,6 +2937,7 @@ margin:0 0.5rem;}
 .analysis_button h3{
 margin:0 0.5rem;}
 
+
 .research_edit .row .input-title{
 flex: 0 0 140px;
 }
@@ -2957,40 +2958,27 @@ margin:0 1rem;}
 width:3.5rem;
 height:3rem;}
 
-.period_day .input-title{
-display:flex;
-flex-direction:column;}
 
-.period_day input{
-width:3.5rem;
-height:3rem;
-}
-
-.period_day label{
-margin:0 1rem;
-}
-
-.research_edit .create_title{
-width:100%;
-margin-top:1rem;}
-
-.analysis_select{
-display:flex;
-flex: 1 0 auto;
-font-family:Comfortaa, "NanumSquare", sans-serif;}
-
-.analysis_row{
-display:flex;
-align-items:flex-start;
-}
+/*분석 대상 이상반응의 조작적 정의 선택*/
 
 .analysis_title{
 display: flex;
 width: 15%;
-border-right: 1px solid #cdcdcd;
 flex-direction: column;
-padding-right: 1rem;
+padding-right: 1.5rem;
 align-content: space-between;
+position:relative;
+}
+
+.analysis_title::after{
+content:"";
+width:1px;
+position:absolute;
+top:0;
+bottom:0;
+right:0;
+margin:auto ;
+background-color: #e5e5e5;
 }
 
 .analysis_search{
@@ -3029,6 +3017,8 @@ display:flex;
 flex-direction:column;
 align-items:flex-start;
 width:100%;
+padding-left:1rem;
+height:100%;
 }
 
 .analysis_content li{
@@ -3037,15 +3027,114 @@ width:100%;
 align-items:center;
 justify-content:flex-start;}
 
+
 .analysis_content_title{
 flex:0 0 100px;
 color:slategray;
 }
 
 
+/*scri*/
 
-.hoi, .drug{
-margin-right:0.5rem;}
+
+.design_select_title{
+flex: 0 0 130px;
+color: slategray;
+font-family: Comfortaa, "NanumSquare", sans-serif;
+font-size: 13px;
+}
+
+.period_day_wrapper{
+width:100%;}
+
+
+.period_day{
+display:flex;
+align-items: center;
+margin-bottom:0.5rem;}
+
+.period_day .input-title{
+display:flex;
+flex-direction:column;}
+
+.period_day input{
+width:3.5rem;
+height:3rem;
+}
+
+.period_day .input_days{
+margin:0 0.5rem;}
+
+.period_day .input-to{
+margin:0 1rem 0 0;
+}
+
+.period_day label{
+margin:0 1rem;
+}
+
+.period_day-input{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+.analysis_select{
+font-family:Comfortaa, "NanumSquare", sans-serif;
+width:100%;}
+
+
+.analysis_small_group{
+display: flex;
+align-items: center;
+margin:1rem 0;
+}
+
+.analysis_select ul li{
+flex:none;
+display:block;
+padding:0;
+}
+
+.design_select hr{
+margin:1rem 0;}
+
+.analysis_select label{
+    display: flex;
+    line-height: 1;
+    border: 1px solid #eee;
+    transition: background-color 0.2s;
+    padding: 1rem;
+    margin: 0.2rem;
+    border-radius: 0.3rem;
+}
+
+.analysis_select input[type="checkbox"]:hover + label,
+.analysis_select input[type="checkbox"]:checked + label {
+    background-color: var(--brightBlue);
+    border: 1px solid var(--brightBlue) !important;
+    color: var(--primaryColor);
+}
+
+.analysis_select input[type="checkbox"] + label {
+    justify-content: center;
+    margin-right: 0;
+    box-sizing: border-box;
+}
+
+.analysis_select input[type="checkbox"] {
+    display: none;
+    opacity: 0;
+}
+
+
+.period_day_wrapper ul{
+width:100%;}
+
+
+
+
 
 
 .popup_search {
@@ -3060,9 +3149,12 @@ margin-right:0.5rem;}
 .popup_search button{
 margin-left:0.5rem;}
 
-.input-days{
-align-items: center;
-}
+
+
+
+
+
+
 
 /*연구디자인 모달*/
 

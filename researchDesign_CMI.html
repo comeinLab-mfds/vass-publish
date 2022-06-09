@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+
     <script>
     $(document).ready(function(){
         $('select').niceSelect();
@@ -109,6 +113,8 @@
         </aside>
 
         <div class="content">
+
+            <!--title and button-->
             <div class="content-title">
                 <h1>연구디자인 생성</h1>
                 <div class="button-container">
@@ -120,14 +126,14 @@
                     </div>
                 </div>
             </div>
+
+            <!--design create-->
             <div class="content-view content_edit research_edit">
 
                 <!--디자인제목-->
                 <div class="row">
                     <div class="input-title">디자인 제목</div>
-                    <div class="input-select">
-                        <input type="text" name="hoi-title" id="hoi_title" autocomplete="off">
-                    </div>
+                    <input type="text" name="design-title" autocomplete="off">
                 </div>
 
                 <!--분석데이터기간-->
@@ -169,7 +175,7 @@
                 <!--분석 대상 이상반응-->
                 <div class="row">
                     <div class="input-title">분석 대상 이상반응</div>
-                    <div class="selectbox">
+                    <div class="selectbox signal_select">
                         <select>
                             <option value="1">아나필락시스</option>
                             <option value="2">무과립증후군</option>
@@ -208,79 +214,160 @@
                 <h3 class="create_title">분석 대상 이상반응의 조작적 정의 선택</h3>
 
                 <div class="row analysis_row hoi">
-                        <div class="analysis_title">
-                            <div class="analysis_search">
-                                <div class="analysis_search_title">HOI</div>
-                                <button type="button" id="myBtn" class="analysis_search_button modalBtnSubmit">검색</button>
-                            </div>
-                            <div class="analysis_gap">
-                                <div class="analysis_gap_title">Gap era</div>
-                                <label for="analysis_gapera">
-                                    <input type="number" id="analysis_gapera">일
-                                </label>
-                            </div>
+                    <div class="analysis_title">
+                        <div class="analysis_search">
+                            <div class="analysis_search_title">HOI</div>
+                            <button type="button" id="myBtn" class="analysis_search_button modalBtnSubmit">검색</button>
                         </div>
-                        <ul class="analysis_content">
-                           <li>
-                               <div class="analysis_content_title">제목</div>
-                               <div class="analysis_content_select">hoi 아나필락시스</div>
-                           </li>
-                           <li>
-                               <div class="analysis_content_title">상세설명</div>
-                               <div class="analysis_content_select">아나필락시스 HOI 정의</div>
-                           </li>
-                        </ul>
+                        <div class="analysis_gap">
+                            <div class="analysis_gap_title">Gap era</div>
+                            <label for="analysis_gapera">
+                                <input type="number" id="analysis_gapera">일
+                            </label>
+                        </div>
                     </div>
+                    <ul class="analysis_content">
+                       <li>
+                           <div class="analysis_content_title">제목</div>
+                           <div class="analysis_content_select">hoi 아나필락시스</div>
+                       </li>
+                       <li>
+                           <div class="analysis_content_title">상세설명</div>
+                           <div class="analysis_content_select">아나필락시스 HOI 정의</div>
+                       </li>
+                    </ul>
+                </div>
 
                 <hr>
 
-                <!--위험구간-->
-                <div class="row period_day">
-                    <div class="input-title">위험구간</div>
-                    <div class="input-select input-days">
-                        <div class="selectbox">
-                            <select>
-                                <option value="-">이전</option>
-                                <option value="+">이후</option>
-                            </select>
+                <div class="row design_select">
+                    <div class="design_select_title">
+                        SCRI
+                    </div>
+                    <div class="period_day_wrapper">
+                        <!--위험구간-->
+                        <div class="period_day">
+                            <div class="input-title">위험구간</div>
+                            <div class="period_day-input input-days">
+                                <div class="selectbox">
+                                    <select>
+                                        <option value="-">이전</option>
+                                        <option value="+">이후</option>
+                                    </select>
+                                </div>
+                                <input type="number">
+                                <span class="input_days">일</span>
+                                <span class="input-to"> ~ </span>
+                                <div class="selectbox">
+                                    <select>
+                                        <option value="-">이전</option>
+                                        <option value="+">이후</option>
+                                    </select>
+                                </div>
+                                <input type="number">
+                                <span class="input_days">일</span>
+                            </div>
                         </div>
-                        <input type="number">
-                        <span>일</span>
-                        <span> ~ </span>
-                        <input type="number">
-                        <span>일</span>
+
+                        <!--대조구간-->
+                        <div class="period_day">
+                            <div class="input-title">대조구간1</div>
+                            <div class="period_day-input input-days">
+                                <div class="input-select-div1">
+                                    <div class="selectbox">
+                                        <select>
+                                            <option value="-">이전</option>
+                                            <option value="+">이후</option>
+                                        </select>
+                                    </div>
+                                    <input type="number">
+                                    <span class="input_days">일</span>
+                                </div>
+                                <div class="input-select-div2">
+                                    <span class="input-to"> ~ </span>
+                                    <div class="selectbox">
+                                    <select>
+                                        <option value="-">이전</option>
+                                        <option value="+">이후</option>
+                                    </select>
+                                </div>
+                                    <input type="number">
+                                    <span class="input_days">일</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="period_day">
+                            <div class="input-title">대조구간2</div>
+                            <div class="period_day-input input-days">
+
+                                <div class="input-select-div1">
+                                    <div class="selectbox">
+                                        <select>
+                                            <option value="-">이전</option>
+                                            <option value="+">이후</option>
+                                        </select>
+                                    </div>
+                                    <input type="number">
+                                    <span class="input_days">일</span>
+                                </div>
+                                <div class="input-select-div2">
+                                    <span class="input-to"> ~ </span>
+                                    <div class="selectbox">
+                                    <select>
+                                        <option value="-">이전</option>
+                                        <option value="+">이후</option>
+                                    </select>
+                                </div>
+                                    <input type="number">
+                                    <span class="input_days">일</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="analysis_select">
+                            <div class="input-title">분석대상 이상반응의 소그룹 분석 방법 선택</div>
+                            <div class="analysis_small_group">
+                                <div class="input-title">성별</div>
+                                <ul>
+                                <li>
+                                    <input type="checkbox" name="gender_select" id="man_select" value="0">
+                                    <label for="man_select">남자</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="gender_select" id="femal_select" value="1">
+                                    <label for="femal_select">여자</label>
+                                </li>
+                            </ul>
+                            </div>
+                            <div class="analysis_small_group">
+                                <div class="input-title">연령군</div>
+                                <div class="input-container">
+                                    <select class="form-control" multiple="multiple">
+                                        <option selected="selected">생후 0-2주</option>
+                                        <option>생후 3-4주</option>
+                                        <option selected="selected">생후 5-6주</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!--대조구간-->
-                <div class="row period_day">
-                    <div class="input-title">대조구간</div>
-                    <div class="input-select input-days">
-                        <div class="input-select-div1">
-                            <div class="selectbox">
-                                <select>
-                                    <option value="-">이전</option>
-                                    <option value="+">이후</option>
-                                </select>
-                            </div>
-                            <input type="number">
-                            <span>일</span>
-                        </div>
-                        <div class="input-select-div2">
-                            <span> ~ </span>
-                            <input type="number">
-                            <span>일</span>
-                        </div>
-                    </div>
-                </div>
+
 
                 <!--Machine Learning-->
-                <div class="row period_day">
-                    <div class="input-title">위험 및 대조구간 길이 </div>
-                    <input type="number" id="danger_day">
-                    <label for="danger_day">일</label>
-                </div>
-
+                <div class="row design_select">
+                    <div class="input-title design_select_title">
+                        Machine Learning
+                    </div>
+                    <div class="period_day_wrapper period_day">
+                        <div class="input-title">위험 및 대조구간 길이 </div>
+                        <input type="number" id="danger_day">
+                        <label for="danger_day">일</label>
+                    </div>
 
             </div>
         </div>

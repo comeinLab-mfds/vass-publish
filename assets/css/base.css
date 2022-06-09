@@ -818,66 +818,6 @@ input[type="radio"] + label:empty:before {
 }
 
 
-
-input[type="checkbox"] + label {
-  cursor: pointer;
-  margin-right: 0.5rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-input[type="checkbox"] + label:before {
-  content: "";
-  background: #f3f6f9;
-  border-radius: 100%;
-  border: 1px solid #e3e6e9;
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  position: relative;
-  margin-right: 3px;
-  vertical-align: middle;
-  transition: all 0.2s ease;
-}
-
-
-input[type="checkbox"]:hover + label:before,
-input[type="checkbox"]:checked + label:before {
-  border-color: #2869bd !important;
-  background-color: #2869bd !important;
-  box-shadow: inset 0 0 0 2px #ddd;
-}
-
-
-input[type="checkbox"]:focus + label:before {
-  outline: none;
-}
-
-
-input[type="checkbox"]:disabled + label {
-  cursor: auto;
-}
-
-
-input[type="checkbox"]:disabled:checked + label:before {
-  box-shadow: inset 0 0 0 2px #f4f4f4;
-  border-color: #b4b4b4;
-  background: #b4b4b4;
-}
-
-
-input[type="checkbox"]:disabled + label:before {
-  border-color: #b4b4b4;
-  background: #f4f4f4;
-}
-
-
-input[type="checkbox"] + label:empty:before {
-  margin-right: 0;
-}
-
 /* line 641, src/assets/css/base.scss */
 .input-comment {
   flex: 1 1 100% !important;
