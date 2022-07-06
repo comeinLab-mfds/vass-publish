@@ -780,7 +780,7 @@ input[type="checkbox"]:checked + label {
   align-items: center;
   background-color: white;
   border-radius: 0.5rem;
-  padding: 3rem 1rem;
+  padding: 1rem 1rem;
   overflow: hidden;
 }
 
@@ -1113,6 +1113,14 @@ margin-left:1rem;}
 .vaccine_resultBtn{
 margin-left:2rem;}
 
+
+.result-view-wrapper{
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
 .vaccine_select{
   background-color: white;
   border-radius: 0.5rem;
@@ -1126,7 +1134,6 @@ display:flex;}
 
 .vaccineResult{
 flex:0 0 auto!important;
-height:auto;
 }
 
 
@@ -1147,46 +1154,48 @@ width:130px!important;
   flex-direction:column;
 }
 
-.vaccineResult_th{
+.vaccineResult{
+display:flex;
 width:100%;
-border-bottom:1px solid #eee;
 padding:1rem;
 text-align:center;
 font-family: Comfortaa, "NanumSquare", sans-serif;
 color: slategray;
 }
 
-.vaccineResult_th li{
+.vaccineResult li{
 padding:0.5rem 0.7rem;
 }
 
-.vaccineResult_th li:nth-child(1){
-width:30%;
+.vaccineResult li:nth-child(1){
+width:25%;
 }
 
-.vaccineResult_th li:nth-child(2){
-width:20%;
+.vaccineResult li:nth-child(2){
+width:25%;
 }
 
-.vaccineResult_th li:nth-child(3){
-width:20%;}
+.vaccineResult li:nth-child(3){
+width:25%;}
 
-.vaccineResult_th li:nth-child(4){
-width:15%;
-}
+.vaccineResult li:nth-child(4){
+width:25%;}
 
-.vaccineResult_th li:nth-child(5){
-width:15%;
-}
 
 .vaccineResult_tableTd{
   display:flex;
   flex-direction:column;
-  height:80%;
+  height:76%;
   overflow:hidden;
   overflow-y:auto;
   margin-top:1rem;
+  width:100%;
 }
+
+.result-view-group{
+height:50%;
+display: flex;
+flex-direction: column;}
 
 .vaccineResult_td{
   display:flex;
@@ -1201,27 +1210,17 @@ padding:1rem;}
 .vaccineResult_tdHead{
 font-weight:700;}
 
-.vaccineResult_td div:nth-child(1){
-width:30%;
+.result-view.safety_result-view{
+margin-left: 0!important;}
+
+.result-title{
+font-size: 1.5rem;
+font-weight: 600;
+margin: 0.5rem 0;
 }
 
-.vaccineResult_td div:nth-child(2){
-width:20%;
-}
-
-.vaccineResult_td div:nth-child(3){
-width:20%;}
-
-.vaccineResult_td div:nth-child(4){
-width:15%;
-}
-
-.vaccineResult_td div:nth-child(5){
-width:15%;
-}
-
-
-
+.result-view-wrapper .result-view-group:first-child{
+margin-bottom:1rem;}
 
 
 /*실마리정보*/
@@ -1464,8 +1463,10 @@ margin-right:1rem;}
 }
 
 
-.scri{
-background-color:#f1f5f9;}
+.small-chart-title{
+font-size:1.8rem;
+font-weight:600;
+margin:2rem auto;}
 
 .safety_view{
 overflow:hidden;}
