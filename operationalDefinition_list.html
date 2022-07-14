@@ -67,11 +67,11 @@
                 </a>
             </div>
             <div class="aside-menu">
+                <h3 class="introduce-menu"><a href="summary.html">소개</a></h3>
                 <h3 class="aside-title">결과대시보드</h3>
                 <ul>
-                    <li><a href="">summary</a></li>
                     <li>
-                        <span class="sub-menu">접종률</span>
+                        <span class="sub-menu">백신 접종 현황</span>
                         <ul>
                             <li><a href="index.html">생년월 코호트별 접종률</a></li>
                             <li><a href="chart_02.html">연령군별 접종률</a></li>
@@ -81,20 +81,20 @@
                     <li>
                         <span class="sub-menu">안전성</span>
                         <ul>
-                            <li><a href="safety.html">안전성 분석 현황</a></li>
+                            <li><a href="safety.html" >안전성 분석 현황</a></li>
                             <li><a href="safety_info.html">실마리정보</a></li>
                         </ul>
                     </li>
                 </ul>
                 <h3 class="aside-title">조작적 정의</h3>
                 <ul>
-                    <li><a href="operationalDefinition_list.html"  class="active">목록리스트</a></li>
+                    <li><a href="operationalDefinition_list.html" class="active">목록리스트</a></li>
                     <li><a href="operationalDefinition_add.html">조작적정의 생성</a></li>
                 </ul>
                 <h3 class="aside-title">연구디자인</h3>
                 <ul>
-                    <li><a href="">연구디자인 리스트</a></li>
-                    <li><a href="">연구디자인 생성</a></li>
+                    <li><a href="researchDesign_list.html">연구디자인 리스트</a></li>
+                    <li><a href="researchDesign_CMI.html">연구디자인 생성</a></li>
                 </ul>
                 <h3 class="aside-title">관리자</h3>
                 <ul>
@@ -111,21 +111,55 @@
         <div class="content">
             <div class="content-title">
                 <h1>조작적 정의</h1>
-                <div class="selectbox">
-                    <select name="" id="">
-                        <option value="HOI">없음</option>
-                        <option value="HOI">HOI</option>
-                        <option value="VOI">VOI</option>
-                        <option value="Condition">Condition</option>
-                        <option value="Drug Exposure">Drug Exposure</option>
-                    </select>
+                <div class="search_content">
+                    <div class="selectbox">
+                        <select name="" id="operational_ctg_select">
+                            <option>HOI</option>
+                            <option>VOI</option>
+                            <option>CONDITION</option>
+                            <option>DRUG</option>
+                        </select>
+                    </div>
+                    <input type="text" name="" value="" id="operational_search_val">
                 </div>
-                <div class="search_input">
-                    <input type="text">
-                    <button class="btn-submit" href="#">Search</button>
+                <div class="button-container">
+                    <button type="button" class="btn-submit" onclick="javascript:fn_operational_select_popup();">생성</button>
+                    <button type="button" id="myBtn" class="btn-submit modalBtnSubmit" onclick="javascript:fn_list_search();">검색</button>
                 </div>
-                <button id="myBtn" class="modalBtnSubmit">Create</button>
-                    <div id="myModal" class="myModal">
+            </div>
+            <div class="content-view list operational-definition-list">
+                <div class="content-table">
+                    <ul class="row th table_cursor">
+                        <li>No.</li>
+                        <li>카테고리</li>
+                        <li>제목</li>
+                        <li>설명</li>
+                        <li class="table_list_th">
+                            <div class="table_pointer" onclick="fn_ordering_created();">생성일 </div>
+                            <div class="table_list_array"></div>
+                        </li>
+                        <li class="table_list_th">
+                            <div class="table_pointer1" onclick="fn_ordering_creator();">생성자 </div>
+                            <div class="table_list_array1"></div>
+                        </li>
+                    </ul>
+                    <div id="op_list_wrap">
+
+                        <ul class="row" onclick="JavaScript:fn_op_detail_view(95);">
+                            <li>1</li>
+                            <li>HOI</li>
+                            <li>del_hoi_test</li>
+                            <li>zxcvzeafwvzxc</li>
+                            <li>2022-05-16 09:55</li>
+                            <li>유저1</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="myModal" class="myModal">
                         <div class="myBtn_modal-content">
                             <h1>조작적정의 생성</h1>
                             <span class="modalClose">&times;</span>
@@ -143,31 +177,6 @@
                             </table>
                         </div>
                     </div>
-            </div>
-            <div class="content-view list operational-definition-list">
-                <div class="content-table">
-                    <ul class="row th">
-                        <li>count</li>
-                        <li>Category</li>
-                        <li>Created Date</li>
-                        <li>Created User</li>
-                        <li>Descripton</li>
-                        <li>Query</li>
-                        <li>Extraction date</li>
-                    </ul>
-                    <ul class="row" onclick="location.href='operationalDefinition_edit.html'">
-                        <li>1</li>
-                        <li>HOI</li>
-                        <li>2020-10-01</li>
-                        <li>hong1234</li>
-                        <li>seizure 진단 받은 eventseizure 진단 받은 event</li>
-                        <li>select * sdfsdf</li>
-                        <li>2020-10-31</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </main>
 </div>
 <script src="assets/js/jquery.cookie.min.js"></script>
 <script src="assets/js/script.js"></script>

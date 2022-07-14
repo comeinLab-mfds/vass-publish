@@ -57,11 +57,11 @@
                 </a>
             </div>
             <div class="aside-menu">
+                <h3 class="introduce-menu"><a href="summary.html">소개</a></h3>
                 <h3 class="aside-title">결과대시보드</h3>
                 <ul>
-                    <li><a href="">summary</a></li>
                     <li>
-                        <span class="sub-menu">접종률</span>
+                        <span class="sub-menu">백신 접종 현황</span>
                         <ul>
                             <li><a href="index.html">생년월 코호트별 접종률</a></li>
                             <li><a href="chart_02.html">연령군별 접종률</a></li>
@@ -71,20 +71,20 @@
                     <li>
                         <span class="sub-menu">안전성</span>
                         <ul>
-                            <li><a href="safety.html">안전성 분석 현황</a></li>
+                            <li><a href="safety.html" >안전성 분석 현황</a></li>
                             <li><a href="safety_info.html">실마리정보</a></li>
                         </ul>
                     </li>
                 </ul>
                 <h3 class="aside-title">조작적 정의</h3>
                 <ul>
-                    <li><a href="operationalDefinition_list.html">목록리스트</a></li>
-                    <li><a href="operationalDefinition_add.html" class="active">조작적정의 생성</a></li>
+                    <li><a href="operationalDefinition_list.html" class="active">목록리스트</a></li>
+                    <li><a href="operationalDefinition_add.html">조작적정의 생성</a></li>
                 </ul>
                 <h3 class="aside-title">연구디자인</h3>
                 <ul>
-                    <li><a href="">연구디자인 리스트</a></li>
-                    <li><a href="">연구디자인 생성</a></li>
+                    <li><a href="researchDesign_list.html">연구디자인 리스트</a></li>
+                    <li><a href="researchDesign_CMI.html">연구디자인 생성</a></li>
                 </ul>
                 <h3 class="aside-title">관리자</h3>
                 <ul>
@@ -101,69 +101,190 @@
         <div class="content">
             <div class="content-title">
                 <h1>조작적 정의 상세보기</h1>
-                <div class="button-container">
-                    <button class="btn-cancel" onclick="javascript:history.back()">목록으로</button>
-                </div>
+                <span id="creator_request_del_msg"></span>
             </div>
+
             <div class="content-view edit">
                 <div class="row">
                     <div class="content-view-item">
                         <div class="input-title">Category</div>
                         <div class="input-select">
-                            <label for="HOI">HOI</label>
+                            <label>HOI</label>
                         </div>
                     </div>
-                    <div class="content-view-item">
+                    <!-- <div class="content-view-item" id="detail_approval_wrapper">
                         <div class="input-title">Approval</div>
                         <div clss="approval_select">
                             <ul class="table_radio">
                                 <li>
-                                    <input type="radio" value="approval" name="hoi_approval" id="hoi_approval">
-                                    <label for="hoi_approval">Y</label>
+                                    <input type="radio" value="1" name="detail_ctg_approval" id="detail_ctg_yes_approval">
+                                    <label for="detail_ctg_yes_approval">Y</label>
                                 </li>
                                 <li>
-                                    <input type="radio" value="non_approval" name="hoi_approval" id="hoi_nonapproval">
-                                    <label for="hoi_nonapproval">N</label>
+                                    <input type="radio" value="0" name="detail_ctg_approval" id="detail_ctg_non_approval">
+                                    <label for="detail_ctg_non_approval">N</label>
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
+
                 <div class="row">
                     <div class="content-view-item">
                         <div class="input-title">Creator</div>
-                        <div class="input-select">
-                            Park Waiting
-                        </div>
+                        <div class="input-select" id="detail_creator"></div>
                     </div>
                     <div class="content-view-item">
                         <div class="input-title">Create Date</div>
-                        <div class="input-select">
-                           2021-07-07
+                        <div class="input-select" id="detail_date"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-title">제목</div>
+                    <div class="input-select" id="detail_title"></div>
+                </div>
+
+                <div class="filter admin_check_filter">
+                    <div class="input-title input_group">진단환경 <span class="input_title_br"> [복수선택가능]</span></div>
+                    <ul id="admin_check_list_ul">
+                        <li>
+                            <input type="checkbox" name="hoi-hospital-path" id="hoi_no_admission" value="0" disabled>
+                            <label for="hoi_no_admission">입원 안함</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="hoi-hospital-path" id="hoi_emergency_room" value="1" disabled>
+                            <label for="hoi_emergency_room">응급실 입원</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="hoi-hospital-path" id="hoi_outpatinet" value="2" disabled>
+                            <label for="hoi_outpatinet">외래 입원</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="row allergy_select">
+                    <div class="input-title">이상반응 선택</div>
+                    <div class="vaccine_select signal_select">
+                        <div class="selectbox">
+                            <select name="" id="hoi_adverse_select" disabled>
+                                <!-- ajax 로 niceselect 그려준다 -->
+                            </select>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="content-view-item">
-                        <div class="input-title">Extraction Start Date</div>
-                        <div class="input-container">
-                            <input type="text" id="ageStartYear_02" class="datepicker_ym" autocomplete="false">
-                        </div>
-                    </div>
-                    <div class="content-view-item">
-                        <div class="input-title">Extraction End Date</div>
-                        <div class="input-container">
-                            <input type="text" id="ageStartYear_02" class="datepicker_ym" autocomplete="false">
-                        </div>
+
+                <div class="row row-diagnosis">
+                    <div class="input-title">진단정보</div>
+                    <div class="row-table filter-vaccine-type detail_operational">
+                        <table id="hoi_diagnosis_icd_listtable" class="table input-table">
+                            <colgroup>
+                                <col width="5%">
+                                <col width="31%">
+                                <col width="31%">
+                                <col width="33%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" class="checkbox" name="create_hoi_check" value="" id="all_detail_hoi_diagnosis_icd_checkbox">
+                                    <th>진단 코드</th>
+                                    <th>진단명</th>
+                                    <th>상태</th>
+                                </tr>
+                            </thead>
+                            <tbody id="hoi_diagnosis_icd_tbody">
+
+                            </tbody>
+                        </table>
+                            <!-- <div class="button-container create_button">
+                                <button type="button" class="btn-submit" onclick="javascript:fn_hoi_detail_diagnosis_icd_select_add()">추가</button>
+                                <button type="button" class="btn-cancel" onclick="javascript:fn_hoi_detail_diagnosis_icd_code_select_remove()">선택삭제</button>
+                            </div> -->
                     </div>
                 </div>
+
+                <h3 class="create_title">추가 조건</h3>
+
+                <div class="row row-diagnosis-02">
+                    <div class="row-table filter-vaccine-type detail_operational">
+                        <table id="hoi_consider_icd_listtable" class="table input-table">
+                            <colgroup>
+                                <col width="5%">
+                                <col width="10%">
+                                <col width="15%">
+                                <col width="25%">
+                                <col width="15%">
+                                <col width="30%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" class="checkbox" name="" value="" id="all_detail_hoi_consider_icd_checkbox"></th>
+                                    <th>진단 코드</th>
+                                    <th>진단명</th>
+                                    <th>상태</th>
+                                    <th>발생여부</th>
+                                    <th class="range_group">발생일로부터의 <span class="range_day_span">기간</span></th>
+                                </tr>
+                            </thead>
+                            <tbody id="hoi_consider_icd_tbody">
+
+                            </tbody>
+                        </table>
+                        <!-- <div class="button-container create_button">
+                            <button type="button" class="btn-submit" onclick="javascript:fn_hoi_detail_consider_icd_select_add()">추가</button>
+                            <button type="button" class="btn-cancel" onclick="javascript:fn_hoi_detail_consider_icd_code_select_remove()">선택삭제</button>
+                        </div> -->
+                    </div>
+                </div>
+
+                <hr>
+
+                 <h3 class="create_title">약물처방조건</h3>
+
+                <div class="row row-diagnosis-03">
+                    <div class="row-table filter-vaccine-type detail_operational">
+                        <table id="hoi_consider_edi_listtable" class="table input-table">
+                            <colgroup>
+                                <col width="5%">
+                                <col width="15%">
+                                <col width="20%">
+                                <col width="25%">
+                                <col width="35%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" class="checkbox" name="" value="" id="all_detail_hoi_consider_edi_checkbox"></th>
+                                    <th>주성분 코드</th>
+                                    <th>성분명</th>
+                                    <th>처방여부</th>
+                                    <th class="range_group">발생일로부터의 <span class="range_day_span">기간</span></th>
+                                </tr>
+                            </thead>
+                            <tbody id="hoi_consider_edi_tbody">
+
+                            </tbody>
+                        </table>
+                            <!-- <div class="button-container create_button">
+                                <button type="button" class="btn-submit" onclick="javascript:fn_hoi_detail_consider_edi_select_add()">추가</button>
+                                <button type="button" class="btn-cancel" onclick="javascript:fn_hoi_detail_consider_edi_code_select_remove()">선택삭제</button>
+                            </div> -->
+                    </div>
+                </div>
+
                 <div class="row">
-                    <div class="input-title">Description</div>
-                    <textarea readonly>seizure 진단 받은 eventseizure 진단 받은 event</textarea>
+                    <div class="input-title">상세설명</div>
+                    <textarea id="detail_description" class="is_possible_edit_not_use" disabled></textarea>
                 </div>
                 <div class="row">
-                    <div class="input-title">Query</div>
-                    <textarea>select * sdfsdf</textarea>
+                    <div class="input-title">작동 쿼리</div>
+                    <textarea id="detail_query" class="query_class" disabled></textarea>
+                </div>
+                <div class="button-container detail_view_button">
+                    <button type="button" class="detail_ctl_btn btn-del" id="detail_del_btn" onclick="JavaScript:fn_del_operational_definition_detail();" style="display: none;">삭제</button>
+                    <button type="button" class="detail_ctl_btn btn-del" id="detail_req_del_btn" onclick="JavaScript:fn_require_del_operational_definition_detail();" style="display: none;">삭제 요청</button>
+                    <button type="button" class="detail_ctl_btn btn-del" id="detail_req_del_cancel_btn" onclick="JavaScript:fn_cancel_del_operational_definition_detail();" style="display: none;">삭제 요청 취소</button>
+                    <!-- <button type="button" class="detail_ctl_btn btn-edit" id="detail_edit_btn" onclick="JavaScript:fn_save_operational_definition_detail();" style="display: none;">수정</button> -->
+                    <button type="button" class="btn-cancel" onclick="JavaScript:go_list_view();">목록</button>
                 </div>
             </div>
         </div>

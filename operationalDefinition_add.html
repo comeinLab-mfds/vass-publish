@@ -6,11 +6,17 @@
 
     <script src="assets/js/jquery-3.5.1.min.js"></script>
     <script src="assets/js/jquery.cookie.min.js"></script>
+    <script src="assets/js/jquery.nice-select.js"></script>
+
+
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
     <script>
       $(function () {
         var dateFormat = "yy-mm-dd",
@@ -41,6 +47,13 @@
           return date;
         }
       });
+    </script>
+
+        <script>
+        $(document).ready(function(){
+            $('select').niceSelect();
+
+        });
     </script>
 </head>
 <body>
@@ -91,11 +104,11 @@
                 </a>
             </div>
             <div class="aside-menu">
+                <h3 class="introduce-menu"><a href="summary.html">소개</a></h3>
                 <h3 class="aside-title">결과대시보드</h3>
                 <ul>
-                    <li><a href="">summary</a></li>
                     <li>
-                        <span class="sub-menu">접종률</span>
+                        <span class="sub-menu">백신 접종 현황</span>
                         <ul>
                             <li><a href="index.html">생년월 코호트별 접종률</a></li>
                             <li><a href="chart_02.html">연령군별 접종률</a></li>
@@ -105,7 +118,7 @@
                     <li>
                         <span class="sub-menu">안전성</span>
                         <ul>
-                            <li><a href="safety.html">안전성 분석 현황</a></li>
+                            <li><a href="safety.html" >안전성 분석 현황</a></li>
                             <li><a href="safety_info.html">실마리정보</a></li>
                         </ul>
                     </li>
@@ -113,12 +126,12 @@
                 <h3 class="aside-title">조작적 정의</h3>
                 <ul>
                     <li><a href="operationalDefinition_list.html">목록리스트</a></li>
-                    <li><a href="operationalDefinition_add.html" class="active">조작적정의 생성</a></li>
+                    <li><a href="operationalDefinition_add.html"  class="active">조작적정의 생성</a></li>
                 </ul>
                 <h3 class="aside-title">연구디자인</h3>
                 <ul>
-                    <li><a href="researchDesign_list.html" class="active">연구디자인 리스트</a></li>
-                    <li><a href="">연구디자인 생성</a></li>
+                    <li><a href="researchDesign_list.html">연구디자인 리스트</a></li>
+                    <li><a href="researchDesign_CMI.html">연구디자인 생성</a></li>
                 </ul>
                 <h3 class="aside-title">관리자</h3>
                 <ul>
@@ -140,237 +153,210 @@
                     <button class="btn-cancel" onclick="location.href='operationalDefinition_list.html'">취소</button>
                 </div>
             </div>
-            <div class="content-view edit">
-                <div class="row">
-                    <div class="input-title">Category</div>
-                    <div class="input-select">
-                        <input value="HOI" type="radio" name="select-category" id="HOI">
-                        <label for="HOI">HOI</label>
-                        <small class="category-information"></small>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-title">입원 경로</div>
-                    <div class="input-select">
-                        <div>
-                            <input value="입원" type="radio" name="select-admission" id="admission-01">
-                            <label for="admission-01">입원</label>
-                        </div>
-                        <div>
-                            <input value="외래" type="radio" name="select-admission" id="admission-02">
-                            <label for="admission-02">외래</label>
-                        </div>
-                        <div>
-                            <input value="응급실" type="radio" name="select-admission" id="admission-03">
-                            <label for="admission-03">응급실</label>
-                        </div>
-                    </div>
-                </div>
-                <h3>Diagnosis</h3>
-                <div class="row-table">
-                    <table id="input-table" class="table">
-                        <thead>
-                            <tr>
-                                <th><input type="checkbox"  id="checkb" name="checkb"><label for="checkb"><span></span></label></th>
-                                <th>ICD code</th>
-                                <th>Name</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><input type="checkbox" id="checkb1" name="checkb"><label for="checkb1"><span></span></label></td>
-                                <td><span class="input_table_text">C46.</td>
-                                <td><span class="input_table_text">Kaposi sarcoma of palate</td>
-                                <td class="table_select">
-                                    <input value="HOI" type="radio" name="select-diagnosis" id="diagnosis">
-                                    <label for="diagnosis">주+부상병</label>
-                                    <input value="VOI" type="radio" name="select-diagnosis" id="mainDiagnosis">
-                                    <label for="mainDiagnosis">주상병</label>
-                                    <input value="condition" type="radio" name="select-diagnosis" id="subDiagnosis">
-                                    <label for="subDiagnosis">부상병</label>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="btn_contain">
-                        <button class="btn-cancel">선택삭제</button>
-                        <button id="myBtn" class="modalBtnSubmit">항목추가</button>
-                            <div id="myModal" class="myModal">
-                                <div class="modal-table">
-                                    <div class="serch_input_modal">
-                                        <input type="text">
-                                        <button class="btn-submit" href="#">Search</button>
-                                        <span class="modalClose">&times;</span>
-                                    </div>
-                                    <table id="input-modal-table" class="table"> 
-                                    <thead>
-                                        <tr>
-                                            <th><input type="checkbox" id="checkb2" name="checkb"><label for="checkb2"><span></span></label></th>
-                                            <th>ICD code</th>
-                                            <th>Name</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td><input type="checkbox" id="checkb3" name="checkb"><label for="checkb3"><span></span></label></td>
-                                        <td><span>C46.</span>
-                                        <td><span>Kaposi sarcoma of palate</span></td>
-                                    </tr>
-                                    </tbody>
-                                    </table>
-                                    <button id="myBtn" class="btn-submit btn-submit-modal"   onclick="location.href='operationalDefinition_add.html'">선택추가</button>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                <h3>같이 고려할 것 들</h3>
-                <div class="row-table">
-                    <table id="input-table" class="table">
-                        <thead>
-                            <tr>
-                                <th><input type="checkbox" id="checkb14" name="checkb"><label for="checkb14"><span></span></label></th>
-                                <th>ICD code</th>
-                                <th>Name</th>
-                                <th>Status</th>
-                                <th>발생여부</th>
-                                <th>Range(Day)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><input type="checkbox" id="checkb13" name="checkb"><label for="checkb13"><span></span></label></td>
-                                <td><span class="input_table_text">C46.</td>
-                                <td><span class="input_table_text">Kaposi sarcoma of palate</td>
-                                <td class="table_select">
-                                    <input value="HOI" type="radio" name="select-diagnosis" id="diagnosis">
-                                    <label for="diagnosis">주+부상병</label>
-                                    <input value="VOI" type="radio" name="select-diagnosis" id="mainDiagnosis">
-                                    <label for="mainDiagnosis">주상병</label>
-                                    <input value="condition" type="radio" name="select-diagnosis" id="subDiagnosis">
-                                    <label for="subDiagnosis">부상병</label>
-                                </td>
-                                <td><label><input type="checkbox" id="checkb5" name="checkb" checked/><label for="checkb5"><span></span></label></td>
-                                <td class="input-select input-days table_select">
-                                    <input type="number">
-                                    <span class="input-days-range"> ~ </span>
-                                    <input type="number">
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="btn_contain">
-                        <button class="btn-cancel">선택삭제</button>
-                        <button id="myBtn" class="modalBtnSubmit">항목추가</button>
-                            <div id="myModal" class="myModal">
-                                <div class="modal-table">
-                                    <div class="serch_input_modal">
-                                        <input type="text">
-                                        <button class="btn-submit" href="#">Search</button>
-                                        <span class="modalClose">&times;</span>
-                                    </div>
-                                    <table id="input-modal-table" class="table"> 
-                                        <thead>
-                                            <tr>
-                                                <th><input type="checkbox" id="checkb6" name="checkb"><label for="checkb6"><span></span></label></th>
-                                                <th>ICD code</th>
-                                                <th>Name</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td><input type="checkbox" id="checkb7" name="checkb"><label for="checkb7"><span></span></label></td>
-                                            <td><span>C46.</span>
-                                            <td><span>Kaposi sarcoma of palate</span></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                    <button id="myBtn" class="btn-submit btn-submit-modal"  onclick="location.href='operationalDefinition_add.html'">선택추가</button>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                <div class="row-table">
-                    <table id="input-table" class="table">
-                        <thead>
-                            <tr>
-                                <th><input type="checkbox" id="checkb8" name="checkb"><label for="checkb8"><span></span></label></th>
-                                <th>EDI code</th>
-                                <th>Name</th>
-                                <th>처방여부</th>
-                                <th>Range(Day)</th>
-                            </tr>
-                        </thead>
-                            <tbody>
-                                <tr>
-                                    <td><input type="checkbox" id="checkb9" name="checkb"><label for="checkb9"><span></span></label></td>
-                                    <td><span class="input_table_text">C46.</td>
-                                    <td><span class="input_table_text">Kaposi sarcoma of palate</td>
-                                    <td><input type="checkbox" id="checkb10" name="checkb" checked/><label for="checkb10"><span></span></label></td>
-                                    <td class="input-select input-days table_select">
-                                        <input type="number">
-                                        <span class="input-days-range"> ~ </span>
-                                        <input type="number"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="btn_contain">
-                            <button class="btn-cancel">선택삭제</button>
-                            <button id="myBtn" class="modalBtnSubmit">항목추가</button>
-                                <div id="myModal" class="myModal">
-                                    <div class="modal-table">
-                                        <div class="serch_input_modal">
-                                            <input type="text">
-                                            <button class="btn-submit" href="#">Search</button>
-                                            <span class="modalClose">&times;</span>
-                                        </div>
-                                        <table id="input-modal-table" class="table"> 
-                                            <thead>
-                                                <tr>
-                                                    <th><input type="checkbox" id="checkb11" name="checkb"><label for="checkb11"><span></span></label></th>
-                                                    <th>EDI Code</th>
-                                                    <th>Name</th>
-                                                    <th>ATC Code</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td><input type="checkbox" id="checkb12" name="checkb"><label for="checkb12"><span></span></label></td>
-                                                <td><span>C46.</span>
-                                                <td><span>Kaposi sarcoma of palate</span></td>
-                                                <td><span>ADW45877</span></td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                        <button class="btn-submit btn-submit-modal" onclick="location.href='operationalDefinition_add.html'">선택추가</button>
-                                    </div>
-                                </div>
-                        </div>
-                </div>
-                <div class="row row-description">
-                    <div class="input-title">Description</div>
-                    <textarea></textarea>
-                </div>
-                <div class="row row-query">
-                    <div class="input-title">
-                        <span>Query</span>
-                        <button class="btn-query">쿼리 생성</button>
-                    </div>
-                    <textarea class="query-textarea" readonly></textarea>
-                    <div class="buttons">
-                        <button class="btn-copy">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
-                                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
-                            </svg>
-                        </button>
-                        <button class="btn-refresh">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 18 18">
-                                <path d="M9 13.5c-2.49 0-4.5-2.01-4.5-4.5S6.51 4.5 9 4.5c1.24 0 2.36.52 3.17 1.33L10 8h5V3l-1.76 1.76C12.15 3.68 10.66 3 9 3 5.69 3 3.01 5.69 3.01 9S5.69 15 9 15c2.97 0 5.43-2.16 5.9-5h-1.52c-.46 2-2.24 3.5-4.38 3.5z"/>
-                            </svg>
-                        </button>
-                        <div class="tooltip">Click to copy to clipboard</div>
-                    </div>
-                </div>
+            <div class="content-view content_edit">
+    <div class="row">
+        <div class="input-title">Category</div>
+        <div class="input-select">
+            <label>HOI</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="input-title">제목</div>
+        <div class="input-select">
+            <input type="text" name="hoi-title" id="hoi_title" autocomplete="off">
+        </div>
+    </div>
+
+    <div class="filter admin_check_filter">
+        <div class="input-title input_group">진단환경 <span class="input_title_br"> [복수선택가능]</span></div>
+        <ul id="admin_check_list_ul">
+            <li>
+                <input type="checkbox" name="hoi-hospital-path" id="hoi_no_admission" value="0">
+                <label for="hoi_no_admission">입원 안함</label>
+            </li>
+            <li>
+                <input type="checkbox" name="hoi-hospital-path" id="hoi_emergency_room" value="1">
+                <label for="hoi_emergency_room">응급실 입원</label>
+            </li>
+            <li>
+                <input type="checkbox" name="hoi-hospital-path" id="hoi_outpatinet" value="2">
+                <label for="hoi_outpatinet">외래 입원</label>
+            </li>
+        </ul>
+    </div>
+
+    <!-- <div class="filter filter-vaccine-type hoi_filter_vaccine_type">
+        <div class="input-title input_group">백신 선택</div>
+        <ul id="age_vaccine_list_ul">
+
+        </ul>
+    </div> -->
+
+    <div class="row allergy_select">
+        <div class="input-title">이상반응 선택</div>
+        <div class="vaccine_select signal_select">
+            <div class="selectbox">
+                <select name="hoi-hoidefn-id" id="hoi_adverse_select">
+                    <!-- ajax 로 niceselect 그려준다 -->
+                </select>
             </div>
+        </div>
+    </div>
+
+    <div class="row-diagnosis diagnosis_inpo">
+        <div class="input-title">진단정보</div>
+        <div class="row-table filter-vaccine-type diagnosis-table">
+            <table id="hoi_diagnosis_icd_listtable" class="table input-table diagnosis-table">
+                <colgroup>
+                    <col width="5%">
+                    <col width="31%">
+                    <col width="31%">
+                    <col width="33%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" class="checkbox" name="create_hoi_check" value="" id="all_hoi_diagnosis_icd_checkbox">
+                        <th>진단 코드</th>
+                        <th>진단명</th>
+                        <th>상태</th>
+                    </tr>
+                </thead>
+                <tbody id="hoi_diagnosis_icd_tbody">
+
+                </tbody>
+            </table>
+                <div class="button-container create_button">
+                    <button type="button" class="btn-submit" onclick="javascript:fn_hoi_diagnosis_icd_select_add()">추가</button>
+                    <button type="button" class="btn-cancel" onclick="javascript:fn_hoi_diagnosis_icd_code_select_remove()">선택삭제</button>
+                </div>
+        </div>
+    </div>
+
+    <h3 class="create_title">추가 조건</h3>
+
+    <div class="row row-diagnosis-02">
+        <div class="row-table filter-vaccine-type">
+            <table id="hoi_consider_icd_listtable" class="table input-table">
+                <colgroup>
+                    <col width="5%">
+                    <col width="10%">
+                    <col width="15%">
+                    <col width="25%">
+                    <col width="15%">
+                    <col width="30%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" class="checkbox" name="" value="" id="all_hoi_consider_icd_checkbox"></th>
+                        <th>진단 코드</th>
+                        <th>진단명</th>
+                        <th>상태</th>
+                        <th>발생여부</th>
+                        <th class="range_group">발생일로부터의 <span class="range_day_span">기간</span></th>
+                    </tr>
+                </thead>
+                <tbody id="hoi_consider_icd_tbody">
+
+                </tbody>
+            </table>
+            <div class="button-container create_button">
+                <button type="button" class="btn-submit" onclick="javascript:fn_hoi_consider_icd_select_add()">추가</button>
+                <button type="button" class="btn-cancel" onclick="javascript:fn_hoi_consider_icd_code_select_remove()">선택삭제</button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+     <h3 class="create_title">약물처방조건</h3>
+
+    <div class="row row-diagnosis-03">
+        <div class="row-table filter-vaccine-type">
+            <table id="hoi_consider_edi_listtable" class="table input-table">
+                <colgroup>
+                    <col width="5%">
+                    <col width="15%">
+                    <col width="20%">
+                    <col width="25%">
+                    <col width="35%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" class="checkbox" name="" value="" id="all_hoi_consider_edi_checkbox"></th>
+                        <th>주성분 코드</th>
+                        <th>성분명</th>
+                        <th>처방여부</th>
+                        <th class="range_group">발생일로부터의 <span class="range_day_span">기간</span></th>
+                    </tr>
+                </thead>
+                <tbody id="hoi_consider_edi_tbody">
+
+                </tbody>
+            </table>
+                <div class="button-container create_button">
+                    <button type="button" class="btn-submit" onclick="javascript:fn_hoi_consider_edi_select_add()">추가</button>
+                    <button type="button" class="btn-cancel" onclick="javascript:fn_hoi_consider_edi_code_select_remove()">선택삭제</button>
+                </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- <h3 class="create_title vaccine_appoint">백신지정 <span> *미지정시 전체 백신에 대한 HOI 정의로 활용됨</span></h3>
+
+    <div class="row row-diagnosis-04">
+        <div class="row-table">
+            <table id="hoi_consider_vaccine_listtable" class="table input-table">
+                <colgroup>
+                    <col width="5%">
+                    <col width="47%">
+                    <col width="48%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" class="checkbox" name="" value="" id="all_hoi_consider_vaccine_checkbox">
+                        <th>Vaccine ID</th>
+                        <th>백신명</th>
+                    </tr>
+                </thead>
+                <tbody id="hoi_consider_vaccine_tbody">
+
+                </tbody>
+            </table>
+                <div class="button-container create_button">
+                    <button type="button" class="btn-submit" onclick="javascript:fn_hoi_consider_vaccine_select_add()">추가</button>
+                    <button type="button" class="btn-cancel" onclick="javascript:fn_hoi_consider_vaccine_code_select_remove()">선택삭제</button>
+                </div>
+        </div>
+    </div> -->
+
+    <div class="row row-description">
+        <div class="input-title">상세설명</div>
+        <textarea id="hoi_create_description"></textarea>
+    </div>
+
+    <div class="row row-query">
+        <div class="input-title">
+            <span>작동 쿼리</span>
+            <button type="button" class="btn-query" onclick="javascript:fn_query_create_hoi();">쿼리 생성</button>
+        </div>
+        <textarea id="hoi_create_query_content" class="query-textarea" readonly></textarea>
+        <div class="buttons">
+            <button type="button" class="btn-copy">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                </svg>
+            </button>
+            <button type="button" class="btn-refresh">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 18 18">
+                    <path d="M9 13.5c-2.49 0-4.5-2.01-4.5-4.5S6.51 4.5 9 4.5c1.24 0 2.36.52 3.17 1.33L10 8h5V3l-1.76 1.76C12.15 3.68 10.66 3 9 3 5.69 3 3.01 5.69 3.01 9S5.69 15 9 15c2.97 0 5.43-2.16 5.9-5h-1.52c-.46 2-2.24 3.5-4.38 3.5z"/>
+                </svg>
+            </button>
+            <div class="tooltip">Click to copy to clipboard</div>
+        </div>
+    </div>
+</div>
         </div>
     </main>
     <div class="modal modal-query-refresh">

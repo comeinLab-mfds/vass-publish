@@ -339,6 +339,17 @@ aside li a {
   color: white;
 }
 
+.introduce-menu{
+margin: 1rem 2rem 1rem;
+font-size: 12px;
+font-weight: bold;
+justify-content: flex-start;
+}
+
+.introduce-menu a{
+color: #d3d6d9;
+}
+
 /* line 312, src/assets/css/style.scss */
 input[type="radio"] {
   display: none;
@@ -3439,8 +3450,71 @@ bottom:30px;
 color:#fff;}
 
 
+/*summary*/
 
+.content.summary-content{
+position:relative;
+font-family: "NanumSquare", sans-serif;}
 
+.introduce_content{
+margin: 1rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+width:100%;
+height:100%;
+justify-content: space-around;
+}
+
+.introduce_title{
+text-align: center;
+}
+
+.introduce_content_title{
+font-size:4.5rem;
+color: #1c468f;
+font-weight: 600;
+}
+
+.introduce_content_subtitle{
+font-size:3.5rem;
+color: #1c468f;
+}
+
+.introduce_content_subtitle:after{
+content: "";
+display: block;
+width: 60px;
+border-bottom: 1px solid #bcbcbc;
+margin: 20px auto;
+}
+
+.introduce_download{
+text-decoration-line:underline;
+text-underline-position: under;
+display: flex;
+flex-direction: column;
+font-size:1.7rem;
+}
+
+.introduce_download:before{
+content: "";
+display: block;
+width: 60px;
+border-bottom: 1px solid #bcbcbc;
+margin: 20px auto;
+}
+
+.footer_img{
+display:flex;
+align-items: center;}
+
+.footer_img img{
+width:180px;
+height:auto;}
+
+.footer_img li{
+margin:0 1.5rem}
 
 /*==========모달팝업 darkmode=================*/
 

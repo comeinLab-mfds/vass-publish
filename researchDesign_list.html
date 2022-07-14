@@ -67,9 +67,9 @@
                 </a>
             </div>
             <div class="aside-menu">
+                <h3 class="introduce-menu"><a href="summary.html">소개</a></h3>
                 <h3 class="aside-title">결과대시보드</h3>
                 <ul>
-                    <li><a href="">summary</a></li>
                     <li>
                         <span class="sub-menu">접종률</span>
                         <ul>
@@ -94,7 +94,7 @@
                 <h3 class="aside-title">연구디자인</h3>
                 <ul>
                     <li><a href="researchDesign_list.html" class="active">연구디자인 리스트</a></li>
-                    <li><a href="">연구디자인 생성</a></li>
+                    <li><a href="researchDesign_CMI.html">연구디자인 생성</a></li>
                 </ul>
                 <h3 class="aside-title">관리자</h3>
                 <ul>
@@ -113,19 +113,10 @@
             <div class="content-title">
                 <h1>연구디자인 리스트</h1>
                 <div class="search_content">
-                    <div class="selectbox">
-                        <select name="" id="">
-                            <option value="HOI">없음</option>
-                            <option value="HOI">HOI</option>
-                            <option value="VOI">VOI</option>
-                            <option value="Condition">Condition</option>
-                            <option value="Drug Exposure">Drug Exposure</option>
-                        </select>
-                    </div>
                     <input type="text" name="" value="">
                     <div class="button-container">
-                        <button id="myBtn" class="modalBtnSubmit">Create</button>
-                        <button type="button" class="btn-submit">Search</button>
+                        <button type="button" id="myBtn" class="btn-submit">생성</button>
+                        <button type="button" id="design_search_btn" class="btn-submit" onclick="javascript:fn_study_design_list_search();">검색</button>
                     </div>
                 </div>
             </div>
@@ -133,36 +124,28 @@
                 <div class="content-table">
                     <ul class="row th">
                         <li>NO</li>
+                        <li>제목</li>
+                        <li>분석 대상 백신</li>
+                        <li>분석 대상 HOI</li>
                         <li class="table_list_th">
-                            <div class="array_pointer">연구 디자인 종류</div>
+                            <div class="table_pointer" onclick="javascript:fn_design_ordering_created();">생성일</div>
                             <div class="table_list_array"></div>
                         </li>
                         <li class="table_list_th">
-                            <div class="array_pointer1">분석 대상 백신</div>
-                            <div class="table_list_array"></div>
-                        </li>
-                        <li class="table_list_th">
-                            <div class="array_pointer2">분석 대상 HOI</div>
-                            <div class="table_list_array"></div>
-                        </li>
-                        <li class="table_list_th">
-                            <div class="array_pointer3">생성일</div>
-                            <div class="table_list_array"></div>
-                        </li>
-                        <li class="table_list_th">
-                            <div class="array_pointer4">작성자</div>
-                            <div class="table_list_array"></div>
+                            <div class="table_pointer1" onclick="javascript:fn_design_ordering_creator();">작성자</div>
+                            <div class="table_list_array1"></div>
                         </li>
                         <li>분석작동</li>
                     </ul>
-                    <ul class="row">
-                        <li>1</li>
-                        <li>SCRI</li>
-                        <li>인플루엔자</li>
-                        <li>아나필락시스</li>
-                        <li>2022-03-03 08:09</li>
-                        <li>홍길동</li>
-                        <li>Yes</li>
+                    <div id="design_list_wrapper">
+
+                    <ul class="row" onclick="JavaScript:fn_study_design_view(9);">
+                        <li>1</li><li>test4</li>
+                        <li>BCG</li>
+                        <li>길랑-바레 증후군</li>
+                        <li>2022-06-09 09:31</li>
+                        <li>vass_관리자</li>
+                        <li style="color:darkgray">No</li>
                     </ul>
                 </div>
             </div>
